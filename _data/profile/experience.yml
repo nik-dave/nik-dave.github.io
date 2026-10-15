@@ -2,10 +2,22 @@
 
 professional_experience:
 
+  - position: "Mechanical Engineer/ Scrum Master"
+    company: "ASML (via Bright Society)"
+    location: "Veldhoven, The Netherlands"
+    dates: "Jan. 2025 – Present"
+    highlights:
+      - "Working within ASML Defectivity Group, supporting defectivity solutions for semiconductor manufacturing systems."
+      - "Owner and co-developer of the ASML Particle Tracking Tool supporting ASML designers in their contamination analysis."
+      - "Scrum Master of Common Defectivity Test Rig (CDTR) team. Jira setup and project management as SaFe coach of the team."
+      - "Collaboration with Test Measurement facility (TMF) team to perform Particle Tracking Velocimetry development."
+      - "Collaboration with Zeiss for MEMs defectivity study with experimental measurement and image analysis."
+      - "Collaboration with CFD and DUV competence for research on micro particle behaviour in atmospheric conditions in semiconductor systems."
+
   - position: "Functional Design Engineer"
     company: "ASML (via Bright Society)"
     location: "Veldhoven, The Netherlands"
-    dates: "Jan. 2022 – Present"
+    dates: "Jan. 2023 – Dec 2024"
     highlights:
       - "Working within ASML DUV metrology development, supporting overlay and focus drift-control solutions for semiconductor manufacturing systems."
       - "Owner and developer of the BMMO NXT Focus MATLAB model supporting the IMO3 programme."
@@ -18,11 +30,11 @@ professional_experience:
     location: "Eindhoven / Venlo, The Netherlands & Brussels, Belgium"
     dates: "Sep. 2018 – Dec. 2022"
     highlights:
-      - "Conducted fully funded double-degree doctoral research through the Marie Skłodowska-Curie Innovative Training Network (MSCA-ITN-EJD ProTechTion)."
-      - "Research focused on multiscale modelling of dimensional stability and through-thickness liquid transport in paper materials."
-      - "Developed and applied analytical, numerical and multiphysics modelling approaches to investigate transport phenomena in porous media."
-      - "Collaborated with industrial and academic partners across Europe, including Canon Production Printing."
-      - "Supported teaching activities and supervised bachelor and master student projects."
+      - "Conducted doctoral research on multiscale modelling of liquid transport and dimensional stability in paper-based materials within an academic-industrial research collaboration."
+      - "Developed analytical, numerical and multiphysics models to investigate transport phenomena and coupled hygro-mechanical behaviour in porous materials."
+      - "Combined physical modelling, numerical implementation and engineering analysis across multiple material and structural scales."
+      - "Collaborated with multidisciplinary academic and industrial partners across Europe, including Canon Production Printing."
+      - "Supported teaching activities and supervised bachelor's and master's student projects as a teaching assistant and coach."
 
   - position: "Computational Engineer (Research Internship)"
     company: "ASTUTE, Swansea University"
@@ -56,6 +68,16 @@ professional_experience:
 
 teaching_experience:
 
+  - position: "Mentor & Knowledge-Sharing Lead"
+    institution: "ASML"
+    location: "Veldhoven, The Netherlands"
+    dates: "2022 – Present"
+    description: "Supporting onboarding, coaching and technical knowledge transfer within engineering teams."
+    highlights:
+      - "Mentored interns and engineers on GitHub workflows and development practices."
+      - "Organised knowledge-sharing sessions and technical workshops."
+      - "Supported continuous-improvement and agile team initiatives."
+      
   - position: "Teaching Assistant & Student Supervisor"
     institution: "Eindhoven University of Technology (TU/e)"
     location: "Eindhoven, The Netherlands"
@@ -75,12 +97,3 @@ teaching_experience:
       - "Represented the interests of MSc students within the programme."
       - "Acted as liaison between students, lecturers and programme coordinators."
 
-  - position: "Mentor & Knowledge-Sharing Lead"
-    institution: "ASML"
-    location: "Veldhoven, The Netherlands"
-    dates: "2022 – Present"
-    description: "Supporting onboarding, coaching and technical knowledge transfer within engineering teams."
-    highlights:
-      - "Mentored interns and engineers on GitHub workflows and development practices."
-      - "Organised knowledge-sharing sessions and technical workshops."
-      - "Supported continuous-improvement and agile team initiatives."

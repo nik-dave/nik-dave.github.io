@@ -1,0 +1,111 @@
+/* ============================================================
+   Awards, scholarships and recognition
+   ============================================================ */
+
+.awards-list {
+  margin-top: var(--space-4);
+}
+
+
+/* Individual award row */
+
+.award-item {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4) 0;
+}
+
+
+/* Award / organisation logo */
+
+.award-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 90px;
+}
+
+.award-logo img {
+  display: block;
+  max-width: 135px;
+  max-height: 82px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Award information */
+
+.award-content {
+  min-width: 0;
+}
+
+.award-content h4 {
+  margin: 0 0 var(--space-1);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.award-organisation {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.award-programme {
+  margin: var(--space-1) 0 0;
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+
+/* Date */
+
+.award-dates {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+/* Separator */
+
+.award-divider {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: var(--space-2) 0;
+}
+
+
+/* ============================================================
+   Mobile
+   ============================================================ */
+
+@media (max-width: 767.98px) {
+
+  .award-item {
+    grid-template-columns: 95px minmax(0, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+  }
+
+  .award-logo {
+    width: 95px;
+    height: 70px;
+  }
+
+  .award-logo img {
+    max-width: 90px;
+    max-height: 64px;
+  }
+
+  .award-dates {
+    grid-column: 2;
+    margin-top: -0.35rem;
+  }
+}

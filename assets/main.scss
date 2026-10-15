@@ -42,6 +42,7 @@ $baseurl: "{{ site.url }}{{ site.baseurl }}";
 @import "components/chips";
 @import "components/clamp";
 @import "components/embed";
+@import "components/awards";
 
 // Layouts
 @import "layouts/grid";

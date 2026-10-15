@@ -1,4 +1,31 @@
-# Awards and honors, shown on the About page and the generated CV.
-# Each entry needs: name
-- name: ABC 2026 Best XYZ Award, 2026
+# Awards, scholarships and academic recognition
 
+- name: "WCCM & ECCOMAS Congress Scholarship"
+  organisation: "World Congress on Computational Mechanics / ECCOMAS"
+  programme: "14th WCCM & ECCOMAS Congress"
+  dates: "2021"
+  image: "awards/wccm-eccomas.png"
+
+- name: "Marie Skłodowska-Curie European Commission Fully Funded Doctorate Scholarship"
+  organisation: "European Commission"
+  programme: "European Joint Doctorate · PhD · MSCA-ITN-EJD ProTechTion"
+  dates: "2018–2022"
+  image: "awards/eu-funded.jpg"
+
+- name: "Erasmus Mundus Fully Funded Masters Scholarship"
+  organisation: "European Commission"
+  programme: "European Joint Masters · MSc · Computational Mechanics"
+  dates: "2016–2018"
+  image: "awards/eu-funded.jpg"
+
+- name: "Go Global Scholarship"
+  organisation: "Swansea University and CIMNE, UPC Barcelona"
+  programme: "MSc Computational Mechanics, UPC Barcelona"
+  dates: "2017–2018"
+  image: "awards/cimne.png"
+
+- name: "Excellence Scholarship"
+  organisation: "Swansea University"
+  programme: "MSc Computational Mechanics, Swansea"
+  dates: "2016–2017"
+  image: "awards/swansea-university.jpg"

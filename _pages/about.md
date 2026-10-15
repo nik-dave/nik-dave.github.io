@@ -16,7 +16,7 @@ permalink: /about/
 {% if site.department %}<p class="pi-dept">{{ site.department }}</p>{% endif %}
 {% if site.college %}<p class="pi-dept">{{ site.college }}</p>{% endif %}
 <p class="pi-address">{{ site.institution }}{% if site.institution_location %}, {{ site.institution_location }}{% endif %}</p>
-{% if site.office or site.phone %}<p class="pi-office">{% if site.office %}Office: {{ site.office }}{% endif %}{% if site.office and site.phone %} · {% endif %}{% if site.phone %}Tel: <a href="tel:{{ site.phone | remove: '-' }}">{{ site.phone | remove_first: '+1-' }}</a>{% endif %}</p>{% endif %}
+
 <div class="pi-links">
 {% if site.email %}<a href="mailto:{{ site.email }}" class="icon-link" title="Email"><i class="fa-solid fa-envelope"></i></a>{% endif %}
 {% if site.links.cv and site.links.cv != "" %}<a href="{{ site.url }}{{ site.baseurl }}/{{ site.links.cv }}" class="icon-link" title="CV"><i class="ai ai-cv"></i></a>{% endif %}
@@ -191,24 +191,87 @@ View credential &rarr;
 {% endif %}
 
 
-{% if site.data.profile.awards %}
+{% if site.data.profile.awards and site.data.profile.awards.size > 0 %}
 <div class="section-card">
-<h3>Awards & Recognition</h3>
-<ul>
+<h3>Awards, Scholarships & Recognition</h3>
+
+<div class="awards-list" markdown="0">
 {% for award in site.data.profile.awards %}
-<li>{{ award.name | replace: "-","&#8211;" }}</li>
-{% endfor %}
-</ul>
+<div class="award-item">
+
+{% if award.image and award.image != "" %}
+<div class="award-logo">
+<img src="{{ '/images/' | append: award.image | relative_url }}" alt="{{ award.name }} logo" loading="lazy">
 </div>
 {% endif %}
 
-<div class="section-card about-publications" markdown="0">
-<h3>Selected Publications</h3>
-<p class="section-intro">Selected publications from my work in computational mechanics, multiphysics modelling, transport phenomena and engineering research.</p>
+<div class="award-content">
+<h4>{{ award.name }}</h4>
+{% if award.organisation and award.organisation != "" %}
+<p class="award-organisation">{{ award.organisation }}</p>
+{% endif %}
+{% if award.programme and award.programme != "" %}
+<p class="award-programme">{{ award.programme }}</p>
+{% endif %}
+</div>
 
-{% bibliography --max 6 %}
+{% if award.dates and award.dates != "" %}
+<div class="award-dates">{{ award.dates }}</div>
+{% endif %}
 
-<p class="about-publications-more">
-<a href="{{ '/publications/' | relative_url }}">View all publications &rarr;</a>
-</p>
+</div>
+{% unless forloop.last %}<hr class="award-divider">{% endunless %}
+{% endfor %}
+</div>
+</div>
+{% endif %}
+
+
+
+
+<div class="section-card">
+
+<h3>Publications & Conference Presentations</h3>
+
+<h4>Publications</h4>
+
+<ul>
+<li>
+<strong>2024</strong> — Through-thickness liquid penetration inducing hydro-expansion of thin porous-fibrous sheets: pore transport, fibre mass exchange and moisture-induced deformations. <em>Manuscript submitted for publication.</em>
+</li>
+
+<li>
+<strong>2024</strong> — On the prediction of the hygro-expansivity of paper based on fibre constitutive properties: an experimental-numerical multi-scale analysis. <em>Manuscript submitted for publication.</em>
+</li>
+
+<li>
+<strong>2024</strong> — Accuracy of hygro-expansive curl predictions for paper sheets based on homogenised 2D and 3D network representations. <em>European Journal of Mechanics - A/Solids</em>, 106, 105339.
+</li>
+
+<li>
+<strong>2022</strong> — Hygro-mechanics of fibrous networks: A comparison between micro-scale modelling approaches. In <em>Mechanics of Fibrous Networks</em>, Elsevier.
+</li>
+</ul>
+
+
+<h4 style="margin-top: var(--space-5);">Conference Presentations</h4>
+
+<ul>
+<li><strong>2022</strong> — 15th World Congress on Computational Mechanics (WCCM).</li>
+
+<li><strong>2022</strong> — 8th ECCOMAS Congress, Oslo, Norway.</li>
+
+<li><strong>2021</strong> — 10th International Conference on Adaptive Modelling and Simulation (ADMOS).</li>
+
+<li><strong>2021</strong> — 9th International Conference on Computational Methods for Coupled Problems (COUPLED).</li>
+
+<li><strong>2021</strong> — 14th World Congress on Computational Mechanics & ECCOMAS Congress.</li>
+
+<li><strong>2020</strong> — InterPore Benelux Day.</li>
+
+<li><strong>2020</strong> — Progress in Paper Physics Seminar (PPPS2020), Jyväskylä, Finland.</li>
+
+<li><strong>2019</strong> — 9th International Conference on Adaptive Modelling and Simulation (ADMOS).</li>
+</ul>
+
 </div>
