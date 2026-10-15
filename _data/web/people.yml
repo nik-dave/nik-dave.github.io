@@ -1,0 +1,119 @@
+# =============================================================================
+# people.yml — Single source of truth for all lab members
+# =============================================================================
+# Sections: pi | collaborators | students | alumni | other
+#
+# Pages that consume this file:
+#   _pages/about.md    → people.pi, people.students (show_about: true)
+#   _pages/team.md     → people.pi, people.students (show_team: true),
+#                         people.alumni, people.collaborators
+#   _pages/research.md → auto-links author/mentor names to their website
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# PI
+# Used in: about.md (education list), team.md (PI card), research.md (author link)
+# Fields:
+#   website        – canonical URL linked from research page author credits
+#   education      – full degree list shown in about.md / team.md
+#   educationshort – condensed list shown in sidebar
+# -----------------------------------------------------------------------------
+pi:
+  website: "https://nik-dave.github.io/about/"
+
+  education:
+    - "2022 - Ph.D. Mechanical Engineering, TU Eindhoven & ULB Brussels"
+    - "2018 - M.Sc. Computational Mechanics, Swansea University & UPC Barcelona"
+    - "2011 - B.Eng. Mechanical Engineering"
+
+  educationshort:
+    - "Ph.D. Mechanical Engineering"
+    - "M.Sc. Computational Mechanics"
+    - "B.Eng. Mechanical Engineering"
+
+
+# -----------------------------------------------------------------------------
+# Collaborators (external mentors, co-advisors, visiting researchers, etc.)
+# Used in: team.md (Collaborators section), research.md (mentor link lookup)
+# Required: name
+# Optional: affiliation, website, photo, email
+# Display flags:
+#   show_collaborator – true → show in team.md Collaborators table
+# Sort field:
+#   last_name – used for alphabetical sorting by last name in team.md
+# -----------------------------------------------------------------------------
+# EXAMPLE:
+# collaborators:
+#   - name: Jane Smith
+#     last_name: Smith
+#     show_collaborator: true
+#     affiliation: MIT
+#     website: https://janesmith.mit.edu
+#     email: jsmith@mit.edu
+collaborators:
+  - name: "Andrei Yakunin"
+    last_name: "Yakunin"
+    show_collaborator: false
+    affiliation: "ASML"
+
+  - name: "Vladimir Kvon"
+    last_name: "Kvon"
+    show_collaborator: false
+    affiliation: "ASML"
+
+  - name: "Gijs Peters"
+    last_name: "Peters"
+    show_collaborator: false
+    affiliation: "ASML"
+
+# -----------------------------------------------------------------------------
+# Students (current and incoming members)
+# Used in: team.md (card grid), about.md (mentoring list), research.md (author link)
+#
+# Required: name
+# Display flags:
+#   show_team  – true → show card in team.md grid
+#   show_about – true → show in about.md "Students and Mentoring" list
+# Card fields (team.md):
+#   photo    – relative path under images/ (e.g. team/mobin.jpg)
+#   info     – short role label shown on the card, e.g. "Ph.D. Student",
+#   email, website, scholar, github
+# Mentoring list fields (about.md):
+#   location – institution
+#   degree   – degree program
+#   year     – enrollment year or range (e.g. "2024 – now")
+# mentoring_role – controls which "Students and Mentoring" subsection (about.md)
+#                  and CV "Student Guidance" subhead (build-cv.js) the entry falls under.
+#                  Valid values: doctoral_advisor | master_advisor |
+#                                undergraduate_advisor | high_school_advisor |
+#                                doctoral_committee | master_committee
+# Research link field:
+#   website  – URL linked when the name appears in research.yml authors/mentors
+# -----------------------------------------------------------------------------
+# EXAMPLE:
+# students:
+#   - name: 
+#     show_team: true
+#     show_about: true
+#     mentoring_role: doctoral_advisor
+#     photo: 
+#     info: Ph.D. Student
+#     email: 
+#     website: 
+#     location: 
+#     degree: Doctoral of Industrial Engineering
+#     year_start: 2025
+#     year_end: now
+
+students:
+
+  - name: John Jon
+    show_team: false
+    show_about: false
+    website: ""
+    info: Student
+
+
+
+

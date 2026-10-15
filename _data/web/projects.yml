@@ -1,0 +1,229 @@
+# Software / side projects — shown on the Projects page (/projects/).
+# Separate from _data/web/research.yml on purpose: this file is for built and
+# shipped software, not academic research projects.
+# Entries are sorted in reverse chronological order by end_date.
+#
+# Required fields:
+#   title       — project name (also used to generate the anchor ID on the page)
+#   end_date    — YYYY-MM, used for sorting (use an estimated date for ongoing work)
+#   abstract    — one-paragraph summary
+#
+# Optional fields:
+#   image       — path relative to /images/, e.g. "projects/wherefold.png"
+#   start_date  — YYYY-MM
+#   role        — your role on the project, e.g. "Solo developer"
+#   status      — free text shown as a badge, e.g. "Live", "Beta", "Archived"
+#   stack       — list of technologies; also used by the Tech filter
+#   links:
+#     webpage   — full external URL to the live site
+#     github    — full external URL to the repository
+#     demo      — full external URL to a demo video
+#     docs      — full external URL to documentation
+#     blog      — write-up about this project: a site-relative path
+#                 (e.g. "/blogs/building-wherefold/") or a full external URL
+
+
+- title: "Particle Transport Diagnostics in Atmospheric Conditions"
+  image: "projects/particle_transport_diagnostics.png"
+  start_date: "2025-08"
+  end_date: "2025-12"
+  role: "Research Engineer — experiment design, diagnostics, data processing, trajectory analysis"
+  status: "Completed"
+
+  stack:
+    - "Python"
+    - "NumPy"
+    - "SciPy"
+    - "Pandas"
+    - "OpenCV"
+    - "Matplotlib"
+    - "Particle Tracking Velocimetry (PTV)"
+    - "Experimental Diagnostics"
+
+  abstract: >
+    Micron-sized particles are tracked using optical diagnostics and
+    Particle Tracking Velocimetry (PTV) under atmospheric conditions.
+    Reconstructed trajectories are analysed to quantify particle
+    transport, incident and reflected velocity distributions, impact
+    angles, and particle-surface interaction behaviour.
+
+  links:
+    webpage: ""
+    blog: ""
+
+
+# =============================================================================
+# projects.yml
+#
+# Engineering systems, software tools and technical workflows developed or
+# delivered by Nik Dave.
+#
+# This file is intentionally separate from research.yml:
+#
+#   research.yml = technical questions, investigations and research topics
+#   projects.yml = systems, tools, workflows and demonstrators that were built
+#
+# Dates use the YYYY-MM format. For ongoing projects, an estimated end_date is
+# included for sorting and the status is shown as "Ongoing".
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# PARTICLE TRANSPORT EXPERIMENTAL PLATFORM
+# -----------------------------------------------------------------------------
+
+- title: "Atmospheric Particle Transport Diagnostic Platform"
+  image: "projects/particle_transport_diagnostics.png"
+  start_date: "2025-01"
+  end_date: "2026-12"
+  role: "Research Engineer — experimental design, diagnostics and technical analysis"
+  status: "Ongoing"
+
+  stack:
+    - "3D Particle Tracking Velocimetry"
+    - "LaVision DaVis"
+    - "Optical Diagnostics"
+    - "Experimental Design"
+    - "Camera Calibration"
+    - "Particle Injection"
+    - "Measurement Validation"
+    - "Scientific Data Analysis"
+
+  abstract: >
+    Development of an atmospheric test platform for studying micron-scale
+    particle transport and particle-surface interaction. The platform combines
+    controlled particle injection, synchronised optical imaging,
+    three-dimensional Particle Tracking Velocimetry and structured test
+    execution. Reconstructed trajectories are used to investigate particle
+    velocities, directions, impact conditions and reflected behaviour. The
+    project covers measurement concept development, experimental integration,
+    calibration, test execution, data-quality assessment and validation of the
+    diagnostic methodology.
+
+  links:
+    webpage: ""
+    github: ""
+    demo: ""
+    docs: ""
+    blog: ""
+
+
+# -----------------------------------------------------------------------------
+# PARTICLE-TRAJECTORY DATA PROCESSING
+# -----------------------------------------------------------------------------
+
+- title: "Three-Dimensional Particle Trajectory Analysis Workflow"
+  image: "research/2025_PTV_DUV.png"
+  start_date: "2025-01"
+  end_date: "2026-12"
+  role: "Developer and Analyst — trajectory processing, classification and visualisation"
+  status: "Ongoing"
+
+  stack:
+    - "Python"
+    - "NumPy"
+    - "Pandas"
+    - "SciPy"
+    - "Matplotlib"
+    - "3D Trajectory Analysis"
+    - "Statistical Analysis"
+    - "Scientific Visualisation"
+
+  abstract: >
+    Development of a structured analysis workflow for processing
+    three-dimensional particle trajectories obtained from optical measurements.
+    The workflow supports data preparation, trajectory inspection,
+    incident-versus-reflected particle classification and calculation of
+    velocity and angular distributions. It also supports quality checks,
+    statistical comparison and engineering visualisation of particle behaviour.
+    The objective is to convert complex trajectory datasets into reproducible
+    and interpretable engineering results.
+
+  links:
+    webpage: ""
+    github: ""
+    demo: ""
+    docs: ""
+    blog: ""
+
+
+# -----------------------------------------------------------------------------
+# SEMICONDUCTOR METROLOGY MODELLING
+# -----------------------------------------------------------------------------
+
+- title: "Model Development Workflow for Semiconductor Metrology"
+  image: "projects/particle_transport_diagnostics.png"
+  start_date: "2023-01"
+  end_date: "2026-12"
+  role: "Functional Design Engineer — model development, verification and technical coordination"
+  status: "Ongoing"
+
+  stack:
+    - "MATLAB"
+    - "Physical Modelling"
+    - "Model Verification"
+    - "Data Analysis"
+    - "Git"
+    - "GitHub"
+    - "Version Control"
+    - "Systems Engineering"
+    - "Agile Development"
+
+  abstract: >
+    Development and maintenance of model-based engineering workflows supporting
+    semiconductor metrology and system-drift analysis. The work combines
+    physical understanding, numerical modelling, model verification, data
+    interpretation and controlled software-development practices. Additional
+    activities include version-control improvement, technical knowledge sharing
+    and coordination across functional and software-engineering disciplines.
+    This public description intentionally excludes proprietary model
+    architecture, internal programme details, customer information and
+    performance data.
+
+  links:
+    webpage: ""
+    github: ""
+    demo: ""
+    docs: ""
+    blog: ""
+
+
+# -----------------------------------------------------------------------------
+# PERSONAL PORTFOLIO AND AUTOMATED CV
+# -----------------------------------------------------------------------------
+
+- title: "Engineering Portfolio and Automated CV Generator"
+  image: "projects/particle_transport_diagnostics.png"
+  start_date: "2026-09"
+  end_date: "2026-10"
+  role: "Designer and Developer"
+  status: "Live"
+
+  stack:
+    - "Jekyll"
+    - "Liquid"
+    - "YAML"
+    - "HTML"
+    - "SCSS"
+    - "JavaScript"
+    - "Node.js"
+    - "Puppeteer"
+    - "Git"
+    - "GitHub Actions"
+    - "GitHub Pages"
+
+  abstract: >
+    Development of a data-driven engineering portfolio in which structured YAML
+    files provide a shared source for website content and CV generation. The
+    website includes responsive layouts, dark-mode support, searchable research
+    and publication sections, technical-project cards and automated deployment
+    through GitHub Actions. A Node.js and Puppeteer workflow generates a PDF CV
+    from the same profile data used by the website, reducing duplication and
+    keeping professional information consistent across formats.
+
+  links:
+    webpage: "https://nik-dave.github.io"
+    github: "https://github.com/nik-dave/nikdave.github.io"
+    demo: ""
+    docs: ""
+    blog: ""

@@ -1,0 +1,414 @@
+// =============================================================
+// Lab page — hero banner, research focus section & equipment grid
+// =============================================================
+
+// ------ Research Focus section --------------------------------
+
+.rf-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: var(--space-4);
+
+  .section-card {
+    margin-top: var(--space-3);
+    margin-bottom: 0;
+  }
+}
+
+.rf-card {
+  display: flex;
+  gap: var(--space-8);
+  align-items: flex-start;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+.rf-image-wrap {
+  flex: 0 0 180px;
+
+  img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    flex: 0 0 auto;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+.rf-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.rf-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.rf-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.rf-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+
+  &::after { display: none; }
+}
+
+.rf-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 var(--space-3);
+}
+
+.rf-projects {
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: var(--space-1);
+    font-size: 0.875rem;
+
+    &::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      background-image: none;
+
+      &:hover { color: var(--accent); }
+    }
+  }
+}
+
+.rf-funding {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin: 0 0 var(--space-3);
+
+  strong {
+    color: var(--text-secondary);
+    font-weight: 600;
+  }
+}
+
+.rf-domains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+// ------ Recent Research section --------------------------------
+
+.rr-card {
+  position: relative;
+}
+
+.rr-header {
+  margin-bottom: var(--space-4);
+}
+
+.rr-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.4;
+
+  &::after { display: none; }
+}
+
+.rr-more-btn {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+
+  &:hover {
+    background-color: var(--accent);
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.rr-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.rr-abstract {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 var(--space-4);
+  max-width: none;
+}
+
+.rr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+// ------ Equipment grid ----------------------------------------
+
+.page-hero {
+  width: 100%;
+  line-height: 0;
+
+  img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+.equipment-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-slow), transform var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+
+  .equipment-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover .equipment-thumb {
+    transform: scale(1.04);
+  }
+
+  .equipment-thumb-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--text-tertiary);
+  }
+
+  .equipment-body {
+    padding: var(--space-6) var(--space-8) var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex: 1;
+  }
+
+  .equipment-category {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-tertiary);
+    margin: 0;
+  }
+
+  .equipment-name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+
+    &::after { display: none; }
+  }
+
+  .equipment-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .equipment-accessories {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      padding-left: 0.9rem;
+      position: relative;
+
+      &::before {
+        content: "–";
+        position: absolute;
+        left: 0;
+        color: var(--text-tertiary);
+      }
+    }
+  }
+
+  // Collapsible Description / Accessories blocks (native <details>).
+  .equipment-more {
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--space-2);
+
+    > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-tertiary);
+      transition: color var(--transition-base);
+
+      &::-webkit-details-marker { display: none; }
+
+      &::after {
+        content: "\f078";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 0.65rem;
+        transition: transform var(--transition-base);
+      }
+
+      &:hover { color: var(--accent); }
+    }
+
+    &[open] > summary::after { transform: rotate(180deg); }
+
+    > :not(summary) { margin-top: var(--space-2); }
+  }
+
+  .equipment-accessory-maker {
+    color: var(--text-tertiary);
+  }
+
+  .equipment-name a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  .equipment-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: auto;
+    padding-top: var(--space-4);
+  }
+}
+
+.equipment-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  text-decoration: none;
+  max-width: 100%;
+  text-align: center;
+  transition: color var(--transition-base), border-color var(--transition-base);
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+
+  i {
+    font-size: 0.72rem;
+  }
+}

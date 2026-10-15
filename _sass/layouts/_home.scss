@@ -1,0 +1,400 @@
+// =============================================================
+// Home page — two-column grid, editorial feel
+// =============================================================
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-12);
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.home-content {
+  min-width: 0;
+
+  h3:first-child {
+    margin-top: 0;
+  }
+
+  // First paragraph — slightly larger, editorial lead-in
+  > p:first-of-type {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+}
+
+// Hero heading — the person's name, large and prominent
+.home-hero {
+  font-family: var(--font-display);
+  font-size: 2.375rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: var(--space-1);
+  color: var(--text-primary);
+
+  &::after {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.home-hero-sub {
+  font-family: var(--font-accent);
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: none;
+}
+
+// Banner image — editorial frame with caption
+.banner-frame {
+  margin: var(--space-8) 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &:hover img {
+    transform: scale(1.02);
+  }
+
+  .banner-caption {
+    padding: var(--space-3) var(--space-4);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+  }
+}
+
+// News timeline
+.news-timeline {
+  margin-top: 0;
+
+  .news-item {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .news-date {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: var(--font-display);
+  }
+
+  .news-headline {
+    margin-top: var(--space-1);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+// Recent Projects grid on homepage
+.home-projects-grid {
+  // 4 cards, 2x2 — a full second row instead of an orphan card
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-slow), transform var(--transition-slow);
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+  }
+
+  .home-project-card-body {
+    padding: var(--space-4);
+    flex: 1;
+
+    h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin: 0 0 var(--space-2) 0;
+      line-height: 1.4;
+      color: var(--text-primary);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+      max-width: none;
+    }
+  }
+}
+
+// -------------------------------------------------------------
+// Software / side projects — wide horizontal cards on the homepage.
+// Deliberately a different shape from .home-project-card above so
+// research and software read as two distinct kinds of work.
+// -------------------------------------------------------------
+.home-software-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.home-software-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base),
+    border-color var(--transition-base);
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    border-color: var(--accent-soft);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-software-card-media {
+  position: relative;
+  background-color: var(--bg-secondary);
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-height: 160px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+  }
+
+  @media (max-width: 600px) {
+    img {
+      aspect-ratio: 16 / 9;
+      height: auto;
+      min-height: 0;
+    }
+  }
+}
+
+.home-software-card-body {
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+
+  h4 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.35;
+    color: var(--text-primary);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    max-width: none;
+  }
+
+  @media (max-width: 600px) {
+    padding: var(--space-4);
+  }
+}
+
+// Role · status · dates line
+.home-software-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+
+  .home-software-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-full);
+    background-color: var(--accent-wash);
+    color: var(--accent-deep);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+// Tech stack chips — capped so a long stack doesn't unbalance the card
+.home-software-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+
+  span {
+    font-size: 0.68rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+}
+
+.home-software-cta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: auto;
+  padding-top: var(--space-1);
+
+  i {
+    transition: transform var(--transition-fast);
+  }
+
+  .home-software-card:hover & i {
+    transform: translateX(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-software-card,
+  .home-software-cta i {
+    transition: none;
+  }
+
+  .home-software-card:hover {
+    transform: none;
+  }
+
+  .home-software-card:hover .home-software-cta i {
+    transform: none;
+  }
+}
+
+
+/* Homepage action buttons */
+
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.home-btn-primary {
+  background: #1565C0;
+  color: #ffffff;
+  border: 2px solid #1565C0;
+}
+
+.home-btn-primary:hover {
+  background: #0D47A1;
+  border-color: #0D47A1;
+  color: #ffffff;
+}
+
+.home-btn-secondary {
+  background: transparent;
+  color: #1565C0;
+  border: 2px solid #1565C0;
+}
+
+.home-btn-secondary:hover {
+  background: #1565C0;
+  color: #ffffff;
+}
+
+

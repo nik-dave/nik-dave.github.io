@@ -1,0 +1,25 @@
+- degree: "Ph.D., Mechanical Engineering"
+  institution: "Eindhoven University of Technology (TU/e) & Université libre de Bruxelles (ULB)"
+  location: "Eindhoven, Netherlands & Brussels, Belgium"
+  dates: "Sep. 2018 – Dec. 2022"
+  details:
+    - "Joint doctoral programme conducted in collaboration with Canon Production Printing as part of the Marie Skłodowska-Curie Innovative Training Network (MSCA-ITN-EJD ProTechTion)."
+    - "Research focused on multiscale modelling of dimensional stability and through-thickness liquid transport in paper-based materials."
+    - "Supported teaching activities and supervised bachelor and master student projects as teaching assistant and coach."
+
+- degree: "M.Sc., Computational Mechanics"
+  institution: "Swansea University & Universitat Politècnica de Catalunya (UPC)"
+  location: "Swansea, United Kingdom & Barcelona, Spain"
+  dates: "Sep. 2016 – Aug. 2018"
+  details:
+    - "Erasmus Mundus joint master's programme completed with Distinction."
+    - "Awarded a fully funded European Commission Erasmus Mundus scholarship, together with Swansea University International Excellence and Go-Global scholarships."
+    - "Master thesis: Modelling of electromechanical transduction at finite deformation."
+    - "Student Representative for the MSc Computational Mechanics programme."
+
+- degree: "B.Eng., Mechanical Engineering"
+  dates: "Jul. 2007 – Jun. 2011"
+  details:
+    - "Graduated with Distinction and awarded a Silver Medal for academic excellence."
+    - "Bachelor thesis: Testing of aluminium foam castings in automotive crash management."
+    - "Project work included analysis of the viability of biogas as a vehicle fuel and its associated engineering challenges."

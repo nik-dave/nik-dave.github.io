@@ -1,0 +1,355 @@
+# Research focus areas 
+# projects.slug must match the Jekyll slugify output of the project title in research.yml
+
+# Research focus areas
+
+- id: 1
+  name: "Semiconductor systems, Metrology & Defectivity"
+  image: "research/2025_PTV_DUV.png"
+  description: "Investigation of contamination, particle-induced defects and engineering challenges associated with advanced semiconductor manufacturing systems."
+  projects:
+    - title: "Particle Transport and Surface Interaction Diagnostics"
+      slug: "Particle Transport and Surface Interaction Diagnostics"
+    - title: "Atmospheric 3D Particle Tracking Velocimetry"
+      slug: "Atmospheric 3D Particle Tracking Velocimetry"
+    - title: "Overlay and Focus Drift Modelling for Semiconductor Systems"
+      slug: "Overlay and Focus Drift Modelling for Semiconductor Systems"
+    - title: "Model-Based Metrology and Drift Correction"
+      slug: "Model-Based Metrology and Drift Correction"
+  funding: ""
+  domains:
+    - Semiconductor Manufacturing
+    - Defectivity
+    - Contamination Control
+    - Yield Improvement
+    - Overlay drift control
+    - Focus drift control
+    - Diagnostics tooling and version control
+
+- id: 2
+  name: "Particle Transport & Contamination Control"
+  image: "research/2025_PTV_DUV.png"
+  description: "Experimental and numerical investigation of particle transport, deposition, reflection and contamination behaviour under atmospheric and industrial conditions."
+  projects:
+    - title: "Development of a test rig for measurement of particle transport in atmospheric conditions."
+      slug: "development-of-a-test-rig-for-measurement-of-particle-transport-in-atmospheric-conditions"
+  funding: ""
+  domains:
+    - Particle Transport
+    - Contamination Control
+    - Surface Interaction
+    - Particle Dynamics
+
+- id: 3
+  name: "Experimental Diagnostics & Validation"
+  image: "research/2025_PTV_DUV.png"
+  description: "Development and application of advanced optical measurement techniques for quantitative flow, particle and system diagnostics."
+  projects:
+    - title: "Development of a test rig for measurement of particle transport in atmospheric conditions."
+      slug: "development-of-a-test-rig-for-measurement-of-particle-transport-in-atmospheric-conditions"
+  funding: ""
+  domains:
+    - Particle Tracking Velocimetry
+    - Optical Diagnostics
+    - Measurement Systems
+    - Experimental Validation
+
+- id: 4
+  name: "Computational Modelling & Simulation"
+  image: "research/2025_PTV_DUV.png"
+  description: "Application of CFD, FEM and numerical modelling techniques to understand, predict and optimise complex engineering systems."
+  projects: []
+  funding: ""
+  domains:
+    - CFD
+    - FEM
+    - Numerical Methods
+    - Engineering Simulation
+
+- id: 5
+  name: "Engineering Data Analysis & Insight Generation"
+  image: "research/2025_PTV_DUV.png"
+  description: "Extraction of engineering insight from experimental and simulation data through statistical analysis, visualisation and automated workflows."
+  projects:
+    - title: "Development of a test rig for measurement of particle transport in atmospheric conditions."
+      slug: "development-of-a-test-rig-for-measurement-of-particle-transport-in-atmospheric-conditions"
+  funding: ""
+  domains:
+    - Data Analytics
+    - Python
+    - Scientific Computing
+    - Engineering Decision Support
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =============================================================================
+# research_areas.yml
+# Broad research and technical focus areas used by the Research page filters.
+#
+# Each project slug must match the Jekyll slug generated from the corresponding
+# project title in _data/web/research.yml.
+# =============================================================================
+
+
+- id: 1
+  name: "Semiconductor Systems, Metrology & Defectivity"
+  image: "research/2025_PTV_DUV.png"
+  description: >
+    Model-based engineering, metrology, drift correction, particle behaviour
+    and defectivity-related challenges in advanced semiconductor manufacturing
+    systems. This area combines physical understanding, functional modelling,
+    experimental evidence and robust engineering workflows.
+  projects:
+    - title: "Particle Transport and Surface Interaction Diagnostics"
+      slug: "particle-transport-and-surface-interaction-diagnostics"
+
+    - title: "Atmospheric Three-Dimensional Particle Tracking Velocimetry"
+      slug: "atmospheric-three-dimensional-particle-tracking-velocimetry"
+
+    - title: "Overlay and Focus Drift Modelling for Semiconductor Systems"
+      slug: "overlay-and-focus-drift-modelling-for-semiconductor-systems"
+
+    - title: "Model-Based Metrology and Drift Correction"
+      slug: "model-based-metrology-and-drift-correction"
+
+  funding: ""
+  domains:
+    - "Semiconductor Manufacturing"
+    - "Model-Based Metrology"
+    - "Overlay"
+    - "Focus"
+    - "Drift Correction"
+    - "Defectivity Engineering"
+    - "Contamination Control"
+    - "Functional Design"
+    - "Systems Engineering"
+
+
+- id: 2
+  name: "Particle Transport, Contamination & Experimental Diagnostics"
+  image: "research/2025_PTV_DUV.png"
+  description: >
+    Experimental investigation of micron-scale particle transport, contamination
+    behaviour and particle-surface interaction. This area includes optical
+    diagnostics, three-dimensional trajectory reconstruction, velocity and
+    angle analysis, measurement uncertainty and experimental validation.
+  projects:
+    - title: "Particle Transport and Surface Interaction Diagnostics"
+      slug: "particle-transport-and-surface-interaction-diagnostics"
+
+    - title: "Atmospheric Three-Dimensional Particle Tracking Velocimetry"
+      slug: "atmospheric-three-dimensional-particle-tracking-velocimetry"
+
+  funding: ""
+  domains:
+    - "Particle Transport"
+    - "Particle Tracking Velocimetry"
+    - "Optical Diagnostics"
+    - "Particle-Surface Interaction"
+    - "Contamination"
+    - "Trajectory Reconstruction"
+    - "Measurement Systems"
+    - "Experimental Validation"
+    - "Engineering Data Analysis"
+
+
+- id: 3
+  name: "Multiphysics Modelling of Materials"
+  image: "research/2025_PTV_DUV.png"
+  description: >
+    Analytical and numerical modelling of coupled transport and mechanical
+    behaviour in heterogeneous materials. The work spans porous-media transport,
+    moisture-induced deformation, dimensional stability, constitutive behaviour
+    and multiphysics formulations across material and structural scales.
+  projects:
+    - title: "Multiscale Liquid Transport in Porous Materials"
+      slug: "multiscale-liquid-transport-in-porous-materials"
+
+    - title: "Hygro-Mechanical Dimensional Stability of Paper Sheets"
+      slug: "hygro-mechanical-dimensional-stability-of-paper-sheets"
+
+    - title: "Transport Phenomena in Porous Materials"
+      slug: "transport-phenomena-in-porous-materials"
+
+    - title: "Multiphysics Modelling Across Material Scales"
+      slug: "multiphysics-modelling-across-material-scales"
+
+  funding: ""
+  domains:
+    - "Multiphysics"
+    - "Multiscale Modelling"
+    - "Porous Materials"
+    - "Liquid Transport"
+    - "Hygro-Mechanics"
+    - "Dimensional Stability"
+    - "Continuum Mechanics"
+    - "Finite Element Method"
+    - "Industrial Printing"
+
+
+- id: 4
+  name: "Fluid Dynamics, Thermal Management & Energy Systems"
+  image: "research/2025_PTV_DUV.png"
+  description: >
+    Computational analysis of fluid flow, heat transfer, thermal management,
+    hydrodynamics and energy systems. Applications span wave-energy devices,
+    vehicle thermal management, HVAC, electronics cooling, heat exchangers,
+    external aerodynamics and multidisciplinary product development.
+  projects:
+    - title: "Hydrodynamic Analysis of Floating Devices"
+      slug: "hydrodynamic-analysis-of-floating-devices"
+
+    - title: "Simulation of Wave Energy Converter Performance"
+      slug: "simulation-of-wave-energy-converter-performance"
+
+    - title: "Open-Source Simulation Workflow for Wave-Energy Systems"
+      slug: "open-source-simulation-workflow-for-wave-energy-systems"
+
+    - title: "Underhood Thermal Management"
+      slug: "underhood-thermal-management"
+
+    - title: "Exhaust Heat Protection and Thermal Analysis"
+      slug: "exhaust-heat-protection-and-thermal-analysis"
+
+    - title: "Electronic Cooling and Heat Exchanger Simulation"
+      slug: "electronic-cooling-and-heat-exchanger-simulation"
+
+    - title: "HVAC Fogging and Defogging Analysis"
+      slug: "hvac-fogging-and-defogging-analysis"
+
+    - title: "Computational Workflow Optimisation for Vehicle CAE"
+      slug: "computational-workflow-optimisation-for-vehicle-cae"
+
+    - title: "Wiper Aerodynamics and Coupled Vehicle-System Analysis"
+      slug: "wiper-aerodynamics-and-coupled-vehicle-system-analysis"
+
+  funding: ""
+  domains:
+    - "Computational Fluid Dynamics"
+    - "Heat Transfer"
+    - "Thermal Management"
+    - "Hydrodynamics"
+    - "Wave Energy"
+    - "Automotive Engineering"
+    - "HVAC"
+    - "Electronic Cooling"
+    - "Heat Exchangers"
+    - "External Aerodynamics"
+
+
+- id: 5
+  name: "Computational Engineering, CAE & Numerical Methods"
+  image: "research/2025_PTV_DUV.png"
+  description: >
+    Development and application of numerical methods, simulation workflows and
+    engineering-analysis tools for complex multidisciplinary problems. This area
+    includes CFD, FEM, multiphysics modelling, scientific computing, model
+    verification, workflow automation and the translation of simulation results
+    into engineering decisions.
+  projects:
+    - title: "Atmospheric Three-Dimensional Particle Tracking Velocimetry"
+      slug: "atmospheric-three-dimensional-particle-tracking-velocimetry"
+
+    - title: "Overlay and Focus Drift Modelling for Semiconductor Systems"
+      slug: "overlay-and-focus-drift-modelling-for-semiconductor-systems"
+
+    - title: "Model-Based Metrology and Drift Correction"
+      slug: "model-based-metrology-and-drift-correction"
+
+    - title: "Multiscale Liquid Transport in Porous Materials"
+      slug: "multiscale-liquid-transport-in-porous-materials"
+
+    - title: "Hygro-Mechanical Dimensional Stability of Paper Sheets"
+      slug: "hygro-mechanical-dimensional-stability-of-paper-sheets"
+
+    - title: "Transport Phenomena in Porous Materials"
+      slug: "transport-phenomena-in-porous-materials"
+
+    - title: "Multiphysics Modelling Across Material Scales"
+      slug: "multiphysics-modelling-across-material-scales"
+
+    - title: "Hydrodynamic Analysis of Floating Devices"
+      slug: "hydrodynamic-analysis-of-floating-devices"
+
+    - title: "Simulation of Wave Energy Converter Performance"
+      slug: "simulation-of-wave-energy-converter-performance"
+
+    - title: "Open-Source Simulation Workflow for Wave-Energy Systems"
+      slug: "open-source-simulation-workflow-for-wave-energy-systems"
+
+    - title: "Underhood Thermal Management"
+      slug: "underhood-thermal-management"
+
+    - title: "Exhaust Heat Protection and Thermal Analysis"
+      slug: "exhaust-heat-protection-and-thermal-analysis"
+
+    - title: "Electronic Cooling and Heat Exchanger Simulation"
+      slug: "electronic-cooling-and-heat-exchanger-simulation"
+
+    - title: "HVAC Fogging and Defogging Analysis"
+      slug: "hvac-fogging-and-defogging-analysis"
+
+    - title: "Computational Workflow Optimisation for Vehicle CAE"
+      slug: "computational-workflow-optimisation-for-vehicle-cae"
+
+    - title: "Wiper Aerodynamics and Coupled Vehicle-System Analysis"
+      slug: "wiper-aerodynamics-and-coupled-vehicle-system-analysis"
+
+  funding: ""
+  domains:
+    - "CFD"
+    - "FEM"
+    - "Multiphysics"
+    - "Numerical Methods"
+    - "Scientific Computing"
+    - "MATLAB"
+    - "Python"
+    - "Model Verification"
+    - "CAE Workflow"
+    - "Simulation Automation"
+    - "Engineering Decision Support"

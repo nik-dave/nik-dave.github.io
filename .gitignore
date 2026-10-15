@@ -1,0 +1,23 @@
+tags
+
+# Jekyll output
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Ruby dependency lock
+Gemfile.lock
+
+# OS files
+.DS_Store
+
+# npm
+node_modules/
+
+# IDEs
+.vs/
+.worktrees/
+.claude/
+
+# Generated CV intermediate file
+cv/cv.generated.html

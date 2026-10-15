@@ -1,0 +1,702 @@
+# Research projects — shown on the Research page and linked from the Lab page Research Focus section.
+# Projects are sorted in reverse chronological order by end_date.
+#
+# Required fields:
+#   title       — full project title (also used to generate the anchor ID on the Research page)
+#   image       — path relative to /images/, e.g. "research/2026_myproject.jpg"
+#   end_date    — YYYY-MM, used for sorting (use an estimated date for ongoing work)
+#   abstract    — one-paragraph summary
+#
+# Optional fields:
+#   start_date  — YYYY-MM
+#   focus       — list of Research Area IDs (1–5) defined in _data/research_areas.yml
+#                 A project can belong to multiple areas, e.g. focus: [2, 5]
+#                 1 = CFD, Thermal engineering
+#                 2 = FEM, numerical modelling
+#                 3 = Semiconductor metrology
+#                 4 = Experimental diagnostics, validation 
+#                 5 = Particle Tracking Velocimetry
+#   keywords    — list of tags shown on the Research page and used by the Keyword filter
+#   authors     — list of {name, url} (name must match people.yml for auto-linking)
+#   mentors     — list of {name, url} (same auto-linking rules as authors)
+#   links:
+#     paper     — filename in /papers/ (e.g. "Dave2024.pdf"), OR a full external URL
+#     webpage   — full external URL
+#     video     — list of {url, date}, e.g.:
+#                   video:
+#                     - url: "https://youtu.be/xxxx"
+#                       date: "2026-09"   # YYYY-MM, own date (not tied to end_date), used to sort /videos/
+#                 A project can have multiple videos, each with its own date. Empty list [] if none.
+#     poster    — path relative to site root, must include "files/posters/" prefix, e.g. "files/posters/2026_myposter.pdf"
+#     slide     — path relative to site root, must include "files/slides/" prefix, e.g. "files/slides/2026_myslide.pdf"
+#     bib       — full external URL to BibTeX / citation page
+#     github    — full external URL to GitHub repository
+
+
+# =============================================================================
+# research.yml
+# Technical research and engineering topics shown on the Research page.
+#
+# Focus-area IDs:
+#   1 = Semiconductor Systems, Metrology & Defectivity
+#   2 = Particle Transport, Contamination & Experimental Diagnostics
+#   3 = Multiphysics Modelling of Materials
+#   4 = Fluid Dynamics, Thermal Management & Energy Systems
+#   5 = Computational Engineering, CAE & Numerical Methods
+#
+# For ongoing topics, end_date is deliberately omitted so the website displays
+# "Present". Dates use the YYYY-MM format.
+# =============================================================================
+
+
+# =============================================================================
+# research.yml
+# Technical research and engineering topics shown on the Research page.
+#
+# Focus-area IDs:
+#   1 = Semiconductor Systems, Metrology & Defectivity
+#   2 = Particle Transport, Contamination & Experimental Diagnostics
+#   3 = Multiphysics Modelling of Materials
+#   4 = Fluid Dynamics, Thermal Management & Energy Systems
+#   5 = Computational Engineering, CAE & Numerical Methods
+#
+# For ongoing topics, end_date is deliberately omitted so the website displays
+# "Present". Dates use the YYYY-MM format.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# SEMICONDUCTOR SYSTEMS, PARTICLE TRANSPORT AND EXPERIMENTAL DIAGNOSTICS
+# -----------------------------------------------------------------------------
+
+- title: "Particle Transport and Surface Interaction Diagnostics"
+  image: "research/2025_PTV_DUV.png"
+  focus: [1, 2]
+  start_date: "2025-01"
+  authors:
+    - name: "Nik Dave"
+    - name: "Gijs Peters"
+  mentors: []
+  keywords:
+    - "Particle Transport"
+    - "Particle-Surface Interaction"
+    - "Contamination"
+    - "Incident Particles"
+    - "Reflected Particles"
+    - "Experimental Diagnostics"
+    - "Trajectory Analysis"
+    - "Semiconductor Systems"
+  abstract: >
+    Development of an experimental methodology for characterising micron-scale
+    particle transport and particle-surface interaction under atmospheric
+    conditions. The work combines controlled particle injection, optical
+    diagnostics and trajectory reconstruction to evaluate incident and reflected
+    particle motion, including velocity and angular distributions. The resulting
+    measurements support improved understanding of particle behaviour,
+    contamination mechanisms and experimental validation within semiconductor
+    engineering applications.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Atmospheric Three-Dimensional Particle Tracking Velocimetry"
+  image: "research/2025_PTV_DUV.png"
+  focus: [1, 2, 5]
+  start_date: "2025-01"
+  authors:
+    - name: "Nik Dave"
+    - name: "Gijs Peters"
+  mentors: []
+  keywords:
+    - "3D PTV"
+    - "Particle Tracking Velocimetry"
+    - "Optical Diagnostics"
+    - "Particle Trajectories"
+    - "Camera Calibration"
+    - "Velocity Measurement"
+    - "Data Processing"
+    - "Experimental Validation"
+  abstract: >
+    Application of three-dimensional Particle Tracking Velocimetry to reconstruct
+    micron-scale particle trajectories in atmospheric test conditions. The
+    methodology combines synchronised imaging, volumetric calibration, particle
+    identification, trajectory reconstruction and statistical processing to
+    determine particle velocities and directions before and after interaction
+    with a surface. The work also addresses measurement uncertainty, optical
+    accessibility and the practical limitations of resolving individual particle
+    events in controlled experiments.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Overlay and Focus Drift Modelling for Semiconductor Systems"
+  image: "research/2025_PTV_DUV.png"
+  focus: [1, 5]
+  start_date: "2023-01"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Semiconductor Metrology"
+    - "Overlay"
+    - "Focus"
+    - "Drift Modelling"
+    - "Model Development"
+    - "MATLAB"
+    - "Functional Design"
+    - "System Performance"
+  abstract: >
+    Development and maintenance of model-based engineering solutions for
+    understanding and correcting overlay and focus drift in semiconductor
+    manufacturing systems. The work involves translating system behaviour into
+    computational models, analysing model performance, investigating functional
+    dependencies and supporting verification activities. The description is
+    intentionally limited to public-safe, high-level engineering information
+    and excludes proprietary model architecture, customer information and
+    internal performance data.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Model-Based Metrology and Drift Correction"
+  image: "research/2025_PTV_DUV.png"
+  focus: [1, 5]
+  start_date: "2023-01"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Model-Based Metrology"
+    - "Drift Correction"
+    - "Semiconductor Systems"
+    - "Functional Modelling"
+    - "MATLAB"
+    - "Model Verification"
+    - "Systems Engineering"
+    - "Version Control"
+  abstract: >
+    Application of model-based metrology principles to support drift correction
+    and functional performance in advanced semiconductor systems. Activities
+    include model development, verification, technical issue analysis, version
+    control and multidisciplinary coordination between functional and software
+    engineering. The work demonstrates how physical understanding, numerical
+    modelling and robust development workflows can be combined within a complex
+    high-technology product environment.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+# -----------------------------------------------------------------------------
+# MULTIPHYSICS MODELLING OF PAPER AND POROUS MATERIALS
+# -----------------------------------------------------------------------------
+
+- title: "Multiscale Liquid Transport in Porous Materials"
+  image: "research/2025_PTV_DUV.png"
+  focus: [3, 5]
+  start_date: "2018-09"
+  end_date: "2022-12"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Liquid Transport"
+    - "Porous Materials"
+    - "Multiscale Modelling"
+    - "Paper"
+    - "Capillary Transport"
+    - "Numerical Modelling"
+    - "Printing Technology"
+    - "Transport Phenomena"
+  abstract: >
+    Investigation of through-thickness liquid transport in paper-based porous
+    materials through multiscale analytical and numerical modelling. The work
+    examined how pore structure, material heterogeneity and liquid-material
+    interaction influence transport at different spatial and temporal scales.
+    The research was performed in collaboration with academic and industrial
+    partners and was motivated by the need to better understand liquid
+    penetration and material response in printing applications.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Hygro-Mechanical Dimensional Stability of Paper Sheets"
+  image: "research/2025_PTV_DUV.png"
+  focus: [3, 5]
+  start_date: "2018-09"
+  end_date: "2022-12"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Hygro-Mechanics"
+    - "Dimensional Stability"
+    - "Paper Mechanics"
+    - "Moisture-Induced Deformation"
+    - "Material Anisotropy"
+    - "Multiphysics"
+    - "Finite Element Method"
+    - "Printing Technology"
+  abstract: >
+    Study of moisture-driven dimensional changes in paper sheets using coupled
+    hygro-mechanical modelling. The research investigated the relationship
+    between moisture transport, material anisotropy, local deformation and
+    sheet-level dimensional stability. Analytical and computational approaches
+    were used to connect material behaviour at different scales and to improve
+    understanding of deformation mechanisms relevant to industrial printing
+    processes.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Transport Phenomena in Porous Materials"
+  image: "research/2025_PTV_DUV.png"
+  focus: [3, 4, 5]
+  start_date: "2018-09"
+  end_date: "2022-12"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Transport Phenomena"
+    - "Porous Media"
+    - "Moisture Transport"
+    - "Capillary Flow"
+    - "Diffusion"
+    - "Material Modelling"
+    - "Continuum Mechanics"
+    - "Scientific Computing"
+  abstract: >
+    Research into coupled transport processes in heterogeneous porous materials,
+    with emphasis on moisture and liquid movement through fibrous structures.
+    The work considered capillary effects, diffusion, material architecture and
+    constitutive behaviour when formulating models at material and structural
+    scales. The resulting framework supported the interpretation of complex
+    transport behaviour and its interaction with mechanical response.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Multiphysics Modelling Across Material Scales"
+  image: "research/2025_PTV_DUV.png"
+  focus: [3, 5]
+  start_date: "2016-09"
+  end_date: "2022-12"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Multiphysics"
+    - "Multiscale Modelling"
+    - "Finite Element Method"
+    - "Continuum Mechanics"
+    - "Thermo-Mechanical"
+    - "Electro-Mechanical"
+    - "Hygro-Mechanical"
+    - "MATLAB"
+    - "Python"
+  abstract: >
+    Development and application of analytical and numerical techniques for
+    coupled physical problems across multiple length scales. The work included
+    thermo-mechanical, electro-mechanical and hygro-mechanical formulations,
+    together with one-dimensional and two-dimensional finite-element
+    implementations in MATLAB and Python. These studies established a broad
+    foundation in constitutive modelling, numerical methods and the verification
+    of multiphysics simulations.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+# -----------------------------------------------------------------------------
+# HYDRODYNAMICS AND WAVE-ENERGY SYSTEMS
+# -----------------------------------------------------------------------------
+
+- title: "Hydrodynamic Analysis of Floating Devices"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2017-03"
+  end_date: "2017-08"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Hydrodynamics"
+    - "Floating Devices"
+    - "Wave-Structure Interaction"
+    - "Computational Mechanics"
+    - "Fluid Dynamics"
+    - "Numerical Simulation"
+    - "Engineering Validation"
+  abstract: >
+    Numerical investigation of the hydrodynamic behaviour of floating devices
+    subjected to wave loading. The research examined how device geometry and
+    motion influence fluid-structure interaction and the potential extraction
+    of wave energy. The work formed part of an industrially oriented research
+    project and combined physical interpretation, numerical modelling and
+    comparison with established engineering software.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Simulation of Wave Energy Converter Performance"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2017-03"
+  end_date: "2017-08"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Wave Energy"
+    - "Wave Energy Converters"
+    - "Power Extraction"
+    - "Hydrodynamic Performance"
+    - "Device Geometry"
+    - "Renewable Energy"
+    - "Numerical Modelling"
+    - "Design Evaluation"
+  abstract: >
+    Assessment of wave-energy converter performance using numerical models of
+    floating-device behaviour. The study considered the influence of device
+    shape and hydrodynamic response on power-extraction potential. Simulation
+    results were compared with commercial engineering tools to evaluate the
+    suitability of the modelling approach for early-stage design comparison and
+    technical decision-making.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Open-Source Simulation Workflow for Wave-Energy Systems"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2017-03"
+  end_date: "2017-08"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Open-Source Simulation"
+    - "Wave Energy"
+    - "Computational Workflow"
+    - "Model Validation"
+    - "Automation"
+    - "Hydrodynamics"
+    - "Scientific Computing"
+    - "Reproducibility"
+  abstract: >
+    Development of an open-source simulation process for comparing the
+    hydrodynamic performance and power-extraction potential of wave-energy
+    converter concepts. The workflow was structured to support repeatable model
+    setup, comparative analysis and validation against established commercial
+    software. This work demonstrated how accessible computational tools can
+    support engineering evaluation and design exploration.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+# -----------------------------------------------------------------------------
+# AUTOMOTIVE THERMAL MANAGEMENT AND CFD
+# -----------------------------------------------------------------------------
+
+- title: "Underhood Thermal Management"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2011-07"
+  end_date: "2015-01"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Underhood Thermal Management"
+    - "Automotive CFD"
+    - "Heat Transfer"
+    - "Vehicle Development"
+    - "Thermal Analysis"
+    - "Conjugate Heat Transfer"
+    - "Design Optimisation"
+    - "Virtual Prototyping"
+  abstract: >
+    Computational assessment of underhood thermal behaviour for automotive
+    development programmes. The work involved modelling heat sources, airflow,
+    exhaust flows and component temperatures to evaluate thermal risks and
+    support design decisions. The simulations were developed in collaboration
+    with cross-functional design, aerodynamics, cooling and test teams and were
+    interpreted together with physical test information.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Exhaust Heat Protection and Thermal Analysis"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2011-07"
+  end_date: "2015-01"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Exhaust Thermal Management"
+    - "Heat Protection"
+    - "Radiation"
+    - "Convection"
+    - "Automotive CFD"
+    - "Component Protection"
+    - "Thermal Loads"
+    - "Vehicle Integration"
+  abstract: >
+    Analysis of exhaust-system thermal loads and their influence on surrounding
+    vehicle components. Computational studies were used to assess convection,
+    radiation, heat shielding and component exposure under representative
+    operating conditions. The work supported heat-protection strategies and
+    design evaluation through coordination with thermal, packaging and vehicle
+    engineering teams.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Electronic Cooling and Heat Exchanger Simulation"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2015-01"
+  end_date: "2016-08"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Electronic Cooling"
+    - "Heat Exchangers"
+    - "Thermal Management"
+    - "CFD"
+    - "Heat Transfer"
+    - "Digital Prototyping"
+    - "Cooling Performance"
+    - "Automotive Engineering"
+  abstract: >
+    CFD and thermal-analysis activities supporting the development of electronic
+    cooling and heat-exchanger systems. The work considered airflow,
+    temperature distribution, heat rejection and component performance in
+    multidisciplinary vehicle applications. Numerical analysis was used to
+    identify thermal risks, compare design alternatives and support
+    model-informed product development.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "HVAC Fogging and Defogging Analysis"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2015-01"
+  end_date: "2016-08"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "HVAC"
+    - "Fogging"
+    - "Defogging"
+    - "Cabin Airflow"
+    - "Automotive CFD"
+    - "Thermal Comfort"
+    - "Heat and Mass Transfer"
+    - "System Optimisation"
+  abstract: >
+    Computational analysis of automotive HVAC, fogging and defogging behaviour
+    using coupled airflow and thermal models. The work supported investigation
+    of cabin-air distribution, glazing conditions and system performance under
+    relevant operating scenarios. Simulation results were used to evaluate
+    design concepts and improve the efficiency of virtual development
+    activities.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Computational Workflow Optimisation for Vehicle CAE"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2011-07"
+  end_date: "2016-08"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "CAE Workflow"
+    - "Pre-Processing"
+    - "Simulation Efficiency"
+    - "Automation"
+    - "Computational Cost"
+    - "Model Quality"
+    - "Process Improvement"
+    - "Engineering Productivity"
+  abstract: >
+    Development and improvement of CAE preprocessing and simulation workflows
+    for multidisciplinary automotive thermal and fluid-dynamics applications.
+    The work focused on reducing repetitive effort, improving model consistency
+    and making computational analysis more efficient without compromising the
+    quality required for engineering decisions. The resulting methods supported
+    closer integration between virtual analysis and physical testing teams.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+
+
+- title: "Wiper Aerodynamics and Coupled Vehicle-System Analysis"
+  image: "research/2025_PTV_DUV.png"
+  focus: [4, 5]
+  start_date: "2015-01"
+  end_date: "2016-08"
+  authors:
+    - name: "Nik Dave"
+  mentors: []
+  keywords:
+    - "Wiper Aerodynamics"
+    - "External Aerodynamics"
+    - "Automotive CFD"
+    - "Coupled Systems"
+    - "Vehicle Integration"
+    - "Airflow"
+    - "Digital Prototyping"
+    - "Multidisciplinary Engineering"
+  abstract: >
+    Application of CFD and digital-prototyping techniques to investigate wiper
+    aerodynamics and related vehicle-system interactions. The work required
+    coordination between aerodynamics, thermal-management, HVAC and design
+    teams to evaluate airflow behaviour and its influence on functional
+    performance. The study contributed to multidisciplinary engineering
+    assessment within the vehicle-development process.
+  links:
+    paper: ""
+    webpage: ""
+    video: []
+    bib: ""
+    poster: ""
+    slide: ""
+    github: ""
+    arxiv: ""
+    supplementary: ""
+

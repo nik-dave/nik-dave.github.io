@@ -1,0 +1,91 @@
+@Comment{
+  =============================================================
+  ref.bib  Publication and Talk entries for the academic website
+  =============================================================
+
+  ENTRY TYPES
+    article        Journal articles
+    inproceedings  Conference papers
+    unpublished    Preprints / working papers
+    book           Thesis, monograph
+    incollection   Talks  (keywords={invited} or keywords={talk})
+    report         Technical reports
+
+  STANDARD FIELDS
+    title    = {Paper Title},
+    author   = {Last, First and Last2, First2},
+    year     = {2025},
+    doi      = {10.xxxx/xxxxx},        -> DOI button (published entries)
+                                          -> arXiv button (unpublished entries)
+    abstract = {Paper abstract...},    -> Abstract button (collapsible)
+
+  CUSTOM FIELDS  (trigger extra buttons on the website)
+    url    = {https://...},                          -> Website button
+    arxiv  = {https://arxiv.org/abs/xxxx.xxxxx},    -> arXiv button
+    pdf    = {filename.pdf},                         -> PDF button
+                                                        (place file in /papers/)
+
+  EXAMPLE  inproceedings entry with all fields
+    inproceedings{dave2025example,
+      title     = {An Example Paper Title},
+      author    = {Dave, Nik and Jane, Mary},
+      booktitle = {Proceedings of the Example Conference},
+      pages     = {1--10},
+      year      = {2025},
+      doi       = {10.1145/1234567.1234568},
+      url       = {https://example.com/paper},
+      arxiv     = {https://arxiv.org/abs/2501.00001},
+      pdf       = {dave2025example.pdf},
+      abstract  = {This is the abstract.},
+    }
+
+  EXAMPLE  talk entry
+    incollection{talk2025example,
+      title     = {Talk Title},
+      author    = {Dave, Nik},
+      booktitle = {Conference or Venue Name},
+      year      = {2025},
+      keywords  = {invited},
+    }
+  =============================================================
+}
+
+# publications
+
+@inproceedings{dave2021,
+  title={Test 1},
+  author={Dave, Nik and Jane, Mary and Bond, James},
+  booktitle={MoM},
+  volume={},
+  pages={},
+  year={2021},
+  organization={American Society of Mechanical Engineers},
+  url={},
+  doi={},
+  abstract={}
+}
+
+
+@article{dave2024,
+  title={Test 2},
+  author={Dave, Nik and Jane, Mary and Bond, James},
+  journal={},
+  volume={35},
+  number={5},
+  pages={1985--2003},
+  year={2024},
+  publisher={Springer },
+   doi={},
+  url={},
+  pdf={},
+  abstract={}
+}
+
+
+@incollection{dave2025,
+  title={Test 3},
+  author={Dave, Nik and Jane, Mary and Bond, James},
+  booktitle={},
+  year={2021},
+  keywords={talk}
+}

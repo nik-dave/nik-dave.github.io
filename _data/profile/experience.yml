@@ -1,0 +1,86 @@
+# Professional Experience
+
+professional_experience:
+
+  - position: "Functional Design Engineer"
+    company: "ASML (via Bright Society)"
+    location: "Veldhoven, The Netherlands"
+    dates: "Jan. 2022 – Present"
+    highlights:
+      - "Working within ASML DUV metrology development, supporting overlay and focus drift-control solutions for semiconductor manufacturing systems."
+      - "Owner and developer of the BMMO NXT Focus MATLAB model supporting the IMO3 programme."
+      - "Supported migration activities from SVN to GitHub and acted as GitHub representative within the development team."
+      - "Served as Delegate Scrum Master for the Drift Control team, supporting agile delivery across functional and software engineering disciplines."
+      - "Organised knowledge-sharing sessions, GitHub workshops and continuous-improvement initiatives within the organisation."
+
+  - position: "Scientific Researcher (Doctoral Researcher)"
+    company: "Eindhoven University of Technology (TU/e), Université libre de Bruxelles (ULB) & Canon Production Printing"
+    location: "Eindhoven / Venlo, The Netherlands & Brussels, Belgium"
+    dates: "Sep. 2018 – Dec. 2022"
+    highlights:
+      - "Conducted fully funded double-degree doctoral research through the Marie Skłodowska-Curie Innovative Training Network (MSCA-ITN-EJD ProTechTion)."
+      - "Research focused on multiscale modelling of dimensional stability and through-thickness liquid transport in paper materials."
+      - "Developed and applied analytical, numerical and multiphysics modelling approaches to investigate transport phenomena in porous media."
+      - "Collaborated with industrial and academic partners across Europe, including Canon Production Printing."
+      - "Supported teaching activities and supervised bachelor and master student projects."
+
+  - position: "Computational Engineer (Research Internship)"
+    company: "ASTUTE, Swansea University"
+    location: "Swansea, United Kingdom"
+    dates: "Mar. 2017 – Aug. 2017"
+    highlights:
+      - "Investigated hydrodynamic behaviour of floating devices and wave-energy systems."
+      - "Developed an open-source simulation workflow to evaluate the performance of Wave Energy Converters (WECs)."
+      - "Validated simulation results against commercial software tools and engineering benchmarks."
+
+  - position: "Senior CFD Engineer"
+    company: "Mercedes-Benz R&D (Daimler AG)"
+    dates: "Jan. 2015 – Aug. 2016"
+    highlights:
+      - "Performed thermal management and digital-prototyping analysis for automotive systems."
+      - "Supported development projects involving HVAC systems, electronic cooling, heat exchangers and vehicle thermal performance."
+      - "Applied CFD and CAE methods using tools including Star-CCM+, Siemens NX and MATLAB."
+      - "Collaborated with multidisciplinary engineering teams to improve design efficiency and reduce development costs."
+
+  - position: "CFD & Thermal Engineer"
+    company: "Jaguar Land Rover"
+    dates: "Jul. 2011 – Jan. 2015"
+    highlights:
+      - "Conducted underhood thermal analysis for vehicle development programmes."
+      - "Supported exhaust thermal management, heat protection and cooling-system optimisation activities."
+      - "Worked closely with aerodynamics, wind-tunnel and HVAC teams across virtual and physical test environments."
+      - "Developed preprocessing and modelling approaches that reduced simulation effort and improved engineering efficiency."
+
+
+# Teaching & Mentoring Experience
+
+teaching_experience:
+
+  - position: "Teaching Assistant & Student Supervisor"
+    institution: "Eindhoven University of Technology (TU/e)"
+    location: "Eindhoven, The Netherlands"
+    dates: "2018 – 2022"
+    description: "Supported teaching activities and supervised bachelor and master student projects during doctoral research."
+    highlights:
+      - "Coached and supervised bachelor and master student research projects."
+      - "Supported academic courses and practical research activities."
+      - "Provided guidance on engineering modelling, simulation and experimental methods."
+
+  - position: "Student Representative"
+    institution: "Swansea University & Universitat Politècnica de Catalunya (UPC)"
+    location: "United Kingdom & Spain"
+    dates: "2016 – 2018"
+    description: "Elected Student Representative for the Erasmus Mundus MSc Computational Mechanics programme."
+    highlights:
+      - "Represented the interests of MSc students within the programme."
+      - "Acted as liaison between students, lecturers and programme coordinators."
+
+  - position: "Mentor & Knowledge-Sharing Lead"
+    institution: "ASML"
+    location: "Veldhoven, The Netherlands"
+    dates: "2022 – Present"
+    description: "Supporting onboarding, coaching and technical knowledge transfer within engineering teams."
+    highlights:
+      - "Mentored interns and engineers on GitHub workflows and development practices."
+      - "Organised knowledge-sharing sessions and technical workshops."
+      - "Supported continuous-improvement and agile team initiatives."

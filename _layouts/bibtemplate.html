@@ -1,0 +1,76 @@
+---
+---
+
+<div class="pub-entry" id="{{ entry.key }}" data-pub-searchable>
+  {% assign _last = site.scholar.last_name %}
+  {% assign _first_init = site.scholar.first_name[0] | slice: 0, 1 %}
+  {% assign _author_pat = _last | append: ", " | append: _first_init | append: "." %}
+  {% assign _bold_pat = "<strong>" | append: _author_pat | append: "</strong>" %}
+  <div class="text-justify">{{ reference | replace: _author_pat, _bold_pat }}</div>
+
+  {% assign bibtest = false %}
+  {% if entry.file %}
+  {% assign bibfile = "/papers/" | append: entry.file %}
+  {% for file in site.static_files %}
+    {% if file.path contains bibfile %}
+     {% assign bibtest = true %}
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+
+  <div class="pub-actions">
+    {% if entry.pdf %}
+    <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.pdf }}" target="_blank" class="btn-pill btn-pdf">PDF</a>
+    {% elsif bibtest %}
+    <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank" class="btn-pill btn-pdf">PDF</a>
+    {% endif %}
+
+    {% if entry.doi %}
+      {% if entry.type == 'unpublished' %}
+        {% unless entry.arxiv %}
+        <a href="{{ entry.doi | prepend: 'https://arxiv.org/abs/' }}" target="_blank" class="btn-pill btn-arxiv">arXiv</a>
+        {% endunless %}
+      {% else %}
+      <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" target="_blank" class="btn-pill btn-doi">DOI</a>
+      {% endif %}
+    {% endif %}
+
+    {% if entry.arxiv %}
+    <a href="{{ entry.arxiv }}" target="_blank" class="btn-pill btn-arxiv">arXiv</a>
+    {% endif %}
+
+    {% if entry.url %}
+    <a href="{{ entry.url }}" target="_blank" class="btn-pill btn-website">Website</a>
+    {% endif %}
+
+    {% if entry.project %}
+    <a href="{{ entry.project }}" class="btn-pill btn-project">Project</a>
+    {% endif %}
+
+    {% if entry.slides %}
+    <a href="{{ site.url }}{{ site.baseurl }}/{{ entry.slides }}" target="_blank" class="btn-pill btn-slides">Slides</a>
+    {% endif %}
+
+    {% if entry.video %}
+    <a href="{{ entry.video }}" target="_blank" class="btn-pill btn-video">Video</a>
+    {% endif %}
+
+    {% if entry.type == 'unpublished' or entry.type == 'article' or entry.type == 'thesis' or entry.type == 'inproceedings' or entry.type == 'report' %}
+    <button class="btn-pill btn-bib" data-toggle-target="bib-{{ entry.key }}">BIB</button>
+    {% endif %}
+
+    {% if entry.abstract %}
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-{{ entry.key }}">Abstract</button>
+    {% endif %}
+  </div>
+
+  <div class="pub-collapse" id="bib-{{ entry.key }}">
+    <pre>{{ entry.bibtex }}</pre>
+  </div>
+
+  {% if entry.abstract %}
+  <div class="pub-collapse" id="abs-{{ entry.key }}">
+    <pre>{{ entry.abstract }}</pre>
+  </div>
+  {% endif %}
+</div>
