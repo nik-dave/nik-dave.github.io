@@ -37,7 +37,7 @@ links:
 # --accent rung there.
 accent_color: "#1565C0" #"#2196F3"
 dark_mode: true              # show dark mode toggle in navbar
-description: "Senior Engineer and PhD specialising in semiconductor systems, particle transport, defectivity, experimental methods and computational modelling."
+description: "Senior Engineer and PhD specialising in semiconductor systems, particle transport, defectivity engineering, experimental diagnostics, CFD and computational modelling."
 baseurl: ""
 url: "https://nik-dave.github.io"
 
@@ -50,15 +50,9 @@ analytics:
 # ============================================================
 nav_pages:
   - name: about
-  - name: publications
-#  - name: talks
+  - name: skills
   - name: research
   - name: projects
-#  - name: lab
-#  - name: team
-#  - name: teaching
-#  - name: videos
-#  - name: blogs
 
 # ============================================================
 # Advanced Settings (you probably don't need to change these)
@@ -70,8 +64,6 @@ include:
 sass:
   quiet_deps: true
   style: compressed
-
-permalink: /blogs/:title/
 
 markdown: kramdown
 highlighter: rouge
@@ -113,6 +105,8 @@ scholar:
 
 exclude:
   - Gemfile
+  - Gemfile.lock
+  - package-lock.json
   - update_bootstrap.sh
   - switch_theme.sh
   - tags

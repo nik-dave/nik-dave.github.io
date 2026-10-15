@@ -1,0 +1,297 @@
+﻿# =============================================================================
+# skills.yml
+# Technical and professional capabilities shown on /skills/
+#
+# level:
+#   core       = deep/current expertise
+#   experienced = substantial practical experience
+#   working    = working knowledge / supporting capability
+# =============================================================================
+
+
+- category: "Semiconductor Systems & Defectivity"
+  icon: "fa-solid fa-microchip"
+  description: >
+    Engineering experience in semiconductor systems combining physical
+    understanding, model-based analysis, experimental evidence and systematic
+    problem solving.
+
+  skills:
+    - name: "Semiconductor Systems Engineering"
+      level: "core"
+
+    - name: "Semiconductor Metrology"
+      level: "core"
+
+    - name: "Particle Transport & Contamination"
+      level: "core"
+
+    - name: "Defectivity Engineering"
+      level: "core"
+
+    - name: "Model-Based Metrology"
+      level: "core"
+
+    - name: "Overlay & Focus Drift Modelling"
+      level: "experienced"
+
+    - name: "Functional Design"
+      level: "core"
+
+    - name: "Model Verification & Validation"
+      level: "core"
+
+
+- category: "Experimental Diagnostics & Particle Measurement"
+  icon: "fa-solid fa-flask"
+  description: >
+    Development and application of experimental methods for quantitative
+    characterisation of particle transport, trajectories and particle-surface
+    interactions.
+
+  skills:
+    - name: "3D Particle Tracking Velocimetry (PTV)"
+      level: "core"
+
+    - name: "Optical Diagnostics"
+      level: "core"
+
+    - name: "Experimental Design"
+      level: "core"
+
+    - name: "Particle Trajectory Analysis"
+      level: "core"
+
+    - name: "Particle-Surface Interaction Analysis"
+      level: "core"
+
+    - name: "Camera & Measurement Calibration"
+      level: "experienced"
+
+    - name: "Experimental Validation"
+      level: "core"
+
+    - name: "Measurement Data Analysis"
+      level: "core"
+
+    - name: "LaVision DaVis"
+      level: "experienced"
+
+
+- category: "CFD, Fluid Dynamics & Thermal Engineering"
+  icon: "fa-solid fa-wind"
+  description: >
+    Industrial and research experience applying computational fluid dynamics
+    and heat-transfer modelling to automotive, energy and high-technology
+    engineering problems.
+
+  skills:
+    - name: "Computational Fluid Dynamics (CFD)"
+      level: "core"
+
+    - name: "Fluid Dynamics"
+      level: "core"
+
+    - name: "Heat Transfer"
+      level: "core"
+
+    - name: "Thermal Management"
+      level: "core"
+
+    - name: "Conjugate Heat Transfer"
+      level: "experienced"
+
+    - name: "Automotive Thermal Analysis"
+      level: "experienced"
+
+    - name: "HVAC & Cooling Systems"
+      level: "experienced"
+
+    - name: "Hydrodynamics"
+      level: "experienced"
+
+    - name: "Wave-Structure Interaction"
+      level: "experienced"
+
+    - name: "Porous-Media Transport"
+      level: "experienced"
+
+
+- category: "FEM, Multiphysics & Computational Mechanics"
+  icon: "fa-solid fa-cubes"
+  description: >
+    Analytical and numerical modelling of coupled physical systems using finite
+    element, continuum-mechanics and multiscale approaches.
+
+  skills:
+    - name: "Finite Element Method (FEM)"
+      level: "core"
+
+    - name: "Computational Mechanics"
+      level: "core"
+
+    - name: "Multiphysics Modelling"
+      level: "core"
+
+    - name: "Multiscale Modelling"
+      level: "core"
+
+    - name: "Continuum Mechanics"
+      level: "experienced"
+
+    - name: "Hygro-Mechanical Modelling"
+      level: "core"
+
+    - name: "Thermo-Mechanical Modelling"
+      level: "experienced"
+
+    - name: "Electro-Mechanical Modelling"
+      level: "experienced"
+
+    - name: "Numerical Methods"
+      level: "core"
+
+    - name: "Model Verification"
+      level: "core"
+
+
+- category: "Programming, Scientific Computing & Data"
+  icon: "fa-solid fa-code"
+  description: >
+    Scientific programming and data-analysis capabilities supporting physical
+    modelling, simulation, experimental analysis and engineering automation.
+
+  skills:
+    - name: "MATLAB"
+      level: "core"
+
+    - name: "Python"
+      level: "experienced"
+
+    - name: "NumPy"
+      level: "experienced"
+
+    - name: "SciPy"
+      level: "experienced"
+
+    - name: "Pandas"
+      level: "experienced"
+
+    - name: "Matplotlib"
+      level: "experienced"
+
+    - name: "Scientific Computing"
+      level: "core"
+
+    - name: "Engineering Data Analysis"
+      level: "core"
+
+    - name: "Scientific Visualisation"
+      level: "experienced"
+
+    - name: "Automation & Scripting"
+      level: "experienced"
+
+
+- category: "CAE & Engineering Software"
+  icon: "fa-solid fa-gears"
+  description: >
+    Practical experience with commercial and specialist engineering tools across
+    simulation, product development, experimental diagnostics and numerical
+    analysis.
+
+  skills:
+    - name: "STAR-CCM+"
+      level: "experienced"
+
+    - name: "ANSYS"
+      level: "experienced"
+
+    - name: "Abaqus"
+      level: "experienced"
+
+    - name: "COMSOL Multiphysics"
+      level: "experienced"
+
+    - name: "Siemens NX"
+      level: "experienced"
+
+    - name: "Siemens Teamcenter"
+      level: "experienced"
+
+    - name: "LaVision DaVis"
+      level: "experienced"
+
+    - name: "MATLAB"
+      level: "core"
+
+
+- category: "Software Development & Engineering Workflows"
+  icon: "fa-solid fa-code-branch"
+  description: >
+    Development practices supporting maintainable engineering models,
+    reproducible workflows, collaboration and automated delivery.
+
+  skills:
+    - name: "Git"
+      level: "experienced"
+
+    - name: "GitHub"
+      level: "experienced"
+
+    - name: "GitHub Actions"
+      level: "experienced"
+
+    - name: "Version Control"
+      level: "experienced"
+
+    - name: "CI/CD Fundamentals"
+      level: "working"
+
+    - name: "Jekyll"
+      level: "working"
+
+    - name: "YAML"
+      level: "experienced"
+
+    - name: "Technical Workflow Automation"
+      level: "experienced"
+
+
+- category: "Engineering Leadership & Collaboration"
+  icon: "fa-solid fa-people-group"
+  description: >
+    Experience working across multidisciplinary engineering environments,
+    translating complex technical problems into structured activities and
+    supporting engineers and students through mentoring and knowledge sharing.
+
+  skills:
+    - name: "Technical Leadership"
+      level: "experienced"
+
+    - name: "Cross-Functional Collaboration"
+      level: "core"
+
+    - name: "Technical Mentoring"
+      level: "experienced"
+
+    - name: "Student Supervision"
+      level: "experienced"
+
+    - name: "Knowledge Sharing & Workshops"
+      level: "experienced"
+
+    - name: "Scrum"
+      level: "experienced"
+
+    - name: "SAFe"
+      level: "experienced"
+
+    - name: "Agile Engineering"
+      level: "experienced"
+
+    - name: "Technical Communication"
+      level: "core"
+
+    - name: "Engineering Problem Solving"
+      level: "core"

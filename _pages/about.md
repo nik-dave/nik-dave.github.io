@@ -40,30 +40,6 @@ permalink: /about/
 {% endif %}
 
 
-{% if site.data.profile.education %}
-<div class="section-card">
-<h3>Education</h3>
-{% for edu in site.data.profile.education %}
-<div>
-<div class="experience-header">
-<div>
-<h4 style="margin: 0; margin-bottom: var(--space-1);">{{ edu.degree }} ｜ {{ edu.institution }}</h4>
-<p style="margin: 0; font-size: 0.9rem; color: var(--text-tertiary);">{{ edu.location }}</p>
-</div>
-<p class="experience-dates">{{ edu.dates }}</p>
-</div>
-<ul style="margin-top: var(--space-2); padding-left: 1.5rem;">
-{% for detail in edu.details %}
-<li style="margin-bottom: var(--space-1); font-size: 0.95rem;">{{ detail }}</li>
-{% endfor %}
-</ul>
-</div>
-{% unless forloop.last %}<hr style="border: none; border-top: 1px solid var(--border-color); margin: var(--space-4) 0;">{% endunless %}
-{% endfor %}
-</div>
-{% endif %}
-
-
 {% if site.data.profile.experience.professional_experience %}
 <div class="section-card">
 <h3>Professional Experience</h3>
@@ -88,9 +64,136 @@ permalink: /about/
 </div>
 {% endif %}
 
+
+{% if site.data.profile.education %}
+<div class="section-card">
+<h3>Education</h3>
+{% for edu in site.data.profile.education %}
+<div>
+<div class="experience-header">
+<div>
+<h4 style="margin: 0; margin-bottom: var(--space-1);">{{ edu.degree }} ｜ {{ edu.institution }}</h4>
+<p style="margin: 0; font-size: 0.9rem; color: var(--text-tertiary);">{{ edu.location }}</p>
+</div>
+<p class="experience-dates">{{ edu.dates }}</p>
+</div>
+<ul style="margin-top: var(--space-2); padding-left: 1.5rem;">
+{% for detail in edu.details %}
+<li style="margin-bottom: var(--space-1); font-size: 0.95rem;">{{ detail }}</li>
+{% endfor %}
+</ul>
+</div>
+{% unless forloop.last %}<hr style="border: none; border-top: 1px solid var(--border-color); margin: var(--space-4) 0;">{% endunless %}
+{% endfor %}
+</div>
+{% endif %}
+
+
+
+{% if site.data.profile.experience.teaching_experience and site.data.profile.experience.teaching_experience.size > 0 %}
+<div class="section-card">
+<h3>Leadership, Coaching & Mentoring</h3>
+
+{% for item in site.data.profile.experience.teaching_experience %}
+<div>
+
+<div class="experience-header">
+<div>
+<h4 style="margin: 0; margin-bottom: var(--space-1);">{{ item.position }}</h4>
+
+{% if item.institution %}
+<p style="margin: 0; margin-bottom: var(--space-1); color: var(--text-secondary);">
+{{ item.institution }}
+</p>
+{% endif %}
+
+{% if item.location %}
+<p style="margin: 0; font-size: 0.9rem; color: var(--text-tertiary);">
+{{ item.location }}
+</p>
+{% endif %}
+</div>
+
+{% if item.dates %}
+<p class="experience-dates">{{ item.dates }}</p>
+{% endif %}
+</div>
+
+{% if item.description %}
+<p style="margin-top: var(--space-2);">
+{{ item.description }}
+</p>
+{% endif %}
+
+{% if item.highlights and item.highlights.size > 0 %}
+<ul style="margin-top: var(--space-2); padding-left: 1.5rem;">
+{% for highlight in item.highlights %}
+<li style="margin-bottom: var(--space-1); font-size: 0.95rem;">
+{{ highlight }}
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+</div>
+
+{% unless forloop.last %}
+<hr style="border: none; border-top: 1px solid var(--border-color); margin: var(--space-4) 0;">
+{% endunless %}
+
+{% endfor %}
+</div>
+{% endif %}
+
+{% if site.data.profile.certifications and site.data.profile.certifications.size > 0 %}
+<div class="section-card">
+<h3>Certifications</h3>
+
+<div class="certification-list">
+
+{% for cert in site.data.profile.certifications %}
+<div class="certification-item">
+
+<div>
+<h4 style="margin: 0; margin-bottom: var(--space-1);">
+{{ cert.name }}
+</h4>
+
+{% if cert.issuer %}
+<p style="margin: 0; color: var(--text-secondary);">
+{{ cert.issuer }}
+</p>
+{% endif %}
+</div>
+
+{% if cert.year %}
+<span class="year-badge">{{ cert.year }}</span>
+{% endif %}
+
+{% if cert.credential_url and cert.credential_url != "" %}
+<p style="margin-top: var(--space-2);">
+{{ cert.credential_url }}
+View credential &rarr;
+</a>
+</p>
+{% endif %}
+
+</div>
+
+{% unless forloop.last %}
+<hr style="border: none; border-top: 1px solid var(--border-color); margin: var(--space-4) 0;">
+{% endunless %}
+
+{% endfor %}
+
+</div>
+</div>
+{% endif %}
+
+
 {% if site.data.profile.awards %}
 <div class="section-card">
-<h3>Awards</h3>
+<h3>Awards & Recognition</h3>
 <ul>
 {% for award in site.data.profile.awards %}
 <li>{{ award.name | replace: "-","&#8211;" }}</li>
@@ -99,3 +202,13 @@ permalink: /about/
 </div>
 {% endif %}
 
+<div class="section-card about-publications" markdown="0">
+<h3>Selected Publications</h3>
+<p class="section-intro">Selected publications from my work in computational mechanics, multiphysics modelling, transport phenomena and engineering research.</p>
+
+{% bibliography --max 6 %}
+
+<p class="about-publications-more">
+<a href="{{ '/publications/' | relative_url }}">View all publications &rarr;</a>
+</p>
+</div>

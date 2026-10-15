@@ -1,0 +1,226 @@
+/* ============================================================
+   Skills page
+   ============================================================ */
+
+.skills-intro {
+  max-width: 850px;
+  margin-bottom: var(--space-5);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* Top-level expertise summary */
+
+.skills-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: var(--space-6);
+}
+
+.skills-summary span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.65rem 1rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.skills-summary i {
+  color: var(--accent);
+}
+
+
+/* Category section */
+
+.skills-section {
+  margin-bottom: var(--space-5);
+}
+
+.skills-section-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+
+  margin-bottom: var(--space-4);
+}
+
+.skills-section-header h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.skills-section-header p {
+  margin: 0;
+
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+
+/* Category icon */
+
+.skills-category-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 10px;
+
+  background: var(--accent-soft);
+  color: var(--accent);
+
+  font-size: 1.1rem;
+}
+
+
+/* Skill grid */
+
+.skills-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+
+  gap: 0.75rem;
+}
+
+
+/* Individual skill */
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 0.75rem;
+
+  padding: 0.8rem 1rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+
+  background: var(--surface-secondary);
+}
+
+.skill-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+
+/* Capability labels */
+
+.skill-level {
+  flex-shrink: 0;
+
+  padding: 0.2rem 0.5rem;
+
+  border-radius: 999px;
+
+  font-size: 0.67rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.skill-level-core {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+.skill-level-experienced {
+  background: var(--surface-tertiary);
+  color: var(--text-secondary);
+}
+
+.skill-level-working {
+  background: transparent;
+  border: 1px solid var(--border-color);
+
+  color: var(--text-tertiary);
+}
+
+
+/* Closing section */
+
+.skills-closing p {
+  max-width: 900px;
+  line-height: 1.7;
+}
+
+.skills-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+
+  margin-top: var(--space-4);
+}
+
+
+/* Mobile */
+
+@media (max-width: 767.98px) {
+
+  .skills-section-header {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-category-icon {
+    margin-bottom: 0.25rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    align-items: flex-start;
+  }
+
+  .skills-actions {
+    flex-direction: column;
+  }
+
+  .skills-actions .home-btn {
+    text-align: center;
+  }
+}
+
+.skills-section {
+  margin-bottom: 1.25rem;
+}
+
+.skills-section-header {
+  margin-bottom: 1.25rem;
+}
+
+.skills-category-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+.skills-category-content p {
+  margin: 0;
+  max-width: 850px;
+}
+
+.skills-grid {
+  margin-top: 0.75rem;
+}

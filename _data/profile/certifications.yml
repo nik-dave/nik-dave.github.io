@@ -1,3 +1,14 @@
 # Certifications — CV only ("Certifications" section).
-- name: "ABC (ABC) Outstanding certification"
-  year: "2025"
+- name: "StarCCM+ Advanced certification"
+  issuer: "CD-adapco"
+  year: "2015"
+
+- name: "Professional Scrum Master"
+  issuer: "Organisation name"
+  year: "2024"
+  credential_url: ""
+
+- name: "SAFe Certification"
+  issuer: "Organisation name"
+  year: "2024"
+  credential_url: ""
