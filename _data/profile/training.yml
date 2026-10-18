@@ -3,33 +3,6 @@
 # Shown on the Skills page
 # =============================================================================
 
-
-# -----------------------------------------------------------------------------
-# Porous media, multiphase flow and multiscale modelling
-# -----------------------------------------------------------------------------
-
-- title: "Capillarity in Porous Media at Different Scales"
-  instructor: "Prof. Majid Hassanizadeh"
-  provider: "InterPore / Utrecht University"
-  date: "Jan. 2021"
-  category: "Porous Media & Multiphase Flow"
-  image: "training/interpore.png"
-
-- title: "Multiscale Modelling and Simulation"
-  instructor: "Prof. Hadi Hajibeygi"
-  provider: "InterPore / TU Delft"
-  date: "Dec. 2020"
-  category: "Porous Media & Multiphase Flow"
-  image: "training/interpore.png"
-
-- title: "Multiphase Flow in Permeable Media"
-  instructor: "Prof. Martin Blunt"
-  provider: "InterPore / Imperial College London"
-  date: "Dec. 2020"
-  category: "Porous Media & Multiphase Flow"
-  image: "training/interpore.png"
-
-
 # -----------------------------------------------------------------------------
 # Scientific computing and machine learning
 # -----------------------------------------------------------------------------
@@ -42,34 +15,41 @@
   category: "Scientific Computing & Machine Learning"
   image: "training/lxmls.png"
 
-
 # -----------------------------------------------------------------------------
-# Computational and experimental mechanics
+# MATLAB and numerical computing
 # -----------------------------------------------------------------------------
 
-- title: "Nonlinear Solid Mechanics"
+- title: "Python for PhDs with Jupyter"
   instructor: ""
-  provider: "Swansea University / University of Pavia"
-  location: "Italy"
-  date: "Jul. 2019"
-  category: "Computational & Experimental Mechanics"
-  image: "training/swansea-pavia.png"
+  provider: "TU Eindhoven"
+  location: "Eindhoven, Netherlands"
+  date: "Sep. 2019"
+  category: "Scientific Computing & Machine Learning"
+  image: "training/jupyter.png"
 
-- title: "Multiscale and Micromechanics"
+- title: "Python Fundamentals for Data Analysis with Anaconda"
   instructor: ""
-  provider: "Graduate School on Engineering Mechanics, TU/e"
-  location: "Eindhoven, The Netherlands"
-  date: "Nov. 2018"
-  category: "Computational & Experimental Mechanics"
-  image: "training/tue.png"
+  provider: "Anaconda/ TU Eindhoven"
+  location: "Eindhoven, Netherlands"
+  date: "Feb. 2019"
+  category: "Scientific Computing & Machine Learning"
+  image: "training/anaconda.png"
 
-- title: "Experimental Mechanics"
+- title: "Advanced MATLAB"
   instructor: ""
-  provider: "Graduate School on Engineering Mechanics, TU/e"
-  location: "Eindhoven, The Netherlands"
-  date: "Sep. 2018"
-  category: "Computational & Experimental Mechanics"
-  image: "training/tue.png"
+  provider: "MathWorks / Jaguar Land Rover"
+  location: "Gaydon, United Kingdom"
+  date: "Mar. 2013"
+  category: "Scientific Computing & Machine Learning"
+  image: "training/mathworks.png"
+
+- title: "MATLAB Basics"
+  instructor: ""
+  provider: "MathWorks / Jaguar Land Rover"
+  location: "Gaydon, United Kingdom"
+  date: "Jun. 2012"
+  category: "Scientific Computing & Machine Learning"
+  image: "training/mathworks.png"
 
 
 # -----------------------------------------------------------------------------
@@ -93,22 +73,59 @@
   image: "training/exa.png"
 
 
+
 # -----------------------------------------------------------------------------
-# MATLAB and numerical computing
+# Computational and experimental mechanics
 # -----------------------------------------------------------------------------
 
-- title: "Advanced MATLAB"
+- title: "Nonlinear Solid Mechanics"
   instructor: ""
-  provider: "MathWorks / Jaguar Land Rover"
-  location: "United Kingdom"
-  date: "Mar. 2013"
-  category: "Scientific Computing & Machine Learning"
-  image: "training/mathworks.png"
+  provider: "University of Pavia/ Swansea University"
+  location: "Pavia, Italy"
+  date: "Jul. 2019"
+  category: "Computational & Experimental Mechanics"
+  image: "training/swansea-pavia.png"
 
-- title: "MATLAB"
+- title: "Multiscale and Micromechanics"
   instructor: ""
-  provider: "MathWorks / Jaguar Land Rover"
-  location: "United Kingdom"
-  date: "Jun. 2012"
-  category: "Scientific Computing & Machine Learning"
-  image: "training/mathworks.png"
+  provider: "Graduate School on Engineering Mechanics, TU/e"
+  location: "Eindhoven, Netherlands"
+  date: "Nov. 2018"
+  category: "Computational & Experimental Mechanics"
+  image: "training/tue.png"
+
+- title: "Experimental Mechanics"
+  instructor: ""
+  provider: "Graduate School on Engineering Mechanics, TU/e"
+  location: "Eindhoven, Netherlands"
+  date: "Sep. 2018"
+  category: "Computational & Experimental Mechanics"
+  image: "training/em.png"
+
+
+
+
+  # -----------------------------------------------------------------------------
+# Porous media, multiphase flow and multiscale modelling
+# -----------------------------------------------------------------------------
+
+- title: "Capillarity in Porous Media at Different Scales"
+  instructor: "Prof. Majid Hassanizadeh"
+  provider: "InterPore / Utrecht University, Netherlands"
+  date: "Jan. 2021"
+  category: "Porous Media & Multiphase Flow"
+  image: "training/interpore-uu.png"
+
+- title: "Multiscale Modelling and Simulation"
+  instructor: "Prof. Hadi Hajibeygi"
+  provider: "InterPore / TU Delft, Netherlands"
+  date: "Dec. 2020"
+  category: "Porous Media & Multiphase Flow"
+  image: "training/interpore-tud.png"
+
+- title: "Multiphase Flow in Permeable Media"
+  instructor: "Prof. Martin Blunt"
+  provider: "InterPore / Imperial College London, United Kingdom"
+  date: "Dec. 2020"
+  category: "Porous Media & Multiphase Flow"
+  image: "training/interpore-icl.png"

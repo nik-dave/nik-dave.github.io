@@ -77,9 +77,25 @@ Multidisciplinary engineering expertise spanning semiconductor systems, experime
 {% endfor %}
 
 {% if site.data.profile.training and site.data.profile.training.size > 0 %}
-<div id="technical-training" class="section-card skills-training expertise-anchor-section" markdown="0">
-<h3>Advanced Technical Trainings</h3>
-<p class="training-intro">Specialist courses and advanced trainings undertaken alongside industrial and academic work, providing additional depth in porous-media transport, multiphase flow, computational mechanics, scientific computing, CFD and experimental methods.</p>
+<div id="technical-training"
+     class="section-card skills-training expertise-anchor-section"
+     markdown="0">
+
+<div class="skills-section-header">
+
+<div class="skills-category-icon">
+<i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+</div>
+
+<div class="skills-category-content">
+<h3>Advanced Technical Training</h3>
+
+<p>
+Specialist courses and advanced training undertaken alongside industrial and academic work, providing additional depth in porous-media transport, multiphase flow, computational mechanics, scientific computing, CAE and experimental methods.
+</p>
+</div>
+
+</div>
 
 <div class="training-list">
 {% assign training_groups = site.data.profile.training | group_by: "category" %}

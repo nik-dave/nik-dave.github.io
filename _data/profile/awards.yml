@@ -2,7 +2,7 @@
 
 - name: "WCCM & ECCOMAS Congress Scholarship"
   organisation: "World Congress on Computational Mechanics / ECCOMAS"
-  programme: "14th WCCM & ECCOMAS Congress"
+  programme: "14th WCCM & ECCOMAS Congress, Paris, France"
   dates: "2021"
   image: "awards/wccm-eccomas.png"
 
@@ -14,7 +14,7 @@
 
 - name: "Go Global Scholarship"
   organisation: "CIMNE, UPC Barcelona and Swansea University"
-  programme: "MSc Computational Mechanics, UPC Barcelona"
+  programme: "MSc Computational Mechanics, UPC Barcelona, Spain"
   dates: "2017–2018"
   image: "awards/cimne.png"
 
@@ -26,6 +26,6 @@
 
 - name: "Excellence Scholarship"
   organisation: "Swansea University"
-  programme: "MSc Computational Mechanics, Swansea"
+  programme: "MSc Computational Mechanics, Swansea, Wales, United Kingdom"
   dates: "2016–2017"
   image: "awards/swansea-university.jpg"
