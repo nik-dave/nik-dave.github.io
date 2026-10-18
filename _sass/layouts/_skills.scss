@@ -341,3 +341,127 @@
     grid-column: 2;
   }
 }
+
+/* ============================================================
+   Expertise page: anchor navigation and equal-weight skill tiles
+   Append this to _sass/layouts/_skills.scss
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.expertise-nav-label {
+  margin: var(--space-5) 0 var(--space-2);
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.expertise-anchor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: var(--space-6);
+}
+
+.expertise-anchor-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.expertise-anchor-nav a i {
+  color: var(--accent);
+}
+
+.expertise-anchor-nav a:hover,
+.expertise-anchor-nav a:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent-deep);
+  transform: translateY(-1px);
+}
+
+.expertise-anchor-section {
+  scroll-margin-top: 7rem;
+}
+
+.expertise-group-heading {
+  margin: var(--space-7) 0 var(--space-4);
+}
+
+.expertise-group-heading h3 {
+  margin-bottom: var(--space-2);
+}
+
+.expertise-group-heading p {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Remove old proficiency-badge spacing and let all expertise tiles carry
+   equal visual weight. */
+.skill-item {
+  min-height: 3.5rem;
+  justify-content: flex-start;
+}
+
+.skill-name {
+  width: 100%;
+}
+
+.expertise-evidence-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-color);
+}
+
+.expertise-evidence-links a {
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.expertise-evidence-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  .expertise-anchor-nav {
+    flex-direction: column;
+  }
+
+  .expertise-anchor-nav a {
+    width: 100%;
+  }
+
+  .expertise-anchor-section {
+    scroll-margin-top: 6rem;
+  }
+}
+
+.expertise-intro {
+  max-width: none;
+  width: 100%;
+  line-height: 1.7;
+}

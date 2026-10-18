@@ -73,7 +73,7 @@
 
 
 # -----------------------------------------------------------------------------
-# CAE and thermal simulation
+# CFD and thermal simulation
 # -----------------------------------------------------------------------------
 
 - title: "Advanced STAR-CCM+"
@@ -81,7 +81,7 @@
   provider: "CD-adapco / Jaguar Land Rover"
   location: "Gaydon, United Kingdom"
   date: "Nov. 2014"
-  category: "CAE & Thermal Simulation"
+  category: "CFD & Thermal Simulation"
   image: "training/star-ccm.png"
 
 - title: "PowerTHERM/FLOW"
@@ -89,7 +89,7 @@
   provider: "EXA Corporation / Jaguar Land Rover"
   location: "Gaydon, United Kingdom"
   date: "Nov. 2013"
-  category: "CAE & Thermal Simulation"
+  category: "CFD & Thermal Simulation"
   image: "training/exa.png"
 
 
