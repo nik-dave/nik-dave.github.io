@@ -1,0 +1,96 @@
+/* ============================================================
+   Certifications
+   ============================================================ */
+
+.certification-list {
+  margin-top: var(--space-4);
+}
+
+.certification-item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-4) 0;
+}
+
+.certification-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  height: 80px;
+}
+
+.certification-logo img {
+  display: block;
+
+  max-width: 112px;
+  max-height: 72px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.certification-content {
+  min-width: 0;
+}
+
+.certification-content h4 {
+  margin: 0 0 var(--space-1);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.certification-issuer,
+.certification-location {
+  margin: 0 0 var(--space-1);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.certification-link {
+  display: inline-block;
+  margin-top: var(--space-1);
+
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.certification-date {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.certification-divider {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: var(--space-2) 0;
+}
+
+@media (max-width: 767.98px) {
+
+  .certification-item {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .certification-logo {
+    width: 90px;
+    height: 65px;
+  }
+
+  .certification-logo img {
+    max-width: 84px;
+    max-height: 58px;
+  }
+
+  .certification-date {
+    grid-column: 2;
+  }
+}

@@ -224,3 +224,120 @@
 .skills-grid {
   margin-top: 0.75rem;
 }
+
+
+
+
+
+/* ============================================================
+   Selected technical training
+   ============================================================ */
+
+.skills-training {
+  margin-top: var(--space-5);
+}
+
+.training-intro {
+  max-width: 900px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.training-category {
+  margin-top: var(--space-5);
+}
+
+.training-category > h4 {
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+}
+
+.training-item {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) auto;
+  gap: var(--space-4);
+  align-items: center;
+
+  padding: var(--space-3) 0;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.training-item:last-child {
+  border-bottom: none;
+}
+
+.training-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 110px;
+  height: 70px;
+}
+
+.training-logo img {
+  display: block;
+
+  max-width: 105px;
+  max-height: 62px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.training-content {
+  min-width: 0;
+}
+
+.training-content h5 {
+  margin: 0 0 var(--space-1);
+
+  color: var(--text-primary);
+  font-size: 0.97rem;
+}
+
+.training-instructor,
+.training-provider,
+.training-location {
+  margin: 0 0 0.15rem;
+
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.training-instructor {
+  color: var(--text-primary);
+}
+
+.training-date {
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 767.98px) {
+
+  .training-item {
+    grid-template-columns: 75px minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .training-logo {
+    width: 75px;
+    height: 55px;
+  }
+
+  .training-logo img {
+    max-width: 70px;
+    max-height: 50px;
+  }
+
+  .training-date {
+    grid-column: 2;
+  }
+}

@@ -1,20 +1,25 @@
 ﻿# =============================================================================
-# skills.yml
-# Technical and professional capabilities shown on /skills/
+# Technical expertise
+# Shown on /expertise/
 #
 # level:
-#   core       = deep/current expertise
+#   core        = deep/current expertise
 #   experienced = substantial practical experience
-#   working    = working knowledge / supporting capability
+#   working     = supporting / working knowledge
 # =============================================================================
 
 
-- category: "Semiconductor Systems & Defectivity"
+# -----------------------------------------------------------------------------
+# CORE ENGINEERING EXPERTISE
+# -----------------------------------------------------------------------------
+
+- category: "Semiconductor Systems & Experimental Diagnostics"
+  group: "core"
   icon: "fa-solid fa-microchip"
   description: >
-    Engineering experience in semiconductor systems combining physical
-    understanding, model-based analysis, experimental evidence and systematic
-    problem solving.
+    Current engineering expertise spanning semiconductor systems, defectivity,
+    particle behaviour, model-based analysis and quantitative experimental
+    diagnostics.
 
   skills:
     - name: "Semiconductor Systems Engineering"
@@ -23,33 +28,12 @@
     - name: "Semiconductor Metrology"
       level: "core"
 
-    - name: "Particle Transport & Contamination"
-      level: "core"
-
     - name: "Defectivity Engineering"
       level: "core"
 
-    - name: "Model-Based Metrology"
+    - name: "Particle Transport & Contamination"
       level: "core"
 
-    - name: "Overlay & Focus Drift Modelling"
-      level: "experienced"
-
-    - name: "Functional Design"
-      level: "core"
-
-    - name: "Model Verification & Validation"
-      level: "core"
-
-
-- category: "Experimental Diagnostics & Particle Measurement"
-  icon: "fa-solid fa-flask"
-  description: >
-    Development and application of experimental methods for quantitative
-    characterisation of particle transport, trajectories and particle-surface
-    interactions.
-
-  skills:
     - name: "3D Particle Tracking Velocimetry (PTV)"
       level: "core"
 
@@ -62,28 +46,71 @@
     - name: "Particle Trajectory Analysis"
       level: "core"
 
-    - name: "Particle-Surface Interaction Analysis"
+    - name: "Particle-Surface Interaction"
       level: "core"
 
-    - name: "Camera & Measurement Calibration"
+    - name: "Model-Based Metrology"
+      level: "core"
+
+    - name: "Functional Design"
+      level: "core"
+
+    - name: "Verification & Validation"
+      level: "core"
+
+    - name: "Measurement & Camera Calibration"
       level: "experienced"
 
-    - name: "Experimental Validation"
+
+- category: "Computational Engineering & Multiphysics"
+  group: "core"
+  icon: "fa-solid fa-cubes"
+  description: >
+    Analytical and numerical modelling of complex physical systems using finite
+    element, multiscale and multiphysics approaches.
+
+  skills:
+    - name: "Finite Element Method (FEM)"
       level: "core"
 
-    - name: "Measurement Data Analysis"
+    - name: "Computational Mechanics"
       level: "core"
 
-    - name: "LaVision DaVis"
+    - name: "Multiphysics Modelling"
+      level: "core"
+
+    - name: "Multiscale Modelling"
+      level: "core"
+
+    - name: "Numerical Methods"
+      level: "core"
+
+    - name: "Model Verification"
+      level: "core"
+
+    - name: "Hygro-Mechanical Modelling"
+      level: "core"
+
+    - name: "Continuum Mechanics"
+      level: "experienced"
+
+    - name: "Thermo-Mechanical Modelling"
+      level: "experienced"
+
+    - name: "Electro-Mechanical Modelling"
+      level: "experienced"
+
+    - name: "Porous-Media Transport"
       level: "experienced"
 
 
-- category: "CFD, Fluid Dynamics & Thermal Engineering"
+- category: "Fluid Dynamics & Thermal Engineering"
+  group: "core"
   icon: "fa-solid fa-wind"
   description: >
-    Industrial and research experience applying computational fluid dynamics
-    and heat-transfer modelling to automotive, energy and high-technology
-    engineering problems.
+    Industrial and research experience in fluid dynamics, heat transfer,
+    thermal management and transport phenomena across automotive, energy and
+    high-technology applications.
 
   skills:
     - name: "Computational Fluid Dynamics (CFD)"
@@ -113,53 +140,18 @@
     - name: "Wave-Structure Interaction"
       level: "experienced"
 
-    - name: "Porous-Media Transport"
-      level: "experienced"
 
+# -----------------------------------------------------------------------------
+# ENABLING CAPABILITIES
+# -----------------------------------------------------------------------------
 
-- category: "FEM, Multiphysics & Computational Mechanics"
-  icon: "fa-solid fa-cubes"
-  description: >
-    Analytical and numerical modelling of coupled physical systems using finite
-    element, continuum-mechanics and multiscale approaches.
-
-  skills:
-    - name: "Finite Element Method (FEM)"
-      level: "core"
-
-    - name: "Computational Mechanics"
-      level: "core"
-
-    - name: "Multiphysics Modelling"
-      level: "core"
-
-    - name: "Multiscale Modelling"
-      level: "core"
-
-    - name: "Continuum Mechanics"
-      level: "experienced"
-
-    - name: "Hygro-Mechanical Modelling"
-      level: "core"
-
-    - name: "Thermo-Mechanical Modelling"
-      level: "experienced"
-
-    - name: "Electro-Mechanical Modelling"
-      level: "experienced"
-
-    - name: "Numerical Methods"
-      level: "core"
-
-    - name: "Model Verification"
-      level: "core"
-
-
-- category: "Programming, Scientific Computing & Data"
+- category: "Scientific Computing & Data"
+  group: "enabling"
   icon: "fa-solid fa-code"
   description: >
-    Scientific programming and data-analysis capabilities supporting physical
-    modelling, simulation, experimental analysis and engineering automation.
+    Scientific programming, numerical analysis and data-processing capabilities
+    supporting modelling, simulation, experimentation and engineering
+    decision-making.
 
   skills:
     - name: "MATLAB"
@@ -180,10 +172,10 @@
     - name: "Matplotlib"
       level: "experienced"
 
-    - name: "Scientific Computing"
+    - name: "Engineering Data Analysis"
       level: "core"
 
-    - name: "Engineering Data Analysis"
+    - name: "Scientific Computing"
       level: "core"
 
     - name: "Scientific Visualisation"
@@ -193,12 +185,12 @@
       level: "experienced"
 
 
-- category: "CAE & Engineering Software"
+- category: "Engineering & Development Tools"
+  group: "enabling"
   icon: "fa-solid fa-gears"
   description: >
-    Practical experience with commercial and specialist engineering tools across
-    simulation, product development, experimental diagnostics and numerical
-    analysis.
+    Engineering software and development tools used across simulation,
+    diagnostics, product development and collaborative engineering workflows.
 
   skills:
     - name: "STAR-CCM+"
@@ -222,17 +214,6 @@
     - name: "LaVision DaVis"
       level: "experienced"
 
-    - name: "MATLAB"
-      level: "core"
-
-
-- category: "Software Development & Engineering Workflows"
-  icon: "fa-solid fa-code-branch"
-  description: >
-    Development practices supporting maintainable engineering models,
-    reproducible workflows, collaboration and automated delivery.
-
-  skills:
     - name: "Git"
       level: "experienced"
 
@@ -248,22 +229,13 @@
     - name: "CI/CD Fundamentals"
       level: "working"
 
-    - name: "Jekyll"
-      level: "working"
 
-    - name: "YAML"
-      level: "experienced"
-
-    - name: "Technical Workflow Automation"
-      level: "experienced"
-
-
-- category: "Engineering Leadership & Collaboration"
+- category: "Leadership & Ways of Working"
+  group: "enabling"
   icon: "fa-solid fa-people-group"
   description: >
-    Experience working across multidisciplinary engineering environments,
-    translating complex technical problems into structured activities and
-    supporting engineers and students through mentoring and knowledge sharing.
+    Technical leadership and collaborative working practices developed across
+    multidisciplinary industrial and academic engineering environments.
 
   skills:
     - name: "Technical Leadership"

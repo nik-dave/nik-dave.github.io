@@ -12,17 +12,17 @@
   dates: "2018–2022"
   image: "awards/eu-funded.jpg"
 
+- name: "Go Global Scholarship"
+  organisation: "CIMNE, UPC Barcelona and Swansea University"
+  programme: "MSc Computational Mechanics, UPC Barcelona"
+  dates: "2017–2018"
+  image: "awards/cimne.png"
+
 - name: "Erasmus Mundus Fully Funded Masters Scholarship"
   organisation: "European Commission"
   programme: "European Joint Masters · MSc · Computational Mechanics"
   dates: "2016–2018"
   image: "awards/eu-funded.jpg"
-
-- name: "Go Global Scholarship"
-  organisation: "Swansea University and CIMNE, UPC Barcelona"
-  programme: "MSc Computational Mechanics, UPC Barcelona"
-  dates: "2017–2018"
-  image: "awards/cimne.png"
 
 - name: "Excellence Scholarship"
   organisation: "Swansea University"

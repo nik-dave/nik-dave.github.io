@@ -147,45 +147,30 @@ permalink: /about/
 
 {% if site.data.profile.certifications and site.data.profile.certifications.size > 0 %}
 <div class="section-card">
-<h3>Certifications</h3>
+<h3>Professional Certifications</h3>
 
-<div class="certification-list">
-
+<div class="certification-list" markdown="0">
 {% for cert in site.data.profile.certifications %}
 <div class="certification-item">
-
-<div>
-<h4 style="margin: 0; margin-bottom: var(--space-1);">
-{{ cert.name }}
-</h4>
-
-{% if cert.issuer %}
-<p style="margin: 0; color: var(--text-secondary);">
-{{ cert.issuer }}
-</p>
-{% endif %}
+{% if cert.image and cert.image != "" %}
+<div class="certification-logo">
+<img src="{{ '/images/' | append: cert.image | relative_url }}" alt="{{ cert.issuer }} logo" loading="lazy">
 </div>
-
-{% if cert.year %}
-<span class="year-badge">{{ cert.year }}</span>
 {% endif %}
 
+<div class="certification-content">
+<h4>{{ cert.name }}</h4>
+{% if cert.issuer and cert.issuer != "" %}<p class="certification-issuer">{{ cert.issuer }}</p>{% endif %}
+{% if cert.location and cert.location != "" %}<p class="certification-location">{{ cert.location }}</p>{% endif %}
 {% if cert.credential_url and cert.credential_url != "" %}
-<p style="margin-top: var(--space-2);">
-{{ cert.credential_url }}
-View credential &rarr;
-</a>
-</p>
+<a href="{{ cert.credential_url }}" class="certification-link" target="_blank" rel="noopener noreferrer">View credential &rarr;</a>
 {% endif %}
-
 </div>
 
-{% unless forloop.last %}
-<hr style="border: none; border-top: 1px solid var(--border-color); margin: var(--space-4) 0;">
-{% endunless %}
-
+{% if cert.date and cert.date != "" %}<div class="certification-date">{{ cert.date }}</div>{% endif %}
+</div>
+{% unless forloop.last %}<hr class="certification-divider">{% endunless %}
 {% endfor %}
-
 </div>
 </div>
 {% endif %}
@@ -237,11 +222,11 @@ View credential &rarr;
 
 <ul>
 <li>
-<strong>2024</strong> — Through-thickness liquid penetration inducing hydro-expansion of thin porous-fibrous sheets: pore transport, fibre mass exchange and moisture-induced deformations. <em>Manuscript submitted for publication.</em>
+<strong>2025</strong> — Through-thickness liquid penetration inducing hydro-expansion of thin porous-fibrous sheets: pore transport, fibre mass exchange and moisture-induced deformations. <em>Manuscript submitted for publication.</em>
 </li>
 
 <li>
-<strong>2024</strong> — On the prediction of the hygro-expansivity of paper based on fibre constitutive properties: an experimental-numerical multi-scale analysis. <em>Manuscript submitted for publication.</em>
+<strong>2025</strong> — On the prediction of the hygro-expansivity of paper based on fibre constitutive properties: an experimental-numerical multi-scale analysis. <em>Mechanics of Materials</em>, Elsevier.
 </li>
 
 <li>
