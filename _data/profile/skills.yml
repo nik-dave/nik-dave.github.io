@@ -78,13 +78,13 @@
     Engineering software and development tools used across simulation, diagnostics, product development and collaborative engineering workflows.
   skills:
     - name: "STAR-CCM+"
-    - name: "ANSYS"
-    - name: "Abaqus"
     - name: "COMSOL Multiphysics"
-    - name: PowerTHERM & PowerFLOW
+    - name: "LaVision DaVis"
+    - name: "PowerTHERM & PowerFLOW"
     - name: "Siemens NX"
     - name: "Siemens Teamcenter"
-    - name: "LaVision DaVis"
+    - name: "ANSYS"
+    - name: "Abaqus"
     - name: "ParaView"
     - name: "Git for Version Control"
     - name: "GitHub, GitLab & Bitbucket"
