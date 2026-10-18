@@ -4,7 +4,7 @@ professional_experience:
 
   - position: "Mechanical Engineer/ Scrum Master"
     company: "ASML (via Bright Society)"
-    location: "Veldhoven, The Netherlands"
+    location: "Veldhoven, Netherlands"
     dates: "Jan. 2025 – Present"
     highlights:
       - "Working within ASML Defectivity Group, supporting defectivity solutions for semiconductor manufacturing systems."
@@ -16,7 +16,7 @@ professional_experience:
 
   - position: "Functional Design Engineer"
     company: "ASML (via Bright Society)"
-    location: "Veldhoven, The Netherlands"
+    location: "Veldhoven, Netherlands"
     dates: "Jan. 2023 – Dec 2024"
     highlights:
       - "Working within ASML DUV metrology development, supporting overlay and focus drift-control solutions for semiconductor manufacturing systems."
@@ -27,7 +27,7 @@ professional_experience:
 
   - position: "Scientific Researcher (Doctoral Researcher)"
     company: "Eindhoven University of Technology (TU/e), Université libre de Bruxelles (ULB) & Canon Production Printing"
-    location: "Eindhoven / Venlo, The Netherlands & Brussels, Belgium"
+    location: "Eindhoven / Venlo, Netherlands & Brussels, Belgium"
     dates: "Sep. 2018 – Dec. 2022"
     highlights:
       - "Conducted doctoral research on multiscale modelling of liquid transport and dimensional stability in paper-based materials within an academic-industrial research collaboration."
@@ -38,7 +38,7 @@ professional_experience:
 
   - position: "Computational Engineer (Research Internship)"
     company: "ASTUTE, Swansea University"
-    location: "Swansea, United Kingdom"
+    location: "Swansea, Wales, United Kingdom"
     dates: "Mar. 2017 – Aug. 2017"
     highlights:
       - "Investigated hydrodynamic behaviour of floating devices and wave-energy systems."
@@ -70,7 +70,7 @@ teaching_experience:
 
   - position: "Mentor & Knowledge-Sharing Lead"
     institution: "ASML"
-    location: "Veldhoven, The Netherlands"
+    location: "Veldhoven, Netherlands"
     dates: "2022 – Present"
     description: "Supporting onboarding, coaching and technical knowledge transfer within engineering teams."
     highlights:
@@ -80,7 +80,7 @@ teaching_experience:
       
   - position: "Teaching Assistant & Student Supervisor"
     institution: "Eindhoven University of Technology (TU/e)"
-    location: "Eindhoven, The Netherlands"
+    location: "Eindhoven, Netherlands"
     dates: "2018 – 2022"
     description: "Supported teaching activities and supervised bachelor and master student projects during doctoral research."
     highlights:

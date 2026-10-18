@@ -380,6 +380,7 @@ html {
   font-weight: 600;
   line-height: 1.25;
   text-decoration: none;
+  cursor: pointer;
   transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
 }
 
@@ -464,4 +465,39 @@ html {
   max-width: none;
   width: 100%;
   line-height: 1.7;
+}
+
+.expertise-nav-intro {
+  margin: var(--space-5) 0 var(--space-3);
+}
+
+.expertise-nav-label {
+  margin: 0 0 0.25rem;
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.expertise-nav-hint {
+  margin: 0;
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.expertise-anchor-arrow {
+  margin-left: 0.4rem;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  transition:
+    transform var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.expertise-anchor-nav a:hover .expertise-anchor-arrow,
+.expertise-anchor-nav a:focus-visible .expertise-anchor-arrow {
+  color: var(--accent);
+  transform: translateY(3px);
 }

@@ -53,7 +53,7 @@
     - name: "Automotive Thermal Management"
     - name: "Conjugate Heat Transfer"
     - name: "HVAC & Cooling Systems"
-    - name: "Hydrodynamics in WECs"
+    - name: "Wave-Energy Hydrodynamics"
     - name: "Wave-Structure Interaction"
 
 - category: "Scientific Computing & Data"
@@ -67,8 +67,7 @@
     - name: "Python"
     - name: "MATLAB"
     - name: "Automation & Scripting"
-    - name: "Engineering Data Analysis"
-    - name: "Scientific Visualisation"
+    - name: "Data Analysis & Visualisation"
 
 
 - category: "Engineering Software & Digital Workflows"
@@ -82,13 +81,14 @@
     - name: "ANSYS"
     - name: "Abaqus"
     - name: "COMSOL Multiphysics"
+    - name: PowerTHERM & PowerFLOW
     - name: "Siemens NX"
     - name: "Siemens Teamcenter"
     - name: "LaVision DaVis"
     - name: "ParaView"
     - name: "Git for Version Control"
-    - name: "GitHub/ GitLab/ Bitbucket"
-    - name: "Actions for CI/CD"
+    - name: "GitHub, GitLab & Bitbucket"
+    - name: "CI/CD Pipelines"
 
 - category: "Leadership & Ways of Working"
   group: "enabling"
@@ -99,9 +99,9 @@
     multidisciplinary industrial and academic engineering environments.
   skills:
     - name: "Technical Leadership"
-    - name: "Requirement Engineering"
+    - name: "Requirements Engineering"
     - name: "Cross-Functional Collaboration"
     - name: "Technical Mentoring & Student Supervision"
     - name: "Knowledge Sharing & Workshops"
-    - name: "Agile/ Scrum/ SAFe"
+    - name: "Agile / Scrum / SAFe"
     - name: "Technical Communication"

@@ -11,17 +11,55 @@ permalink: /expertise/
 Multidisciplinary engineering expertise spanning semiconductor systems, experimental diagnostics and computational engineering, built through more than a decade of industrial R&amp;D and scientific research. My work combines physical understanding, modelling, simulation and experimental evidence to solve complex engineering problems and translate technical insight into practical solutions.
 </p>
 
-<p class="expertise-nav-label">Explore my expertise</p>
+<div class="expertise-nav-intro" markdown="0">
+<p class="expertise-nav-label">Explore an expertise area</p>
+<p class="expertise-nav-hint"><em>Select an area below to jump to the corresponding section.</em></p>
+</div>
 
 <div class="skills-summary expertise-anchor-nav" markdown="0">
-<a href="#semiconductor-diagnostics"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Semiconductor Systems &amp; Experimental Diagnostics</a>
-<a href="#computational-multiphysics"><i class="fa-solid fa-cubes" aria-hidden="true"></i> Computational Engineering &amp; Multiphysics</a>
-<a href="#fluid-thermal"><i class="fa-solid fa-wind" aria-hidden="true"></i> Fluid Dynamics &amp; Thermal Engineering</a>
-<a href="#scientific-computing"><i class="fa-solid fa-code" aria-hidden="true"></i> Scientific Computing &amp; Data</a>
-<a href="#engineering-tools"><i class="fa-solid fa-gears" aria-hidden="true"></i> Engineering &amp; Development Tools</a>
-<a href="#leadership-working"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Leadership &amp; Ways of Working</a>
-<a href="#technical-training"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Advanced Technical Training</a>
+<a href="#semiconductor-diagnostics" class="expertise-anchor-link">
+<i class="fa-solid fa-microchip" aria-hidden="true"></i>
+<span>Semiconductor Systems &amp; Experimental Diagnostics</span>
+<i class="fa-solid fa-arrow-down expertise-anchor-arrow" aria-hidden="true"></i>
+</a>
+
+<a href="#computational-multiphysics" class="expertise-anchor-link">
+<i class="fa-solid fa-cubes" aria-hidden="true"></i>
+<span>Computational Engineering &amp; Multiphysics</span>
+<i class="fa-solid fa-arrow-down expertise-anchor-arrow" aria-hidden="true"></i>
+</a>
+
+<a href="#fluid-thermal" class="expertise-anchor-link">
+<i class="fa-solid fa-wind" aria-hidden="true"></i>
+<span>Fluid Dynamics &amp; Thermal Engineering</span>
+<i class="fa-solid fa-arrow-down expertise-anchor-arrow" aria-hidden="true"></i>
+</a>
+
+<a href="#scientific-computing" class="expertise-anchor-link">
+<i class="fa-solid fa-code" aria-hidden="true"></i>
+<span>Scientific Computing &amp; Data</span>
+<i class="fa-solid fa-arrow-down expertise-anchor-arrow" aria-hidden="true"></i>
+</a>
+
+<a href="#engineering-tools" class="expertise-anchor-link">
+<i class="fa-solid fa-gears" aria-hidden="true"></i>
+<span>Engineering Software &amp; Digital Workflows</span>
+<i class="fa-solid fa-arrow-down expertise-anchor-arrow" aria-hidden="true"></i>
+</a>
+
+<a href="#leadership-working" class="expertise-anchor-link">
+<i class="fa-solid fa-people-group" aria-hidden="true"></i>
+<span>Leadership &amp; Ways of Working</span>
+<i class="fa-solid fa-arrow-down expertise-anchor-arrow" aria-hidden="true"></i>
+</a>
+
+<a href="#technical-training" class="expertise-anchor-link">
+<i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+<span>Advanced Technical Training</span>
+<i class="fa-solid fa-arrow-down expertise-anchor-arrow" aria-hidden="true"></i>
+</a>
 </div>
+
 
 <div class="expertise-group-heading">
 <h3>Core Engineering Expertise</h3>
