@@ -37,7 +37,7 @@ links:
 # --accent rung there.
 accent_color: "#1565C0" #"#2196F3"
 dark_mode: true              # show dark mode toggle in navbar
-description: "Senior Engineer and PhD specialising in semiconductor systems, particle transport, defectivity engineering, experimental diagnostics, CFD and computational modelling."
+description: "Senior Engineer and PhD specialising in semiconductor systems, particle transport, defectivity engineering, experimental diagnostics, FEM, CFD and computational modelling."
 baseurl: ""
 url: "https://nik-dave.github.io"
 

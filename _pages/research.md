@@ -59,7 +59,7 @@ permalink: /research/
 </div>
 </div>
 
-{% assign sorted_research = site.data.web.research | sort: "end_date" | reverse %}
+{% assign sorted_research = site.data.web.research | sort: "start_date" | reverse %}
 <div class="research-list" id="researchList">
 {% for item in sorted_research %}
 {% assign kw_joined = item.keywords | join: "|" %}

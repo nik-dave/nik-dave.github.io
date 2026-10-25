@@ -7,7 +7,7 @@ permalink: /projects/
 
 ## Projects
 
-Software I have designed and built outside of my academic research.
+Selected engineering platforms, computational models, analysis tools and reusable workflows developed across industrial and academic work.
 
 <input type="text" class="pub-search" id="projectSearch" placeholder="Search by name, technology, or keyword...">
 

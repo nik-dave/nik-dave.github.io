@@ -49,7 +49,7 @@ My interests include particle contamination control, defectivity, multiphase flo
 
 ### Recent Research
 
-{% assign sorted_research = site.data.web.research | sort: "end_date" | reverse %}
+{% assign sorted_research = site.data.web.research | sort: "start_date" | reverse %}
 <div class="home-projects-grid" markdown="0">
 {% for item in sorted_research limit:4 %}
 {% assign card_id = item.title | slugify %}
