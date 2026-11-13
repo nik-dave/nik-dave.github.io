@@ -336,7 +336,7 @@
 # -----------------------------------------------------------------------------
 
 - title: "PowerFLOW and PowerTHERM Vehicle Thermal Models"
-  image: "projects/powerflow_powertherm.png"
+  image: "projects/Exhaust_heating.png"
   start_date: "2011-07"
   end_date: "2015-01"
   role: "CFD & Thermal Engineer — model development, thermal analysis and validation"

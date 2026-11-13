@@ -25,12 +25,10 @@ pi:
   education:
     - "2022 - Ph.D. Mechanical Engineering, TU Eindhoven & ULB Brussels"
     - "2018 - M.Sc. Computational Mechanics, Swansea University & UPC Barcelona"
-    - "2011 - B.Eng. Mechanical Engineering"
 
   educationshort:
     - "Ph.D. Mechanical Engineering"
     - "M.Sc. Computational Mechanics"
-    - "B.Eng. Mechanical Engineering"
 
 
 # -----------------------------------------------------------------------------
@@ -52,20 +50,7 @@ pi:
 #     website: https://janesmith.mit.edu
 #     email: jsmith@mit.edu
 collaborators:
-  - name: "Andrei Yakunin"
-    last_name: "Yakunin"
-    show_collaborator: false
-    affiliation: "ASML"
 
-  - name: "Vladimir Kvon"
-    last_name: "Kvon"
-    show_collaborator: false
-    affiliation: "ASML"
-
-  - name: "Gijs Peters"
-    last_name: "Peters"
-    show_collaborator: false
-    affiliation: "ASML"
 
 # -----------------------------------------------------------------------------
 # Students (current and incoming members)

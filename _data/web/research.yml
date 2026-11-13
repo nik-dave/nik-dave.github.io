@@ -213,7 +213,7 @@
 # -----------------------------------------------------------------------------
 
 - title: "Finite-Deformation Electromechanical Modelling of Piezoelectric Transduction"
-  image: "research/2025_PTV_DUV.png"
+  image: "research/Flexoelectricity.png"
   focus: [3, 5]
   start_date: "2017-09"
   end_date: "2018-08"
@@ -248,7 +248,7 @@
 # -----------------------------------------------------------------------------
 
 - title: "Hydrodynamic Modelling and Open-Source Simulation of Wave-Energy Converters"
-  image: "research/2025_PTV_DUV.png"
+  image: "research/hydrodynamic_workflow.png"
   focus: [4, 5]
   start_date: "2017-03"
   end_date: "2017-08"
@@ -284,7 +284,7 @@
 # -----------------------------------------------------------------------------
 
 - title: "Underhood Thermal Management and Heat Protection"
-  image: "research/2025_PTV_DUV.png"
+  image: "research/2011_underfloor.png"
   focus: [4, 5]
   start_date: "2011-07"
   end_date: "2015-01"
@@ -315,7 +315,7 @@
     supplementary: ""
 
 - title: "Electronic Cooling, Heat Exchangers and HVAC Simulation"
-  image: "research/2025_PTV_DUV.png"
+  image: "research/2015_Electronics_cooling.png"
   focus: [4, 5]
   start_date: "2015-01"
   end_date: "2016-08"
@@ -345,7 +345,7 @@
     supplementary: ""
 
 - title: "Computational Workflow Optimisation for Vehicle CAE"
-  image: "research/2025_PTV_DUV.png"
+  image: "research/2013_workflow_improvement.png"
   focus: [4, 5]
   start_date: "2011-07"
   end_date: "2016-08"
@@ -376,7 +376,7 @@
     supplementary: ""
 
 - title: "Wiper Aerodynamics and Vehicle-System Analysis"
-  image: "research/2025_PTV_DUV.png"
+  image: "research/wiper.png"
   focus: [4, 5]
   start_date: "2015-01"
   end_date: "2016-08"

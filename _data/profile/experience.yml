@@ -40,7 +40,7 @@ professional_experience:
 
   - position: "Senior CFD Engineer"
     company: "Mercedes-Benz R&D (Daimler AG)"
-    location: "Bangalore, India & Sindelfingen, Germany"
+    location: "Sindelfingen, Germany"
     dates: "Jan. 2015 – Aug. 2016"
     highlights:
       - "Thermal management and digital-prototyping analysis for automotive systems."
@@ -49,7 +49,7 @@ professional_experience:
 
   - position: "CFD & Thermal Engineer"
     company: "Jaguar Land Rover"
-    location: "Gaydon, England, United Kingdom & Bangalore, India"
+    location: "Gaydon, England, United Kingdom"
     dates: "Jul. 2011 – Jan. 2015"
     highlights:
       - "Underhood thermal and CFD analysis for vehicle-development programmes."
