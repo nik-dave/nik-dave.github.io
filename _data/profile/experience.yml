@@ -48,7 +48,7 @@ professional_experience:
       - "Multidisciplinary engineering using STAR-CCM+, Siemens NX and MATLAB to support design development and simulation efficiency."
 
   - position: "CFD & Thermal Engineer"
-    company: "Jaguar Land Rover"
+    company: "Jaguar Land Rover D&E"
     location: "Gaydon, England, United Kingdom"
     dates: "Jul. 2011 – Jan. 2015"
     highlights:
@@ -63,7 +63,7 @@ teaching_experience:
   - position: "Mentor & Knowledge-Sharing Lead"
     institution: "ASML"
     location: "Veldhoven, The Netherlands"
-    dates: "2022 – Present"
+    dates: "2023 – Present"
     description: "Supporting technical mentoring, onboarding, knowledge transfer and continuous improvement within engineering teams."
     highlights:
       - "Mentoring engineers and interns in engineering-development workflows and practices."

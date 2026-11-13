@@ -7,7 +7,7 @@ department: ""
 college: ""
 institution: "ASML"
 institution_location: "Veldhoven, The Netherlands"
-email: Nik.Dave@asml.com
+email: nikdave.work@gmail.com
 phone: ""  # shown on About/Team PI cards and the generated CV header; leave blank to omit
 office: ""  # shown on About/Team PI cards and the generated CV header
 office_city: ""  # appended to office on the CV header only; if office and office_city are both blank the CV falls back to institution_location

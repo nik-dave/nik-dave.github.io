@@ -5,7 +5,9 @@ sitemap: false
 permalink: /research/
 ---
 
-## Research
+## Research & Engineering
+
+Selected research and engineering investigations spanning semiconductor systems, experimental diagnostics, computational mechanics, multiphysics, fluid dynamics and thermal engineering.
 
 <input type="text" class="pub-search" id="researchSearch" placeholder="Search by title or keyword...">
 

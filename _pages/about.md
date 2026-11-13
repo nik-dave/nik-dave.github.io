@@ -216,7 +216,7 @@ permalink: /about/
 
 <div class="section-card">
 
-<h3>Publications & Conference Presentations</h3>
+<h3>Selected Publications & Presentations</h3>
 
 <h4>Publications</h4>
 

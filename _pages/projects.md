@@ -54,7 +54,7 @@ Selected engineering platforms, computational models, analysis tools and reusabl
 </div>
 </div>
 
-{% assign sorted_projects = site.data.web.projects | sort: "end_date" | reverse %}
+{% assign sorted_projects = site.data.web.projects | sort: "start_date" | reverse %}
 <div class="research-list" id="projectList">
 {% for item in sorted_projects %}
 {% assign stack_joined = item.stack | join: "|" %}

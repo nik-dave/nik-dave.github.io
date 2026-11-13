@@ -27,15 +27,9 @@ permalink: /
   </a>
 </div>
 
-### About me
+### Professional Overview
 
-I am a Senior Engineer with expertise in semiconductor systems, particle transport, defectivity, experimental methods and computational modelling.
-
-My background combines a PhD in Mechanical Engineering with more than nine years of industrial experience. My work spans numerical simulation, CFD, FEM, particle behaviour, experimental validation and data-driven engineering solutions.
-
-I currently work in the high-tech semiconductor industry, focusing on challenging engineering problems where modelling, experimentation and practical implementation need to come together.
-
-My interests include particle contamination control, defectivity, multiphase flow, experimental diagnostics, numerical methods and engineering innovation.
+Senior Engineer and mechanical engineer by training, working at the intersection of physical systems, computational modelling and experimental diagnostics. My career spans automotive R&D, computational mechanics, industrial research and semiconductor technology, with a focus on turning complex physical problems into practical engineering solutions.
 
 <div class="chip-container" markdown="0">
 <a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Semiconductor metrology</a>
@@ -47,7 +41,7 @@ My interests include particle contamination control, defectivity, multiphase flo
 <a href="{{ site.url }}{{ site.baseurl }}/research" class="chip">Numerical modelling</a>
 </div>
 
-### Recent Research
+### Selected Research & Engineering
 
 {% assign sorted_research = site.data.web.research | sort: "start_date" | reverse %}
 <div class="home-projects-grid" markdown="0">
@@ -66,9 +60,9 @@ My interests include particle contamination control, defectivity, multiphase flo
 </div>
 
 {% if site.data.web.projects and site.data.web.projects.size > 0 %}
-### Software I've Built
+### Selected Engineering Projects
 
-{% assign sorted_projects = site.data.web.projects | sort: "end_date" | reverse %}
+{% assign sorted_projects = site.data.web.projects | sort: "start_date" | reverse %}
 <div class="home-software-list" markdown="0">
 {% for item in sorted_projects limit:2 %}
 {% assign card_id = item.title | slugify %}

@@ -18,7 +18,7 @@
 - title: "Atmospheric Particle Transport Diagnostic Platform"
   image: "projects/particle_transport_diagnostics.png"
   start_date: "2025-01"
-  end_date: "2026-12"
+  #end_date: "2026-12"
   role: "Research Engineer — experimental design, diagnostics and technical analysis"
   status: "Ongoing"
   stack:
@@ -47,7 +47,7 @@
 - title: "Particle Trajectory Analysis and Visualisation Tool"
   image: "projects/particle_trajectory_analysis.png"
   start_date: "2025-01"
-  end_date: "2026-12"
+  #end_date: "2026-12"
   role: "Developer and Analyst — trajectory processing, classification and visualisation"
   status: "Ongoing"
   stack:
