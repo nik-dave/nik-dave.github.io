@@ -1,0 +1,538 @@
+# =============================================================================
+# technical_work.yml
+# Single source of truth for the combined Research & Engineering portfolio.
+#
+# Page purpose:
+#   Show the engineering problem investigated AND the tangible contribution or
+#   deliverable produced, without duplicating Research and Projects pages.
+#
+# Focus areas:
+#   1 = Semiconductor Systems, Metrology & Defectivity
+#   2 = Particle Transport, Contamination & Experimental Diagnostics
+#   3 = Multiphysics & Multiscale Modelling of Materials
+#   4 = Computational Fluid Dynamics (CFD) & Thermal Management
+#   5 = Numerical Methods, FEM & Computational Engineering
+#
+# Conventions:
+#   - Items are intended to be sorted by start_date, newest first.
+#   - Ongoing work omits end_date and uses status: "Ongoing".
+#   - Images are relative to /images/.
+#   - Keep employer-related descriptions public-safe and high-level.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# SEMICONDUCTOR SYSTEMS & EXPERIMENTAL DIAGNOSTICS — ASML
+# -----------------------------------------------------------------------------
+
+- title: "Particle Transport and Surface Interaction Diagnostics"
+  image: "research/2025_PTV_surface.png"
+  focus: [1, 2]
+  start_date: "2025-01"
+  status: "Ongoing"
+  context: "Semiconductor defectivity and experimental diagnostics"
+  role: "Mechanical Engineer / Research Engineer — experimental development, analysis and technical coordination"
+  summary: >
+    Experimental investigation of micron-scale particle transport and
+    particle-surface interaction under atmospheric conditions. The work
+    characterises incident and reflected particle motion, including velocity
+    and angular distributions, to improve understanding of particle behaviour
+    and contamination mechanisms in semiconductor engineering applications.
+  contributions:
+    - "Developed and integrated an atmospheric particle-transport diagnostic platform for repeatable experimental investigations."
+    - "Defined experimental methods for controlled particle introduction, surface interaction and optical measurement."
+    - "Developed analysis approaches for incident-versus-reflected particle trajectories, velocity distributions and impact/reflection angles."
+  deliverables:
+    - "Atmospheric particle-transport diagnostic platform"
+    - "Particle-surface interaction measurement methodology"
+    - "Trajectory-analysis and statistical-evaluation capability"
+  methods:
+    - "Particle Transport"
+    - "Particle-Surface Interaction"
+    - "Experimental Diagnostics"
+    - "Trajectory Analysis"
+    - "Statistical Analysis"
+  keywords:
+    - "Particle Transport"
+    - "Particle-Surface Interaction"
+    - "Contamination"
+    - "Experimental Diagnostics"
+    - "Trajectory Analysis"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+- title: "Atmospheric Three-Dimensional Particle Tracking Velocimetry"
+  image: "research/2025_PTV_DUV2.png"
+  focus: [1, 2, 5]
+  start_date: "2025-01"
+  status: "Ongoing"
+  context: "Volumetric optical diagnostics for particle-transport measurements"
+  role: "Research Engineer — PTV development, calibration, processing and validation"
+  summary: >
+    Development and application of three-dimensional Particle Tracking
+    Velocimetry for reconstructing micron-scale particle trajectories in
+    atmospheric test conditions. The methodology combines synchronised imaging,
+    volumetric calibration, particle identification, trajectory reconstruction
+    and statistical processing to quantify particle velocities and directions.
+  contributions:
+    - "Developed the experimental and processing workflow for volumetric particle-trajectory measurements."
+    - "Implemented calibration, trajectory reconstruction, data-quality assessment and validation activities."
+    - "Developed a Python-based tool for trajectory inspection, classification, statistics and engineering visualisation."
+  deliverables:
+    - "3D PTV measurement and processing workflow"
+    - "Particle trajectory analysis and visualisation tool"
+    - "Repeatable velocity and angular-distribution analysis"
+  methods:
+    - "3D Particle Tracking Velocimetry"
+    - "LaVision DaVis"
+    - "Python"
+    - "Optical Diagnostics"
+    - "Volumetric Calibration"
+    - "Scientific Visualisation"
+  keywords:
+    - "3D PTV"
+    - "Optical Diagnostics"
+    - "Particle Trajectories"
+    - "Velocity Measurement"
+    - "Experimental Validation"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+- title: "Model-Based Semiconductor Metrology and Drift Correction"
+  image: "research/2023_Drift_control.png"
+  focus: [1, 5]
+  start_date: "2023-01"
+  end_date: "2024-12"
+  status: "Completed"
+  context: "Semiconductor metrology and model-based functional engineering"
+  role: "Functional Design Engineer — modelling, verification and technical coordination"
+  summary: >
+    Development and verification of model-based engineering solutions supporting
+    overlay and focus drift correction in semiconductor metrology systems. The
+    work combined physical system understanding, MATLAB-based modelling,
+    functional analysis and model verification in a multidisciplinary
+    engineering environment.
+  contributions:
+    - "Developed and maintained MATLAB-based engineering models supporting semiconductor metrology applications."
+    - "Performed functional analysis, model verification and technical issue investigation."
+    - "Supported maintainable and traceable model development through version-control and collaborative engineering practices."
+  deliverables:
+    - "Semiconductor metrology engineering models"
+    - "Model verification and functional-analysis workflow"
+    - "Version-controlled collaborative model-development process"
+  methods:
+    - "MATLAB"
+    - "Physical Modelling"
+    - "Functional Analysis"
+    - "Model Verification"
+    - "Version Control"
+    - "Systems Engineering"
+  keywords:
+    - "Semiconductor Metrology"
+    - "Overlay & Focus"
+    - "Drift Correction"
+    - "MATLAB"
+    - "Model Verification"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+# -----------------------------------------------------------------------------
+# MULTIPHYSICS & MATERIALS — PhD at TU/e, ULB & Canon Production Printing
+# -----------------------------------------------------------------------------
+
+- title: "Multiscale Liquid Transport in Porous Materials"
+  image: "research/Liquid_transport.png"
+  focus: [3, 5]
+  start_date: "2018-09"
+  end_date: "2022-12"
+  status: "Completed"
+  context: "Industrial doctoral research in porous-fibrous materials and printing"
+  role: "Doctoral Researcher — mathematical formulation, implementation and analysis"
+  summary: >
+    Investigation of through-thickness liquid transport in paper-based porous
+    materials using multiscale analytical and numerical modelling. The work
+    examined how pore structure, material heterogeneity and liquid-material
+    interaction influence transport across different spatial and temporal
+    scales, with application to industrial printing processes.
+  contributions:
+    - "Developed analytical and numerical descriptions of pore-scale and through-thickness liquid transport."
+    - "Implemented MATLAB and Python models for transport, fibre-liquid mass exchange and evolving moisture distributions."
+    - "Performed parameter studies and comparisons between modelling assumptions and material-scale descriptions."
+  deliverables:
+    - "Multiscale liquid-transport modelling toolkit"
+    - "MATLAB and Python transport models"
+    - "Parameter-study and model-comparison workflows"
+  methods:
+    - "MATLAB"
+    - "Python"
+    - "Porous-Media Transport"
+    - "Capillary Flow"
+    - "Multiscale Modelling"
+    - "Numerical Methods"
+  keywords:
+    - "Liquid Transport"
+    - "Porous Materials"
+    - "Multiscale Modelling"
+    - "Capillary Transport"
+    - "Printing Technology"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+- title: "Hygro-Mechanical Dimensional Stability of Paper Sheets"
+  image: "research/Paper_curl.png"
+  focus: [3, 5]
+  start_date: "2018-09"
+  end_date: "2022-12"
+  status: "Completed"
+  context: "Industrial doctoral research in paper mechanics and dimensional stability"
+  role: "Doctoral Researcher — coupled modelling, implementation and validation"
+  summary: >
+    Study of moisture-driven dimensional changes in paper sheets using coupled
+    hygro-mechanical modelling. The research investigated relationships between
+    moisture transport, material anisotropy, local deformation and sheet-scale
+    dimensional stability across multiple material scales.
+  contributions:
+    - "Developed a coupled hygro-elastic swelling model for moisture-induced dimensional change."
+    - "Connected fibre-level properties, anisotropic sheet behaviour and non-uniform moisture fields."
+    - "Developed scale-separation models for predicting moisture-induced sheet curl and assessing model fidelity."
+  deliverables:
+    - "Hygro-elastic swelling and dimensional-stability model"
+    - "Scale-separation models for moisture-induced paper curl"
+    - "Sensitivity and model-comparison analyses"
+  methods:
+    - "MATLAB"
+    - "MSC Marc/Mentat"
+    - "Hygro-Mechanics"
+    - "Material Anisotropy"
+    - "Scale Separation"
+    - "Computational Homogenisation"
+  keywords:
+    - "Hygro-Mechanics"
+    - "Dimensional Stability"
+    - "Moisture-Induced Deformation"
+    - "Material Anisotropy"
+    - "Finite Element Method"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+- title: "Multiphysics and Fibre-Network Modelling Across Material Scales"
+  image: "research/Multiscale.png"
+  focus: [3, 5]
+  start_date: "2018-09"
+  end_date: "2022-12"
+  status: "Completed"
+  context: "Industrial doctoral research in fibrous networks and computational homogenisation"
+  role: "Doctoral Researcher — finite-element modelling and multiscale analysis"
+  summary: >
+    Development and application of analytical and finite-element methods for
+    coupled physical problems across fibre, network and sheet scales. The work
+    combined constitutive modelling, idealised fibrous networks, computational
+    homogenisation and multiscale approaches to connect local fibre behaviour to
+    effective material response.
+  contributions:
+    - "Built finite-element models of individual paper-fibre bonds and idealised fibrous networks in MSC Marc/Mentat."
+    - "Investigated the influence of fibre arrangement, bonding and local deformation on effective material response."
+    - "Developed multiscale and homogenisation approaches linking detailed network models to continuum descriptions."
+  deliverables:
+    - "Finite-element models of paper-fibre bonds and networks"
+    - "Periodic-unit-cell and network-scale models"
+    - "Computational homogenisation and multiscale-analysis framework"
+  methods:
+    - "MSC Marc/Mentat"
+    - "Finite Element Method"
+    - "Multiphysics Modelling"
+    - "Multiscale Modelling"
+    - "Computational Homogenisation"
+    - "Continuum Mechanics"
+  keywords:
+    - "Multiphysics Modelling"
+    - "Multiscale Modelling"
+    - "Finite Element Method"
+    - "Continuum Mechanics"
+    - "Coupled-Field Modelling"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+# -----------------------------------------------------------------------------
+# ELECTROMECHANICAL TRANSDUCTION — MSc Computational Mechanics
+# -----------------------------------------------------------------------------
+
+- title: "Finite-Deformation Electromechanical Modelling of Piezoelectric Transduction"
+  image: "research/Flexoelectricity.png"
+  focus: [3, 5]
+  start_date: "2017-09"
+  end_date: "2018-08"
+  status: "Completed"
+  context: "MSc Computational Mechanics thesis"
+  role: "MSc Researcher — coupled formulation, MATLAB implementation and instability analysis"
+  summary: >
+    Computational modelling of coupled electromechanical transduction in
+    piezoelectric materials under finite deformation. The work focused on
+    formulation and numerical implementation of the coupled problem and analysis
+    of electromechanical response and instability at large deformation.
+  contributions:
+    - "Formulated the coupled electromechanical problem for finite deformation."
+    - "Developed the numerical MATLAB implementation and verification cases."
+    - "Analysed deformation, electromechanical response and instability behaviour."
+  deliverables:
+    - "Finite-deformation piezoelectric MATLAB model"
+    - "Numerical validation studies"
+    - "Electromechanical instability-analysis workflow"
+  methods:
+    - "MATLAB"
+    - "Piezoelectricity"
+    - "Electromechanical Coupling"
+    - "Finite Deformation"
+    - "Instability Analysis"
+    - "Computational Mechanics"
+  keywords:
+    - "Piezoelectricity"
+    - "Electromechanical Coupling"
+    - "Finite Deformation"
+    - "Instability Analysis"
+    - "MATLAB"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+# -----------------------------------------------------------------------------
+# HYDRODYNAMICS & WAVE ENERGY — ASTUTE / Swansea University
+# -----------------------------------------------------------------------------
+
+- title: "Hydrodynamic Modelling and Open-Source Simulation of Wave-Energy Converters"
+  image: "research/hydrodynamic_workflow.png"
+  focus: [4, 5]
+  start_date: "2017-03"
+  end_date: "2017-08"
+  status: "Completed"
+  context: "MSc industrial research internship at ASTUTE, Swansea University"
+  role: "Computational Engineer — workflow development, simulation and validation"
+  summary: >
+    Hydrodynamic modelling and performance assessment of floating wave-energy
+    converter concepts, including development of an open-source computational
+    workflow for geometry comparison, repeatable model setup and assessment of
+    power-extraction potential.
+  contributions:
+    - "Developed a repeatable open-source workflow for hydrodynamic simulation of wave-energy converter concepts."
+    - "Investigated the influence of device geometry and motion on wave-structure interaction and performance."
+    - "Compared results with established commercial engineering software for validation and early-stage design evaluation."
+  deliverables:
+    - "Open-source wave-energy simulation workflow"
+    - "Geometry-comparison and performance-assessment models"
+    - "Validation and concept-selection workflow"
+  methods:
+    - "Open-Source Simulation"
+    - "Hydrodynamics"
+    - "Wave-Structure Interaction"
+    - "Wave-Energy Converters"
+    - "Model Validation"
+  keywords:
+    - "Wave Energy"
+    - "Hydrodynamics"
+    - "Wave-Structure Interaction"
+    - "Open-Source Simulation"
+    - "Model Validation"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+# -----------------------------------------------------------------------------
+# AUTOMOTIVE CFD & THERMAL ENGINEERING — Mercedes-Benz R&D
+# -----------------------------------------------------------------------------
+
+- title: "Electronic Cooling, Heat Exchangers and HVAC Simulation"
+  image: "research/2015_Electronics_cooling.png"
+  focus: [4, 5]
+  start_date: "2015-01"
+  end_date: "2016-08"
+  status: "Completed"
+  context: "Automotive CFD and thermal engineering at Mercedes-Benz R&D"
+  role: "Senior CFD Engineer — thermal-fluid model development and design analysis"
+  summary: >
+    CFD and thermal analysis supporting automotive electronics cooling, heat exchangers, 
+    cabin HVAC and headlamp fogging/defogging development. The work evaluated airflow, heat 
+    rejection, component temperatures, cabin climate performance and thermal behaviour to compare 
+    design alternatives and support virtual product development.
+  contributions:
+    - "Developed STAR-CCM+ models for HVAC, electronics cooling and heat-exchanger applications."
+    - "Evaluated airflow, heat rejection, component temperatures and thermal-system performance."
+    - "Supported multidisciplinary design comparison and virtual product-development activities."
+  deliverables:
+    - "STAR-CCM+ HVAC models"
+    - "Electronics-cooling and heat-exchanger models"
+    - "Thermal-fluid design-analysis results"
+  methods:
+    - "STAR-CCM+"
+    - "HVAC"
+    - "Electronics Cooling"
+    - "Heat Exchangers"
+    - "Thermal Management"
+    - "Conjugate Heat Transfer"
+  keywords:
+    - "Electronic Cooling"
+    - "Heat Exchangers"
+    - "HVAC"
+    - "Fogging & Defogging"
+    - "Automotive CFD"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+- title: "Wiper Aerodynamics and Vehicle-System Analysis"
+  image: "research/wiper.png"
+  focus: [4, 5]
+  start_date: "2015-01"
+  end_date: "2016-08"
+  status: "Completed"
+  context: "Automotive aerodynamics and digital prototyping at Mercedes-Benz R&D"
+  role: "Senior CFD Engineer — model development, simulation and engineering analysis"
+  summary: >
+    Application of CFD and digital-prototyping techniques to investigate wiper
+    aerodynamics and related vehicle-system interactions. The work examined
+    airflow behaviour and its influence on functional performance within
+    multidisciplinary vehicle-development programmes.
+  contributions:
+    - "Developed STAR-CCM+ models for airflow around vehicle wiper systems."
+    - "Investigated interactions between external aerodynamics and functional wiper performance."
+    - "Supported multidisciplinary assessment and communication of aerodynamic design findings."
+  deliverables:
+    - "STAR-CCM+ wiper-aerodynamics models"
+    - "CFD post-processing and design-comparison results"
+    - "Vehicle-system aerodynamic assessment"
+  methods:
+    - "STAR-CCM+"
+    - "External Aerodynamics"
+    - "Wiper Systems"
+    - "Vehicle Integration"
+    - "CFD Post-Processing"
+  keywords:
+    - "Wiper Aerodynamics"
+    - "External Aerodynamics"
+    - "Automotive CFD"
+    - "Vehicle Integration"
+    - "Digital Prototyping"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+# -----------------------------------------------------------------------------
+# AUTOMOTIVE CFD, THERMAL MANAGEMENT & CAE WORKFLOWS — Jaguar Land Rover
+# -----------------------------------------------------------------------------
+
+- title: "Underfloor Thermal Management, Heat Protection and Vehicle Cooling"
+  image: "research/2011_underfloor.png"
+  focus: [4, 5]
+  start_date: "2011-07"
+  end_date: "2015-01"
+  status: "Completed"
+  context: "Automotive CFD and thermal engineering at Jaguar Land Rover"
+  role: "CFD & Thermal Engineer — model development, thermal analysis and validation"
+  summary: >
+    CFD-based assessment of vehicle underfloor thermal behaviour, exhaust thermal
+    loads, heat protection, aerodynamic flow and cooling performance. The work
+    combined transient airflow and thermal analysis to identify component risks,
+    evaluate design alternatives and support correlation between virtual and
+    physical test environments.
+  contributions:
+    - "Developed and analysed PowerFLOW and PowerTHERM models for underfloor airflow and exhaust thermal behaviour."
+    - "Investigated heat protection, vehicle aerodynamics and brake-cooling performance."
+    - "Worked with aerodynamics, thermal, packaging and test teams to correlate virtual analysis with physical testing."
+  deliverables:
+    - "PowerFLOW aerodynamic models"
+    - "PowerTHERM underfloor thermal models"
+    - "Brake-cooling, heat-protection and design-risk analyses"
+  methods:
+    - "PowerFLOW"
+    - "PowerTHERM"
+    - "Underfloor Thermal Analysis"
+    - "Vehicle Aerodynamics"
+    - "Brake Cooling"
+    - "Heat Protection"
+  keywords:
+    - "Thermal Management"
+    - "Automotive CFD"
+    - "Heat Transfer"
+    - "Heat Protection"
+    - "Vehicle Cooling"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""
+
+- title: "Computational Workflow Optimisation for Vehicle CAE"
+  image: "research/2013_workflow_improvement.png"
+  focus: [4, 5]
+  start_date: "2011-07"
+  end_date: "2016-08"
+  status: "Completed"
+  context: "Automotive CAE workflow development across Jaguar Land Rover and Mercedes-Benz R&D"
+  role: "CAE / CFD Engineer — preprocessing, workflow improvement and simulation efficiency"
+  summary: >
+    Development and improvement of CAE preprocessing and simulation workflows
+    for multidisciplinary automotive thermal and fluid-dynamics applications.
+    The work focused on reducing repetitive effort, improving model consistency
+    and increasing computational efficiency while preserving the quality needed
+    for engineering decisions.
+  contributions:
+    - "Developed improved preprocessing and simulation approaches for repeated vehicle CAE analyses."
+    - "Reduced repetitive modelling effort and improved consistency across computational workflows."
+    - "Supported closer integration between simulation, engineering decision-making and physical testing."
+  deliverables:
+    - "Improved CAE preprocessing methods"
+    - "Repeatable simulation workflows"
+    - "Engineering-efficiency and model-consistency improvements"
+  methods:
+    - "CAE Pre-Processing"
+    - "Simulation Workflow"
+    - "Automation"
+    - "Model Quality"
+    - "Engineering Productivity"
+  keywords:
+    - "CAE Workflow"
+    - "Pre-Processing"
+    - "Simulation Efficiency"
+    - "Automation"
+    - "Model Quality"
+  links:
+    webpage: ""
+    paper: ""
+    github: ""
+    demo: ""
+    docs: ""

@@ -1,11 +1,16 @@
-// Builds files/cv.pdf directly from the same _data/ files the website renders,
-// so editing one data source updates both the website and the CV.
+// Builds files/cv.pdf from the same profile data used by the website.
 //
-//   _data/profile/*.yml ─┐
-//   _data/web/people.yml ├─> build-cv.js ─> cv.generated.html ─> (puppeteer) ─> files/cv.pdf
-//   assets/ref.bib      ─┘
+// Sources:
+//   _config.yml
+//   _data/profile/summary.yml
+//   _data/profile/experience.yml
+//   _data/profile/education.yml
+//   _data/profile/skills.yml
+//   _data/profile/certifications.yml
+//   _data/profile/awards.yml
 //
-// Run with `npm run cv`. Styling lives in cv/style.css.
+// Run with: npm.cmd run cv
+// Styling: cv/style.css
 
 const fs = require('fs');
 const path = require('path');
@@ -16,31 +21,23 @@ const ROOT = path.join(__dirname, '..');
 const readYaml = (p) => yaml.load(fs.readFileSync(path.join(ROOT, p), 'utf8'));
 
 // ---------------------------------------------------------------------------
-// Load data
+// Load only data that is intentionally used in the recruiter-facing CV
 // ---------------------------------------------------------------------------
 
 const config = readYaml('_config.yml');
-const summary = readYaml('_data/profile/summary.yml');
-const education = readYaml('_data/profile/education.yml');
-const experience = readYaml('_data/profile/experience.yml');
-const awards = readYaml('_data/profile/awards.yml');
-const grants = readYaml('_data/profile/grants.yml');
-const services = readYaml('_data/profile/services.yml');
-const committeeMemberships = readYaml('_data/profile/committee_memberships.yml');
-const conferenceService = readYaml('_data/profile/conference_service.yml');
-const studentGuidance = readYaml('_data/profile/student_guidance.yml');
-const certifications = readYaml('_data/profile/certifications.yml');
-const memberships = readYaml('_data/profile/memberships.yml');
-const people = readYaml('_data/web/people.yml');
+const summary = readYaml('_data/profile/summary.yml') || {};
+const education = readYaml('_data/profile/education.yml') || [];
+const experience = readYaml('_data/profile/experience.yml') || {};
+const skills = readYaml('_data/profile/skills.yml') || [];
+const awards = readYaml('_data/profile/awards.yml') || [];
+const certifications = readYaml('_data/profile/certifications.yml') || [];
 
 const SITE_URL = (config.url || '').replace(/\/$/, '');
 
 // ---------------------------------------------------------------------------
-// Small helpers
+// Helpers
 // ---------------------------------------------------------------------------
 
-// Data files may contain inline HTML (they already do, for the website).
-// Only relative hrefs need fixing up, since a PDF has no site root.
 function html(str) {
   if (str === undefined || str === null) return '';
   return String(str)
@@ -48,31 +45,30 @@ function html(str) {
     .trim();
 }
 
-const enDash = (s) => (s || '').replace(/--/g, '–');
-const sup = (s) => (s || '').replace(/\^(\d)/g, '<sup>$1</sup>');
+const section = (title, body, className = '') =>
+  body && body.trim()
+    ? `<section class="cv-section ${className}"><h2>${title}</h2>${body}</section>`
+    : '';
 
-const section = (title, body) =>
-  body ? `<section class="cv-section"><h2>${title}</h2>${body}</section>` : '';
+const bullets = (items, cls = 'cv-bullets') => {
+  const valid = (items || []).filter((item) => item !== undefined && item !== null && String(item).trim() !== '');
+  return valid.length
+    ? `<ul class="${cls}">${valid.map((item) => `<li>${html(item)}</li>`).join('')}</ul>`
+    : '';
+};
 
-const bullets = (items, cls = 'cv-bullets') =>
-  items && items.length ? `<ul class="${cls}">${items.map((i) => `<li>${i}</li>`).join('')}</ul>` : '';
-
-const subhead = (t) => `<h3 class="cv-subhead">${html(t)}</h3>`;
-
-// Entry header: role on the left, dates right-aligned on the same line.
-// metaParts: string, or array of strings rendered as "org · course · location"
-// with the first part styled as the org (accent) and the last as location (italic).
 function entryHead(title, metaParts, dates) {
   const parts = (Array.isArray(metaParts) ? metaParts : [metaParts]).filter(Boolean);
   const metaHtml = parts
-    .map((m, i) => {
+    .map((part, index) => {
       let cls = 'cv-meta-mid';
       if (parts.length === 1) cls = 'cv-loc';
-      else if (i === 0) cls = 'cv-org';
-      else if (i === parts.length - 1) cls = 'cv-loc';
-      return `<span class="${cls}">${html(m)}</span>`;
+      else if (index === 0) cls = 'cv-org';
+      else if (index === parts.length - 1) cls = 'cv-loc';
+      return `<span class="${cls}">${html(part)}</span>`;
     })
     .join('<span class="cv-sep"> &middot; </span>');
+
   return (
     `<div class="cv-entry-head">` +
     `<div class="cv-entry-title"><span class="cv-role">${html(title)}</span>${metaHtml}</div>` +
@@ -81,190 +77,36 @@ function entryHead(title, metaParts, dates) {
   );
 }
 
-// ---------------------------------------------------------------------------
-// Minimal BibTeX parser for assets/ref.bib
-// ---------------------------------------------------------------------------
+const links = config.links || {};
 
-function parseBibtex(text) {
-  const commentStart = text.indexOf('@Comment{');
-  if (commentStart !== -1) {
-    let depth = 0;
-    let i = commentStart + '@Comment'.length;
-    for (; i < text.length; i++) {
-      if (text[i] === '{') depth++;
-      else if (text[i] === '}') {
-        depth--;
-        if (depth === 0) { i++; break; }
-      }
-    }
-    text = text.slice(0, commentStart) + text.slice(i);
-  }
-
-  const entries = [];
-  const entryRe = /@(\w+)\s*\{/g;
-  let m;
-  while ((m = entryRe.exec(text))) {
-    const type = m[1].toLowerCase();
-    if (type === 'comment') continue;
-    const braceStart = entryRe.lastIndex - 1;
-    let depth = 0;
-    let i = braceStart;
-    for (; i < text.length; i++) {
-      if (text[i] === '{') depth++;
-      else if (text[i] === '}') {
-        depth--;
-        if (depth === 0) break;
-      }
-    }
-    const body = text.slice(braceStart + 1, i);
-    entryRe.lastIndex = i + 1;
-
-    const commaIdx = body.indexOf(',');
-    const key = body.slice(0, commaIdx).trim();
-    const fieldsText = body.slice(commaIdx + 1);
-
-    const fields = {};
-    const fieldRe = /([a-zA-Z]+)\s*=\s*\{/g;
-    let fm;
-    while ((fm = fieldRe.exec(fieldsText))) {
-      const fieldName = fm[1].toLowerCase();
-      const fBraceStart = fieldRe.lastIndex - 1;
-      let fDepth = 0;
-      let j = fBraceStart;
-      for (; j < fieldsText.length; j++) {
-        if (fieldsText[j] === '{') fDepth++;
-        else if (fieldsText[j] === '}') {
-          fDepth--;
-          if (fDepth === 0) break;
-        }
-      }
-      fields[fieldName] = fieldsText.slice(fBraceStart + 1, j).replace(/\s+/g, ' ').trim();
-      fieldRe.lastIndex = j + 1;
-    }
-    entries.push({ type, key, fields });
-  }
-  return entries;
+function contactRow(items, cls) {
+  return items.length
+    ? `<nav class="cv-contact ${cls}">` +
+        items
+          .map(([icon, href, label]) => `<a class="cv-contact-link" data-icon="${icon}" href="${href}">${label}</a>`)
+          .join('') +
+      `</nav>`
+    : '';
 }
-
-function formatAuthors(authorField) {
-  if (!authorField) return '';
-  const names = authorField.split(/\s+and\s+/).map((n) => {
-    const parts = n.split(',').map((s) => s.trim());
-    const full = parts.length === 2 ? `${parts[1]} ${parts[0]}` : n.trim();
-    return full === config.name ? `<strong>${full}</strong>` : full;
-  });
-  if (names.length === 1) return names[0];
-  if (names.length === 2) return `${names[0]} and ${names[1]}`;
-  return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`;
-}
-
-function formatPublication(entry) {
-  const f = entry.fields;
-  const pages = enDash(f.pages);
-  let venue;
-  if (entry.type === 'article') {
-    const locator = `${f.volume ? `${f.volume}${f.number ? `(${f.number})` : ''}` : ''}${pages ? `:${pages}` : ''}`;
-    venue = `<em>${f.journal}</em>${locator ? `, ${locator}` : ''}, ${f.year}`;
-  } else if (entry.type === 'inproceedings' && f.booktitle) {
-    const org = f.organization || f.publisher || '';
-    venue = `In <em>${f.booktitle}</em>${pages ? `, pages ${pages}` : ''}.${org ? ` ${org},` : ''} ${f.year}`;
-  } else {
-    venue = `${f.journal || f.booktitle || ''}, ${f.year}`;
-  }
-  const tag = f.doi || f.url ? `<span class="cv-tag">Peer-reviewed</span>` : '';
-  return `<li>${formatAuthors(f.author)}. ${sup(f.title || '')}. ${venue}.${tag}</li>`;
-}
-
-const bib = parseBibtex(fs.readFileSync(path.join(ROOT, 'assets/ref.bib'), 'utf8'));
-const byYearDesc = (a, b) => Number(b.fields.year || 0) - Number(a.fields.year || 0);
-
-const publications = bib
-  .filter((e) => ['article', 'inproceedings', 'unpublished'].includes(e.type))
-  .sort(byYearDesc);
-
-function talkDate(f) {
-  const raw = f.data || f.date;
-  if (raw && /^\d{4}-\d{2}-\d{2}$/.test(raw)) {
-    return new Date(`${raw}T00:00:00Z`).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      timeZone: 'UTC',
-    });
-  }
-  return f.year;
-}
-
-const formatTalk = (e) =>
-  `<li>${formatAuthors(e.fields.author)} (${talkDate(e.fields)}). ` +
-  `<em>${sup(e.fields.title || '')}</em>. ${e.fields.booktitle}.</li>`;
-
-const talks = bib.filter((e) => e.type === 'incollection');
-const invitedTalks = talks.filter((e) => (e.fields.keywords || '').includes('invited')).sort(byYearDesc);
-const conferenceTalks = talks.filter((e) => (e.fields.keywords || '').includes('talk')).sort(byYearDesc);
-
-// ---------------------------------------------------------------------------
-// Student guidance — advisees derived from _data/web/people.yml
-// ---------------------------------------------------------------------------
-
-const byRole = { doctoral_advisor: [], master_advisor: [], undergraduate_advisor: [], high_school_advisor: [] };
-[...(people.students || []), ...(people.alumni || [])].forEach((p) => {
-  if (byRole[p.mentoring_role]) byRole[p.mentoring_role].push(p);
-});
-
-const guidanceLine = (p) =>
-  `<span class="cv-person">${html(p.name)}</span>` +
-  `<span class="cv-person-meta">${html(p.degree)}, ${html(p.institution || p.location || config.institution)}</span>` +
-  `<span class="cv-person-years">${p.year_start} – ${p.year_end}</span>`;
-
-const guidanceList = (list) =>
-  list.length ? `<ul class="cv-people">${list.map((p) => `<li>${guidanceLine(p)}</li>`).join('')}</ul>` : '';
-
-// Senior design teams carry a team name and a member roster instead of a single
-// advisee, so they get their own line shape on top of the same .cv-people markup.
-const seniorDesignLine = (t) =>
-  `<span class="cv-person">${html(t.team)}</span>` +
-  `<span class="cv-person-meta">${[t.project, t.course, t.institution, t.sponsor ? `Sponsor: ${t.sponsor}` : '', (t.members || []).length ? `Team: ${(t.members || []).join(', ')}` : '']
-    .filter(Boolean)
-    .map(html)
-    .join(', ')}</span>` +
-  `<span class="cv-person-years">${t.year_start} – ${t.year_end}</span>`;
-
-const seniorDesignList = (list) =>
-  list.length ? `<ul class="cv-people">${list.map((t) => `<li>${seniorDesignLine(t)}</li>`).join('')}</ul>` : '';
 
 // ---------------------------------------------------------------------------
 // Header
 // ---------------------------------------------------------------------------
 
-// Contacts render as two rows: how to reach him, then where to find his work.
-// Splitting them keeps each row short enough to breathe at a readable size.
-const links = config.links || {};
 const reachContacts = [];
 if (config.phone) reachContacts.push(['phone', `tel:${config.phone.replace(/[^\d+]/g, '')}`, config.phone]);
 if (config.email) reachContacts.push(['email', `mailto:${config.email}`, config.email]);
-if (config.url) reachContacts.push(['website', config.url, config.url.replace(/^https?:\/\//, '')]);
+if (config.url) reachContacts.push(['website', config.url, config.url.replace(/^https?:\/\//, '').replace(/\/$/, '')]);
 
 const profileContacts = [];
 if (links.linkedin) profileContacts.push(['linkedin', links.linkedin, 'LinkedIn']);
-if (links.google_scholar) profileContacts.push(['scholar', links.google_scholar, 'Google Scholar']);
-if (links.researchgate) profileContacts.push(['researchgate', links.researchgate, 'ResearchGate']);
-if (links.orcid) profileContacts.push(['orcid', links.orcid, 'ORCiD']);
 if (links.github) profileContacts.push(['github', links.github, 'GitHub']);
 
-const contactRow = (items, cls) =>
-  items.length
-    ? `<nav class="cv-contact ${cls}">` +
-      items
-        .map(([icon, href, label]) => `<a class="cv-contact-link" data-icon="${icon}" href="${href}">${label}</a>`)
-        .join('') +
-      `</nav>`
-    : '';
-
-const affiliation = [config.title, config.department, config.institution].filter(Boolean).join(', ');
-const officeLine = [config.office, config.office_city].filter(Boolean).join(', ') || config.institution_location || '';
+const affiliation = [config.title, config.institution].filter(Boolean).join(', ');
+const officeLine = [config.office_city || config.institution_location].filter(Boolean).join('');
 
 // ---------------------------------------------------------------------------
-// Assemble document body
+// Assemble document
 // ---------------------------------------------------------------------------
 
 const parts = [];
@@ -276,165 +118,171 @@ parts.push(
     (officeLine ? `<p class="cv-office">${html(officeLine)}</p>` : '') +
     contactRow(reachContacts, 'cv-contact-reach') +
     contactRow(profileContacts, 'cv-contact-profiles') +
-    `</header>`
+  `</header>`
 );
 
-parts.push(section('Professional Summary', `<p class="cv-summary">${html(summary.text)}</p>`));
+const cvSummary =
+  'Mechanical engineer with a PhD and a career spanning automotive R&D, ' +
+  'computational mechanics, industrial research and semiconductor technology. ' +
+  'Experience ranges from automotive CFD and thermal engineering through an ' +
+  'Erasmus Mundus MSc and joint industrial doctorate to advanced semiconductor ' +
+  'engineering at ASML, combining engineering delivery, scientific research ' +
+  'and technical leadership.';
 
 parts.push(
   section(
-    'Professional Experience',
-    (experience.professional_experience || [])
-      .map(
-        (job) =>
-          `<article class="cv-entry">` +
-          entryHead(job.position, [job.company, job.location], job.dates) +
-          bullets((job.highlights || []).map(html)) +
-          `</article>`
-      )
-      .join('')
+    'Professional Summary',
+    `<p class="cv-summary">${cvSummary}</p>`
   )
 );
+
+const professionalExperience = (experience.professional_experience || [])
+  .map((job) =>
+    `<article class="cv-entry">` +
+      entryHead(job.position, [job.company, job.location], job.dates) +
+      bullets(job.highlights) +
+    `</article>`
+  )
+  .join('');
+parts.push(section('Professional Experience', professionalExperience));
+
+// Compact expertise groups. No subjective proficiency ratings are printed.
+const cvExpertise = [
+  {
+    category: 'Semiconductor Systems & Experimental Diagnostics',
+    items: [
+      'Semiconductor Metrology',
+      'Defectivity Engineering',
+      'Particle Transport & Contamination',
+      '3D Particle Tracking Velocimetry (PTV)',
+      'Optical Diagnostics',
+      'Model-Based Engineering',
+      'Verification & Validation',
+    ],
+  },
+  {
+    category: 'Computational Engineering & Multiphysics',
+    items: [
+      'Finite Element Method (FEM)',
+      'Computational Mechanics',
+      'Multiphysics & Multiscale Modelling',
+      'Numerical Methods',
+      'Piezoelectric Modelling',
+      'Hygro- & Thermo-Mechanical Modelling',
+    ],
+  },
+  {
+    category: 'Fluid Dynamics & Thermal Engineering',
+    items: [
+      'Computational Fluid Dynamics (CFD)',
+      'Automotive Thermal Management',
+      'Conjugate Heat Transfer',
+      'HVAC & Cooling Systems',
+      'Hydrodynamics',
+    ],
+  },
+  {
+    category: 'Scientific Computing & Data',
+    items: [
+      'Python',
+      'MATLAB',
+      'Data Analysis & Visualisation',
+      'Automation & Scripting',
+    ],
+  },
+  {
+    category: 'Engineering Software & Digital Workflows',
+    items: [
+      'STAR-CCM+',
+      'COMSOL Multiphysics',
+      'MSC Marc/Mentat',
+      'LaVision DaVis',
+      'PowerFLOW / PowerTHERM',
+      'Siemens NX / Teamcenter',
+      'Git',
+    ],
+  },
+];
+
+const expertiseGroups = cvExpertise
+  .map(
+    (group) =>
+      `<div class="cv-expertise-group">` +
+      `<h3>${html(group.category)}</h3>` +
+      `<p>${group.items.map(html).join(' · ')}</p>` +
+      `</div>`
+  )
+  .join('');
+
+parts.push(section('Technical Expertise', `<div class="cv-expertise-grid">${expertiseGroups}</div>`, 'cv-section-expertise'));
+
+const educationEntries = education
+  .map((edu) =>
+    `<article class="cv-entry">` +
+      entryHead(edu.degree, [edu.institution, edu.location], edu.dates) +
+      bullets(edu.details) +
+    `</article>`
+  )
+  .join('');
+parts.push(section('Education', educationEntries));
+
+const cvLeadership = [
+  '<strong>ASML:</strong> Technical mentoring, onboarding, knowledge transfer and engineering workshops (2023–Present).',
+  "<strong>TU/e:</strong> Supervised bachelor's and master's research projects and supported modelling and simulation teaching (2018–2022).",
+  '<strong>Swansea University / UPC:</strong> Erasmus Mundus MSc Student Representative and liaison with lecturers and programme coordinators (2016–2018).',
+];
 
 parts.push(
   section(
-    'Teaching Experience',
-    (experience.teaching_experience || [])
-      .map((job) => {
-        return (
-          `<article class="cv-entry">` +
-          entryHead(job.position, [job.institution, job.course, job.location], job.dates) +
-          (job.description ? `<p class="cv-entry-desc">${html(job.description)}</p>` : '') +
-          bullets([...(job.courses || []), ...(job.highlights || [])].map(html)) +
-          `</article>`
-        );
-      })
-      .join('')
+    'Leadership, Coaching & Mentoring',
+    bullets(cvLeadership, 'cv-compact-list')
   )
 );
+
+const certificationItems = certifications.map((cert) => {
+  const details = [cert.issuer, cert.date || cert.year]
+    .filter(Boolean)
+    .map(html)
+    .join(' · ');
+
+  const name = cert.credential_url
+    ? `<a href="${html(cert.credential_url)}"><strong>${html(cert.name)}</strong></a>`
+    : `<strong>${html(cert.name)}</strong>`;
+
+  return `${name}${details ? ` — ${details}` : ''}`;
+});
+
+const cvAwards = [
+  'WCCM & ECCOMAS Congress Scholarship, 2021',
+  'Marie Skłodowska-Curie European Joint Doctorate Scholarship — European Commission, 2018–2022',
+  'Go Global Scholarship — Swansea University / CIMNE / UPC, 2017–2018',
+  "Erasmus Mundus Fully Funded Master's Scholarship — European Commission, 2016–2018",
+  'International Excellence Scholarship — Swansea University, 2016–2017',
+];
 
 parts.push(
   section(
-    'Education',
-    (education || [])
-      .map(
-        (edu) =>
-          `<article class="cv-entry">` +
-          entryHead(`${edu.degree}, ${edu.institution}`, [edu.location], edu.dates) +
-          bullets((edu.details || []).map(html)) +
-          `</article>`
-      )
-      .join('')
+    'Awards, Scholarships & Recognition',
+    bullets(cvAwards, 'cv-compact-list')
   )
 );
 
-parts.push(
-  section('Patents and Publications', `<ol class="cv-numbered">${publications.map(formatPublication).join('')}</ol>`)
-);
+parts.push(section('Professional Certifications', bullets(certificationItems, 'cv-compact-list')));
 
-// Grant entries are pre-formatted author strings ("Dave, N., Bond, J., ..."),
-// not bib records, so formatAuthors() does not reach them. Bold the CV owner's
-// own "Last, F." form so grants read like the publication list, where the owner
-// is already picked out of the author run.
-const ownerCitationName = (() => {
-  const words = config.name.trim().split(/\s+/);
-  return words.length < 2 ? '' : `${words[words.length - 1]}, ${words[0][0]}.`;
-})();
 
-const boldOwner = (text) =>
-  ownerCitationName ? text.split(ownerCitationName).join(`<strong>${ownerCitationName}</strong>`) : text;
 
-parts.push(
-  section('Grants', `<ol class="cv-numbered">${(grants || []).map((g) => `<li>${boldOwner(html(g.name))}</li>`).join('')}</ol>`)
-);
-
-const serviceGroups = (groups) =>
-  (groups || [])
-    .map(
-      (g) =>
-        subhead(g.category) +
-        `<ul class="cv-service">` +
-        (g.items || [])
-          .map(
-            (i) =>
-              `<li><span class="cv-service-name">${html(i.name)}</span>` +
-              (i.years ? `<span class="cv-service-years">${html(i.years)}</span>` : '') +
-              `</li>`
-          )
-          .join('') +
-        `</ul>`
-    )
-    .join('');
-
-parts.push(section('Editorial and Review Activities', serviceGroups(services)));
-parts.push(section('Committee Memberships', serviceGroups(committeeMemberships)));
-
-parts.push(
-  section(
-    'Conference Leadership & Service',
-    `<ul class="cv-service">` +
-      (conferenceService || [])
-        .map(
-          (i) =>
-            `<li><span class="cv-service-name"><strong>${html(i.role)}</strong>, ${html(i.name)}</span>` +
-            `<span class="cv-service-years">${html(i.year)}</span></li>`
-        )
-        .join('') +
-      `</ul>`
-  )
-);
-
-parts.push(
-  section(
-    'Conference Presentations',
-    (invitedTalks.length ? subhead('Invited Presentations') + `<ul class="cv-bullets">${invitedTalks.map(formatTalk).join('')}</ul>` : '') +
-      (conferenceTalks.length
-        ? subhead('Conference Papers / Oral Presentations') +
-          `<ul class="cv-bullets">${conferenceTalks.map(formatTalk).join('')}</ul>`
-        : '')
-  )
-);
-
-parts.push(
-  section(
-    'Student Guidance',
-    (byRole.doctoral_advisor.length ? subhead('Doctoral Dissertation Advisor') + guidanceList(byRole.doctoral_advisor) : '') +
-      (byRole.master_advisor.length ? subhead('Master Thesis Advisor') + guidanceList(byRole.master_advisor) : '') +
-      (byRole.undergraduate_advisor.length
-        ? subhead('Undergraduate Research Advisor') + guidanceList(byRole.undergraduate_advisor)
-        : '') +
-      (byRole.high_school_advisor.length
-        ? subhead('High School Research Advisor') + guidanceList(byRole.high_school_advisor)
-        : '') +
-      ((studentGuidance.doctoral_dissertation_committee || []).length
-        ? subhead('Doctoral Dissertation Committee') + guidanceList(studentGuidance.doctoral_dissertation_committee)
-        : '') +
-      ((studentGuidance.master_thesis_committee || []).length
-        ? subhead('Master Thesis Committee') + guidanceList(studentGuidance.master_thesis_committee)
-        : '') +
-      ((studentGuidance.senior_design_teams || []).length
-        ? subhead('Senior Design Team Mentor') + seniorDesignList(studentGuidance.senior_design_teams)
-        : '')
-  )
-);
-
-parts.push(section('Honors and Awards', bullets((awards || []).map((a) => html(a.name)))));
-parts.push(section('Certifications', bullets((certifications || []).map((c) => `${html(c.name)}, ${html(c.year)}`))));
-parts.push(
-  section('Professional Memberships', bullets((memberships || []).map((m) => `Member, ${html(m.name)}, since ${html(m.since)}`)))
-);
 
 // ---------------------------------------------------------------------------
-// Render HTML + print PDF
+// Render HTML and print PDF
 // ---------------------------------------------------------------------------
 
 const css = fs.readFileSync(path.join(__dirname, 'style.css'), 'utf8');
 
-const document = `<!doctype html>
+const documentHtml = `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>${config.name} — Curriculum Vitae</title>
+<title>${html(config.name)} — Curriculum Vitae</title>
 <style>${css}</style>
 </head>
 <body>
@@ -443,9 +291,9 @@ ${parts.join('\n')}
 </html>`;
 
 const htmlPath = path.join(__dirname, 'cv.generated.html');
-fs.writeFileSync(htmlPath, document);
+fs.writeFileSync(htmlPath, documentHtml, 'utf8');
 
-const today = new Date().toLocaleDateString('en-US', {
+const today = new Date().toLocaleDateString('en-GB', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
@@ -453,8 +301,8 @@ const today = new Date().toLocaleDateString('en-US', {
 });
 
 const footerTemplate = `
-  <div style="width:100%; font-family:'Source Serif 4',Georgia,serif; font-size:7.5pt; color:#888;
-              padding:0 19mm; display:flex; justify-content:space-between;">
+  <div style="width:100%; font-family:Georgia,serif; font-size:7.5pt; color:#888;
+              padding:0 18mm; display:flex; justify-content:space-between;">
     <span>Last updated ${today}</span>
     <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
   </div>`;
@@ -472,7 +320,7 @@ const footerTemplate = `
       path: path.join(outDir, 'cv.pdf'),
       format: 'Letter',
       printBackground: true,
-      margin: { top: '18mm', bottom: '20mm', left: '19mm', right: '19mm' },
+      margin: { top: '15mm', bottom: '16mm', left: '18mm', right: '18mm' },
       displayHeaderFooter: true,
       headerTemplate: '<span></span>',
       footerTemplate,

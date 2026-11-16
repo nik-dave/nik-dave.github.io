@@ -84,8 +84,7 @@ Multidisciplinary engineering expertise spanning semiconductor systems, experime
 </div>
 
 <div class="expertise-evidence-links">
-<a href="{{ '/research/' | relative_url }}">View related research <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-<a href="{{ '/projects/' | relative_url }}">View related projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+<a href="{{ '/research/' | relative_url }}">Explore Research &amp; Engineering <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 </div>
 </div>
 {% endfor %}
@@ -165,8 +164,7 @@ Specialist courses and advanced training undertaken alongside industrial and aca
 <p>My work sits at the intersection of physical understanding, computational modelling and experimental evidence. I combine analytical and numerical methods with experimental diagnostics to understand complex engineering systems, challenge modelling assumptions and translate technical findings into practical engineering decisions.</p>
 
 <div class="skills-actions">
-<a href="{{ '/research/' | relative_url }}" class="home-btn home-btn-secondary">Explore Research</a>
-<a href="{{ '/projects/' | relative_url }}" class="home-btn home-btn-secondary">View Projects</a>
+<a href="{{ '/research/' | relative_url }}" class="home-btn home-btn-secondary">Explore Research &amp; Engineering <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 <a href="{{ '/files/cv.pdf' | relative_url }}" class="home-btn home-btn-primary" target="_blank" rel="noopener noreferrer">Download CV</a>
 </div>
 </div>

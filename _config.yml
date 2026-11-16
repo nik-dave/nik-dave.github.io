@@ -52,7 +52,7 @@ nav_pages:
   - name: about
   - name: expertise
   - name: research
-  - name: projects
+#  - name: projects
 
 # ============================================================
 # Advanced Settings (you probably don't need to change these)

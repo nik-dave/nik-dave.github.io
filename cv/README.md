@@ -1,78 +1,71 @@
 # CV pipeline
 
-`files/cv.pdf` is generated on every deploy — never uploaded by hand, never edited directly.
+`files/cv.pdf` is generated from the same profile data used by the website. Do not edit the PDF directly.
 
+```text
+_config.yml                         ┐
+_data/profile/summary.yml           │
+_data/profile/experience.yml        │
+_data/profile/education.yml         ├─> cv/build-cv.js -> cv.generated.html -> files/cv.pdf
+_data/profile/skills.yml            │                       + cv/style.css
+_data/profile/certifications.yml    │
+_data/profile/awards.yml            ┘
 ```
-_data/profile/*.yml   ┐
-_data/web/people.yml  ├─> cv/build-cv.js ─> cv.generated.html ─(headless Chrome)─> files/cv.pdf
-assets/ref.bib        │        + cv/style.css
-_config.yml           ┘
-```
 
-There is no Markdown step: `build-cv.js` reads the YAML and emits HTML directly, so layout is
-controlled with ordinary CSS (`cv/style.css`) instead of Markdown conventions.
+The CV is intentionally recruiter-facing and compact. It does **not** generate legacy academic-template sections such as grants, editorial service, committee memberships, conference leadership, student-guidance databases or BibTeX publications.
 
-## Files
+## CV sections
 
-| File | Role |
+1. Professional Summary
+2. Professional Experience
+3. Technical Expertise
+4. Education
+5. Leadership, Coaching & Mentoring
+6. Professional Certifications
+7. Awards, Scholarships & Recognition
+
+## Source files
+
+| CV content | Source |
 |---|---|
-| `build-cv.js` | Reads the data, builds the HTML, prints the PDF via puppeteer |
-| `style.css` | All styling: fonts, colors, icons, spacing, page rules |
-| `cv.generated.html` | Build artifact — open it in a browser to debug layout (git-ignored) |
-
-## To update the CV content
-
-Edit the data, not the PDF:
-
-| Section | Source |
-|---|---|
-| Name, title, department, phone, office, email, links | `_config.yml` |
+| Name, title, location, email, website and profile links | `_config.yml` |
 | Professional summary | `_data/profile/summary.yml` |
-| Professional & teaching experience | `_data/profile/experience.yml` |
+| Professional experience and leadership/mentoring | `_data/profile/experience.yml` |
+| Technical expertise | `_data/profile/skills.yml` |
 | Education | `_data/profile/education.yml` |
-| Publications | `assets/ref.bib` — `@article` / `@inproceedings` |
-| Talks | `assets/ref.bib` — `@incollection` with `keywords={invited}` or `{talk}` |
-| Grants | `_data/profile/grants.yml` |
-| Editorial & review service | `_data/profile/services.yml` |
-| Committee memberships | `_data/profile/committee_memberships.yml` |
-| Conference leadership & service | `_data/profile/conference_service.yml` |
-| Doctoral / Master advisees | `_data/web/people.yml` — entries with `mentoring_role:` |
-| Dissertation committees | `_data/profile/student_guidance.yml` |
-| Honors & awards | `_data/profile/awards.yml` |
 | Certifications | `_data/profile/certifications.yml` |
-| Professional memberships | `_data/profile/memberships.yml` |
+| Awards and scholarships | `_data/profile/awards.yml` |
 
-Everything under `_data/profile/` also drives the **About** page, so one edit updates the site and
-the CV together. Fields may contain inline HTML (`<a href="…">`, `<sup>`) — relative links such as
-`/teaching/#inen-5358` are rewritten to absolute URLs in the PDF automatically.
-
-## To change the layout
-
-Everything visual lives in `style.css`:
-
-| Want to change | Where |
-|---|---|
-| Font family / base size | `:root` → `--font-body`, `--font-head`, `--size-body` |
-| Accent color (headings, bullets, links) | `:root` → `--accent` |
-| Section heading style | `.cv-section h2` |
-| Job/degree entry rows (title left, dates right) | `.cv-entry-head`, `.cv-role`, `.cv-dates` |
-| Bullet lists | `.cv-bullets` |
-| Service rows with right-aligned years | `.cv-service` |
-| Student guidance rows | `.cv-people` |
-| Contact icons in the header | `.cv-contact-link[data-icon='…']` (inline SVG masks) |
-| Page size, margins, footer | `pdf()` options at the bottom of `build-cv.js` |
-
-To add a contact icon, add the link in `build-cv.js` (`contacts.push([...])`) and a matching
-`[data-icon='…']::before` rule with an SVG mask in `style.css`.
-
-The footer ("Last updated <date>" + "Page N of M") is generated at build time — the date is the
-build date, so it is always current without anyone maintaining it.
-
-## To preview locally
+## Generate locally
 
 ```bash
-npm install     # first time only
-npm run cv      # writes files/cv.pdf
+npm install
+npm run cv
 ```
 
-`cv.generated.html` and `files/cv.pdf` are git-ignored; CI regenerates both on every push.
+Generated files:
+
+```text
+cv/cv.generated.html
+files/cv.pdf
+```
+
+Open `cv/cv.generated.html` in a browser when debugging layout. Visual styling is controlled by `cv/style.css`.
+
+## Layout guidance
+
+The target is a concise two-page senior-engineer CV. Keep the website as the detailed record of technical training, research, projects and publications.
+
+Useful style controls:
+
+| Change | CSS selector |
+|---|---|
+| Fonts and base sizes | `:root` |
+| Section headings | `.cv-section h2` |
+| Job and education rows | `.cv-entry-head`, `.cv-role`, `.cv-dates` |
+| Bullets | `.cv-bullets` |
+| Expertise grid | `.cv-expertise-grid`, `.cv-expertise-group` |
+| Certifications and awards | `.cv-compact-list` |
+| Contact links/icons | `.cv-contact-link` |
+
+The footer date and page numbering are generated automatically at build time.

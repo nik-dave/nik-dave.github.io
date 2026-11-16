@@ -49,7 +49,7 @@ pi:
 #     affiliation: MIT
 #     website: https://janesmith.mit.edu
 #     email: jsmith@mit.edu
-collaborators:
+# collaborators:
 
 
 # -----------------------------------------------------------------------------
@@ -91,13 +91,13 @@ collaborators:
 #     year_start: 2025
 #     year_end: now
 
-students:
+# students:
 
-  - name: John Jon
-    show_team: false
-    show_about: false
-    website: ""
-    info: Student
+#  - name: John Jon
+#    show_team: false
+#    show_about: false
+#    website: ""
+#    info: Student
 
 
 

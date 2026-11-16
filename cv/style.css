@@ -52,7 +52,7 @@ body {
 .cv-header {
   text-align: center;
   padding-bottom: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
 }
 
 .cv-header h1 {
@@ -181,7 +181,7 @@ body {
   color: var(--accent);
   border-bottom: 1px solid var(--accent-soft);
   padding-bottom: 2.5px;
-  margin: 0 0 6px;
+  margin: 0 0 5px;
   page-break-after: avoid;
   break-after: avoid;
 }
@@ -435,4 +435,112 @@ sup {
   padding: 0 3px;
   margin-left: 5px;
   vertical-align: 1px;
+}
+
+
+
+/* ==========================================================================
+   Compact expertise, certifications and awards for a two-page CV.
+   ========================================================================== */
+
+.cv-expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 18px;
+  row-gap: 5px;
+}
+
+.cv-expertise-group {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv-expertise-group h3 {
+  font-family: var(--font-body);
+  font-size: 9.2pt;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 1px;
+}
+
+.cv-expertise-group p {
+  color: var(--ink-soft);
+  font-size: 8.5pt;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.cv-compact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 18px;
+}
+
+.cv-compact-list > li {
+  position: relative;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  padding-left: 10px;
+  margin-bottom: 3px;
+  font-size: 8.7pt;
+  line-height: 1.3;
+}
+
+.cv-compact-list > li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Slightly tighter page rhythm without reducing readability. */
+.cv-section {
+  margin-bottom: 7px;
+}
+
+.cv-entry {
+  margin-bottom: 5px;
+}
+
+.cv-bullets > li {
+  margin-bottom: 1.8px;
+}
+
+
+.cv-entry-compact {
+  margin-bottom: 4px;
+}
+
+.cv-entry-compact .cv-entry-desc {
+  margin: 1px 0 2px;
+  font-size: 8.7pt;
+  line-height: 1.3;
+}
+
+
+/* Final two-page CV compaction */
+
+.cv-section-expertise {
+  margin-bottom: 5px;
+}
+
+.cv-section-expertise .cv-expertise-grid {
+  row-gap: 3px;
+}
+
+.cv-section-expertise .cv-expertise-group p {
+  font-size: 8.3pt;
+  line-height: 1.22;
+}
+
+.cv-compact-list {
+  column-gap: 14px;
+}
+
+.cv-compact-list > li {
+  margin-bottom: 2px;
+  font-size: 8.4pt;
+  line-height: 1.22;
 }

@@ -2,6 +2,16 @@
 // Research page — horizontal card list
 // =============================================================
 
+/* Research & Engineering introduction */
+
+.research-intro {
+  width: 100%;
+  max-width: none;
+  margin-bottom: var(--space-5);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
 .research-filter-bar {
   display: flex;
   flex-wrap: wrap;
