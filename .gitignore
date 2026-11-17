@@ -21,3 +21,12 @@ node_modules/
 
 # Generated CV intermediate file
 cv/cv.generated.html
+
+# Position-specific application data
+cover-letter/applications/
+
+# Generated cover-letter HTML
+cover-letter/*.generated.html
+
+# Generated cover-letter PDFs
+files/cover-letter-*.pdf

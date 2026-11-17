@@ -96,7 +96,11 @@ function contactRow(items, cls) {
 const reachContacts = [];
 if (config.phone) reachContacts.push(['phone', `tel:${config.phone.replace(/[^\d+]/g, '')}`, config.phone]);
 if (config.email) reachContacts.push(['email', `mailto:${config.email}`, config.email]);
-if (config.url) reachContacts.push(['website', config.url, config.url.replace(/^https?:\/\//, '').replace(/\/$/, '')]);
+if (config.url) reachContacts.push([
+  'website',
+  config.url,
+  'Engineering Portfolio ↗'
+]);
 
 const profileContacts = [];
 if (links.linkedin) profileContacts.push(['linkedin', links.linkedin, 'LinkedIn']);
@@ -303,7 +307,7 @@ const today = new Date().toLocaleDateString('en-GB', {
 const footerTemplate = `
   <div style="width:100%; font-family:Georgia,serif; font-size:7.5pt; color:#888;
               padding:0 18mm; display:flex; justify-content:space-between;">
-    <span>Last updated ${today}</span>
+    <span>Last updated ${today}</span> </span>Engineering portfolio: nik-dave.github.io</span>
     <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
   </div>`;
 

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Stoke:wght@400&display=swap');
+
+:root {
+  --accent: #2196f3;
+  --accent-soft: #90caf9;
+  --ink: #1a1a1a;
+  --muted: #606060;
+  --font-body: 'Quattrocento', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Cinzel', 'Quattrocento', serif;
+  --font-name: 'Stoke', 'Cinzel', serif;
+}
+
+* { box-sizing: border-box; }
+
+@page { size: A4; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 10.4pt;
+  line-height: 1.46;
+  color: var(--ink);
+  margin: 0;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.letter-header {
+  text-align: center;
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 8px;
+  margin-bottom: 13px;
+}
+
+.letter-header h1 {
+  font-family: var(--font-name);
+  font-size: 22pt;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 4px;
+}
+
+.letter-title {
+  font-size: 9.5pt;
+  color: #333;
+  margin: 0 0 1px;
+}
+
+.letter-location {
+  font-size: 8.8pt;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+.letter-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3px 9px;
+  font-size: 8.3pt;
+}
+
+.letter-contact a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sep { color: var(--accent-soft); }
+
+.letter-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.recipient { color: #333; }
+.date { white-space: nowrap; font-weight: 700; }
+
+.subject {
+  color: var(--accent);
+  border-bottom: 1px solid #d7eaff;
+  padding-bottom: 4px;
+  margin: 0 0 15px;
+}
+
+main p {
+  margin: 0 0 9px;
+  text-align: left;
+}
+
+.signature {
+  font-weight: 700;
+  margin-top: -5px;
+}
+
+
+.portfolio-invitation {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--accent-soft);
+  font-size: 9.5pt;
+}
+
+.portfolio-invitation a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
