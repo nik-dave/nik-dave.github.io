@@ -8,42 +8,42 @@ professional_experience:
     dates: "Dec. 2024 – Present"
     highlights:
       - "Work within semiconductor defectivity engineering, supporting particle contamination analysis and experimental technology development."
-      - "Owner and co-developer of a Python-based particle-tracking analysis tool supporting engineering investigations."
+      - "Owner and co-developer of a Python based particle tracking analysis tool supporting engineering investigations."
       - "Scrum Master for a multidisciplinary defectivity test and development team, supporting planning, delivery and continuous improvement."
-      - "Collaborate across experimental diagnostics, CFD and external technology partners on particle-transport and defectivity investigations."
+      - "Collaborate across experimental diagnostics, CFD and external technology partners on particle transport and defectivity investigations."
 
   - position: "Functional Design Engineer"
     company: "ASML (via Bright Society)"
     location: "Veldhoven, The Netherlands"
     dates: "Jan. 2023 – Dec 2024"
     highlights:
-      - "Developed and maintained model-based engineering solutions supporting semiconductor metrology and system drift-control applications."
+      - "Developed and maintained model based engineering solutions supporting semiconductor metrology and system drift control applications."
       - "Owner and co-developer of Overlay and Focus MATLAB models supporting functional analysis within multidisciplinary engineering development."
-      - "Supported modern development practices through version-control migration, technical workshops and agile team responsibilities."
+      - "Supported modern development practices through version control migration, technical workshops and agile team responsibilities."
 
   - position: "Scientific Researcher (Doctoral Researcher)"
     company: "Eindhoven University of Technology (TU/e), Université libre de Bruxelles (ULB) & Canon Production Printing"
     location: "Eindhoven / Venlo, The Netherlands & Brussels, Belgium"
     dates: "Sep. 2018 – Dec. 2022"
     highlights:
-      - "Conducted doctoral research on multiscale modelling of liquid transport in paper-based materials within an academic-industrial collaboration."
+      - "Conducted doctoral research on multiscale modelling of liquid transport in paper based materials within an academic and industrial collaboration."
       - "Developed analytical, numerical and multiphysics models to investigate coupled hygro-mechanical behaviour in porous materials."
       - "Combined physical modelling, numerical implementation and engineering analysis across multiple material and structural scales."
 
-  - position: "Computational Engineer (Research Internship)"
+  - position: "Computational Engineer"
     company: "ASTUTE, Swansea University"
     location: "Swansea, Wales, United Kingdom"
     dates: "Mar. 2017 – Aug. 2017"
     highlights:
-      - "Investigated hydrodynamic behaviour of floating devices and wave-energy systems."
-      - "Developed and validated an open-source simulation workflow to evaluate the performance of Wave Energy Converters (WECs)."
+      - "Investigated hydrodynamic behaviour of floating devices and wave energy systems."
+      - "Developed and validated an open source simulation workflow to evaluate the performance of Wave Energy Converters (WECs)."
 
   - position: "Senior CFD Engineer"
     company: "Mercedes-Benz R&D (Daimler AG)"
     location: "Sindelfingen, Germany"
     dates: "Jan. 2015 – Aug. 2016"
     highlights:
-      - "Thermal management and digital-prototyping analysis for automotive systems."
+      - "Thermal management and digital prototyping analysis for automotive systems."
       - "CFD/CAE analysis covering HVAC, electronic cooling, heat exchangers and vehicle thermal performance."
       - "Multidisciplinary engineering using STAR-CCM+, Siemens NX and MATLAB to support design development and simulation efficiency."
 
@@ -52,22 +52,22 @@ professional_experience:
     location: "Gaydon, England, United Kingdom"
     dates: "Jul. 2011 – Jan. 2015"
     highlights:
-      - "Underhood thermal and CFD analysis for vehicle-development programmes."
-      - "Exhaust heat protection, cooling-system analysis and collaboration with aerodynamics, wind-tunnel and HVAC teams."
-      - "Developed modelling/pre-processing approaches to improve computational efficiency and integration between virtual and physical testing."
+      - "Underhood thermal and CFD analysis for vehicle development programmes."
+      - "Exhaust heat protection, cooling system analysis and collaboration with aerodynamics, wind tunnel and HVAC teams."
+      - "Developed modelling/preprocessing approaches to improve computational efficiency and integration between virtual and physical testing."
 
 # Teaching & Mentoring Experience
 
 teaching_experience:
 
-  - position: "Mentor & Knowledge-Sharing Lead"
+  - position: "Mentor & Knowledge Sharing Lead"
     institution: "ASML"
     location: "Veldhoven, The Netherlands"
     dates: "2023 – Present"
     description: "Supporting technical mentoring, onboarding, knowledge transfer and continuous improvement within engineering teams."
     highlights:
-      - "Mentoring engineers and interns in engineering-development workflows and practices."
-      - "Organising technical workshops and knowledge-sharing activities."
+      - "Mentoring engineers and interns in engineering development workflows and practices."
+      - "Organising technical workshops and knowledge sharing activities."
       
   - position: "Teaching Assistant & Student Supervisor"
     institution: "Eindhoven University of Technology (TU/e)"

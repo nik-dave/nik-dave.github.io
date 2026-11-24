@@ -10,7 +10,7 @@
   icon: "fa-solid fa-microchip"
   description: >
     Current engineering expertise spanning semiconductor systems, defectivity,
-    particle behaviour, model-based analysis and quantitative experimental
+    particle behaviour, model based analysis and quantitative experimental
     diagnostics.
   skills:
     - name: "Semiconductor Metrology"
@@ -20,7 +20,7 @@
     - name: "Optical Diagnostics"
     - name: "Experimental Functional Design"
     - name: "Particle Trajectory & Surface Interaction Analysis"
-    - name: "Model-Based Metrology"
+    - name: "Model Based Metrology"
     - name: "Verification & Validation"
 
 - category: "Computational Engineering & Multiphysics"
@@ -38,7 +38,7 @@
     - name: "Piezoelectric Modelling"
     - name: "Hydro-Mechanical Modelling"
     - name: "Thermo-Mechanical Modelling"
-    - name: "Porous-Media Transport"
+    - name: "Porous Media Transport"
 
 - category: "Fluid Dynamics & Thermal Engineering"
   group: "core"
@@ -47,22 +47,22 @@
   description: >
     Industrial and research experience in fluid dynamics, heat transfer,
     thermal management and transport phenomena across automotive, energy and
-    high-technology applications.
+    high technology applications.
   skills:
     - name: "Computational Fluid Dynamics (CFD)"
     - name: "Automotive Thermal Management"
     - name: "Conjugate Heat Transfer"
     - name: "HVAC & Cooling Systems"
-    - name: "Wave-Energy Hydrodynamics"
-    - name: "Wave-Structure Interaction"
+    - name: "Wave Energy Hydrodynamics"
+    - name: "Wave Structure Interaction"
 
 - category: "Scientific Computing & Data"
   group: "enabling"
   anchor: "scientific-computing"
   icon: "fa-solid fa-code"
   description: >
-    Scientific programming, numerical analysis and data-processing capabilities supporting modelling, simulation, experimentation and engineering
-    decision-making.
+    Scientific programming, numerical analysis and data processing capabilities supporting modelling, simulation, experimentation and engineering
+    decision making.
   skills:
     - name: "Python"
     - name: "MATLAB"
@@ -100,7 +100,7 @@
   skills:
     - name: "Technical Leadership"
     - name: "Requirements Engineering"
-    - name: "Cross-Functional Collaboration"
+    - name: "Cross Functional Collaboration"
     - name: "Technical Mentoring & Student Supervision"
     - name: "Knowledge Sharing & Workshops"
     - name: "Agile / Scrum / SAFe"

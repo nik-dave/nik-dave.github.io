@@ -160,7 +160,7 @@ const cvExpertise = [
       'Particle Transport & Contamination',
       '3D Particle Tracking Velocimetry (PTV)',
       'Optical Diagnostics',
-      'Model-Based Engineering',
+      'Model Based Engineering',
       'Verification & Validation',
     ],
   },
@@ -172,7 +172,7 @@ const cvExpertise = [
       'Multiphysics & Multiscale Modelling',
       'Numerical Methods',
       'Piezoelectric Modelling',
-      'Hygro- & Thermo-Mechanical Modelling',
+      'Hygro & Thermo-Mechanical Modelling',
     ],
   },
   {
